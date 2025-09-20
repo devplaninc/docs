@@ -5,45 +5,69 @@ sidebar_position: 1
 
 # Welcome to Devplan Documentation
 
-Devplan is an AI-native product development platform that maintains context continuity from product requirements through to code implementation, enabling seamless collaboration between product and engineering teams.
+Devplan is the product intelligence layer that transforms how teams build software in the AI era. By connecting context from across your development ecosystem, Devplan enables AI-powered workflows that deliver 8x faster planning and 25% better code quality.
+
+## What Makes Devplan Different
+
+**🔗 Context-Driven AI Development**
+Unlike generic AI tools, Devplan understands your codebase, product decisions, and team patterns to generate production-ready output.
+
+**🚀 End-to-End Intelligence**
+From customer feedback to deployed code, Devplan maintains context throughout your entire development lifecycle.
+
+**⚡ Real Results**
+Teams using Devplan see 8x faster project planning, 25% improvement in AI coding quality, and 80 minutes saved per feature.
 
 ## What You'll Find Here
 
-This documentation will help you understand and maximize the value of Devplan's integrated workflow:
-
-### [Value Proposition](/docs/value-proposition)
-Learn why Devplan exists and how it solves the critical disconnect between product and engineering teams. Understand the business benefits and impact on AI-assisted development.
+### [Why Devplan? The Value Proposition](/docs/value-proposition)
+Understand the AI development challenges Devplan solves and see the proven results teams are achieving with context-driven development.
 
 ### [Core Workflow Guide](/docs/core-workflow)
-Get step-by-step instructions for using Devplan's complete workflow, from PRD creation through CLI integration. Includes best practices, troubleshooting, and role-specific guidance.
+Step-by-step walkthrough of Devplan's intelligent workflow: from idea input through agent-guided planning to AI-ready implementation prompts.
 
-## Key Benefits
+### [Getting Started](/docs/getting-started)
+Complete setup guide including account creation, integrations, CLI installation, and your first project walkthrough.
 
-**For Product Teams:**
-- Structured templates ensure complete requirements capture
-- Real-time collaboration with engineering teams
-- Clear traceability from requirements to implementation
+### [How Devplan Works](/docs/architecture)
+Learn about Devplan's context engine, AI agents, and integration architecture that makes intelligent development possible.
 
-**For Engineering Teams:**
-- Technical context is preserved throughout the development cycle
-- AI assistants receive rich context for better code generation
-- Seamless integration with IDEs and development tools
+## Key Benefits by Role
 
-**For Organizations:**
-- Faster development cycles with reduced rework
-- Better cross-functional collaboration and communication
-- Improved onboarding and knowledge sharing
+### For Product Managers
+- **AI-Assisted Discovery**: Intelligent questioning that uncovers missing requirements
+- **Context-Rich PRDs**: Generate comprehensive specifications with technical integration details
+- **Seamless Handoff**: Requirements flow directly to engineering with full context preserved
 
-## Getting Started
+### For Engineering Teams
+- **Production-Ready Prompts**: AI coding assistance with your specific patterns, files, and architecture
+- **Reduced Rework**: 25% improvement in AI-generated code quality through better context
+- **Integrated Workflow**: Context flows directly from planning into your IDE
 
-1. **Start with the [Value Proposition](/docs/value-proposition)** to understand how Devplan transforms your development process
-2. **Follow the [Core Workflow Guide](/docs/core-workflow)** for detailed implementation instructions
-3. **Set up your first project** and experience context-driven development
+### For Organizations
+- **Accelerated Delivery**: 8x faster planning cycles and reduced development overhead
+- **Better Quality**: Context-driven development reduces bugs and technical debt
+- **Team Alignment**: Shared understanding eliminates communication gaps and rework
 
-## Need Help?
+## Quick Start Guide
 
-- Check the troubleshooting sections in our workflow guide
-- Contact your company administrator for access and permission issues
-- Reach out to customer success for workflow optimization guidance
+1. **[Understand the Value](/docs/value-proposition)** - See how Devplan solves real AI development challenges
+2. **[Learn the Workflow](/docs/core-workflow)** - Discover how context flows from idea to code
+3. **[Get Set Up](/docs/getting-started)** - Create your account and complete integrations
+4. **[Start Building](/docs/getting-started#your-first-project)** - Experience context-driven development firsthand
 
-Ready to transform your product development process? Let's get started!
+## Success Stories
+
+> "We are running our 15-person VC-backed company right now without a PM. Devplan helps fill that gap for us by generating high-quality user stories that sync in Linear in minutes. What used to take me days of back and forth and refinement I'm now doing in less than an hour."
+>
+> — **Andrew, YC-backed Founder**
+
+> "DevPlan agents sometimes do a better job understanding the codebase and generating details than ClaudeCode"
+>
+> — **Design Partner Customer**
+
+## Ready to Transform Your Development Process?
+
+Start with our [Value Proposition](/docs/value-proposition) to understand how Devplan can accelerate your team, or jump straight to [Getting Started](/docs/getting-started) to begin your first project.
+
+The future of product development is context-driven and AI-native. Let's build it together.
