@@ -296,6 +296,6 @@ Now that you're set up:
 3. **Join our community** for tips, best practices, and feature updates
 4. **Provide feedback** to help us improve the platform
 
-Need help? Contact our support team or check out our comprehensive [FAQ section](/docs/faq).
+Need help? Contact our support team at info@devplan.com.
 
 Ready to transform your development process? Start building your first feature!
