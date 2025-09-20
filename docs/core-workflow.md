@@ -346,4 +346,4 @@ Devplan monitors development progress and provides real-time updates:
 
 ## Next Steps
 
-Ready to start using Devplan? Check out our [Getting Started Guide](/docs/getting-started) for setup instructions and your first project walkthrough.
+Ready to start using Devplan? Check out our [Getting Started Guide](/getting-started) for setup instructions and your first project walkthrough.

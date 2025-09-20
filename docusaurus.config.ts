@@ -42,17 +42,9 @@ const config: Config = {
       {
         docs: {
           sidebarPath: './sidebars.ts',
+          routeBasePath: '/', // Serve the docs at the site's root
         },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        blog: false, // Disable the blog plugin
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -73,15 +65,16 @@ const config: Config = {
       logo: {
         alt: 'Devplan Logo',
         src: 'img/Logo-Closed.svg',
+        href: '/intro',
       },
+      hideOnScroll: false,
       items: [
         {
           type: 'docSidebar',
           sidebarId: 'tutorialSidebar',
           position: 'left',
-          label: 'Tutorial',
+          label: 'Documentation',
         },
-        {to: '/blog', label: 'Blog', position: 'left'},
         {
           href: 'https://devplan.com',
           label: 'Devplan',
@@ -93,41 +86,45 @@ const config: Config = {
       style: 'dark',
       links: [
         {
-          title: 'Docs',
+          title: 'Documentation',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Getting Started',
+              to: '/getting-started',
+            },
+            {
+              label: 'Core Workflow',
+              to: '/core-workflow',
+            },
+            {
+              label: 'How Devplan Works',
+              to: '/architecture',
             },
           ],
         },
         {
-          title: 'Community',
+          title: 'Devplan',
           items: [
             {
-              label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              label: 'Devplan App',
+              href: 'https://devplan.com',
             },
             {
-              label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
-            },
-            {
-              label: 'X',
-              href: 'https://x.com/docusaurus',
+              label: 'YouTube Channel',
+              href: 'https://www.youtube.com/@Devplan',
             },
           ],
         },
         {
-          title: 'More',
+          title: 'Support',
           items: [
             {
-              label: 'Blog',
-              to: '/blog',
+              label: 'Contact Us',
+              href: 'mailto:info@devplan.com',
             },
             {
-              label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              label: 'Privacy Policy',
+              href: 'https://www.devplan.com/privacy',
             },
           ],
         },

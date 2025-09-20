@@ -20,16 +20,16 @@ Teams using Devplan see 8x faster project planning, 25% improvement in AI coding
 
 ## What You'll Find Here
 
-### [Why Devplan? The Value Proposition](/docs/value-proposition)
+### [Why Devplan? The Value Proposition](/value-proposition)
 Understand the AI development challenges Devplan solves and see the proven results teams are achieving with context-driven development.
 
-### [Core Workflow Guide](/docs/core-workflow)
+### [Core Workflow Guide](/core-workflow)
 Step-by-step walkthrough of Devplan's intelligent workflow: from idea input through agent-guided planning to AI-ready implementation prompts.
 
-### [Getting Started](/docs/getting-started)
+### [Getting Started](/getting-started)
 Complete setup guide including account creation, integrations, CLI installation, and your first project walkthrough.
 
-### [How Devplan Works](/docs/architecture)
+### [How Devplan Works](/architecture)
 Learn about Devplan's context engine, AI agents, and integration architecture that makes intelligent development possible.
 
 ## Key Benefits by Role
@@ -51,10 +51,10 @@ Learn about Devplan's context engine, AI agents, and integration architecture th
 
 ## Quick Start Guide
 
-1. **[Understand the Value](/docs/value-proposition)** - See how Devplan solves real AI development challenges
-2. **[Learn the Workflow](/docs/core-workflow)** - Discover how context flows from idea to code
-3. **[Get Set Up](/docs/getting-started)** - Create your account and complete integrations
-4. **[Start Building](/docs/getting-started#your-first-project)** - Experience context-driven development firsthand
+1. **[Understand the Value](/value-proposition)** - See how Devplan solves real AI development challenges
+2. **[Learn the Workflow](/core-workflow)** - Discover how context flows from idea to code
+3. **[Get Set Up](/getting-started)** - Create your account and complete integrations
+4. **[Start Building](/getting-started#your-first-project)** - Experience context-driven development firsthand
 
 ## Success Stories
 
@@ -68,6 +68,6 @@ Learn about Devplan's context engine, AI agents, and integration architecture th
 
 ## Ready to Transform Your Development Process?
 
-Start with our [Value Proposition](/docs/value-proposition) to understand how Devplan can accelerate your team, or jump straight to [Getting Started](/docs/getting-started) to begin your first project.
+Start with our [Value Proposition](/value-proposition) to understand how Devplan can accelerate your team, or jump straight to [Getting Started](/getting-started) to begin your first project.
 
 The future of product development is context-driven and AI-native. Let's build it together.

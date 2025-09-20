@@ -291,8 +291,8 @@ A: Yes, Devplan can analyze and work with monorepo structures.
 
 Now that you're set up:
 
-1. **Explore the [Core Workflow](/docs/core-workflow)** to understand the complete development process
-2. **Review [Architecture Documentation](/docs/architecture)** to understand how Devplan works
+1. **Explore the [Core Workflow](/core-workflow)** to understand the complete development process
+2. **Review [Architecture Documentation](/architecture)** to understand how Devplan works
 3. **Join our community** for tips, best practices, and feature updates
 4. **Provide feedback** to help us improve the platform
 

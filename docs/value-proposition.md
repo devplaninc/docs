@@ -128,4 +128,4 @@ Devplan represents the evolution from traditional, disconnected toolchains to an
 - Scale engineering effectiveness without proportional hiring
 - Create institutional knowledge that grows with your team
 
-Ready to experience the difference context makes? [Get started with Devplan](/docs/getting-started).
+Ready to experience the difference context makes? [Get started with Devplan](/getting-started).
