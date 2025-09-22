@@ -28,7 +28,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Implementation Guide',
+      label: 'User Guide',
       collapsed: false,
       items: [
         'getting-started',
