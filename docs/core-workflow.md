@@ -3,6 +3,13 @@ title: "Core Workflow Guide"
 sidebar_position: 3
 ---
 
+import prdQuestions from './assets/screenshots/PRD_questions.png';
+import prdSelfReview from './assets/screenshots/prd_self_review.png';
+import buildPlan from './assets/screenshots/build_plan.png';
+import agenticScorePopover from './assets/screenshots/agentic_score_popover.png';
+import promptExample from './assets/screenshots/prompt_example.png';
+import cliCommands from './assets/screenshots/cli_commands.png';
+
 # Core Workflow Guide
 
 *8 min read • Step-by-step walkthrough of Devplan's intelligent workflow*
@@ -77,37 +84,11 @@ graph LR
 ### Intelligent Questioning
 Devplan's Planning Agent doesn't just accept your input—it actively helps you think through the requirements by asking targeted questions based on your codebase analysis and project context.
 
+<img src={prdQuestions} alt="Example banner" style={{width: '600px'}}/>
+
 :::tip What Makes This Different
 **Context-Aware Questions:** Unlike generic planning tools, Devplan knows your tech stack, existing patterns, and architectural decisions, so it asks relevant questions that matter for your specific implementation.
 :::
-
-### Real Discovery Session Example
-
-**Initial Input:** "Add user authentication to our SaaS dashboard"
-
-**Agent Discovery Process:**
-
-**🔍 Context Analysis (Automatic)**
-```
-Analyzing codebase...
-✓ Detected: Next.js 14 with App Router
-✓ Database: PostgreSQL with Prisma
-✓ Existing: Basic user model in schema
-✓ UI Library: Tailwind + Shadcn components
-```
-
-**🤖 Agent Questions:**
-1. "I see you have a basic User model. Do you want email/password auth, OAuth (Google/GitHub), or both?"
-2. "Your app uses Prisma. Should we extend the existing User schema or create separate auth tables?"
-3. "I notice you're using Shadcn components. Should the login form match your existing Button and Input patterns?"
-4. "Do you need password reset functionality, and should it integrate with your existing email system?"
-5. "Should authenticated routes redirect to a specific dashboard page, or stay on the current page?"
-
-**📝 Collaborative Refinement:**
-- PM clarifies business requirements
-- Agent suggests technical approaches based on existing code
-- Team discusses integration points and edge cases
-- Final requirements capture both business and technical needs
 
 :::note Why This Works
 This collaborative process typically uncovers 3-5 critical requirements that would otherwise be discovered during implementation, preventing costly rework.
@@ -138,6 +119,8 @@ Devplan's Review Agent acts as your personal Chief Product Officer, analyzing th
 - **Feasibility**: Are the requirements technically achievable?
 - **Alignment**: Does this fit with existing product strategy and architecture?
 
+<img src={prdSelfReview} alt="Example banner" style={{width: '600px'}}/>
+
 ## Step 4: Technical Design & Architecture
 
 ### Code-Aware Planning
@@ -155,111 +138,18 @@ Unlike generic planning tools, Devplan understands your technical stack and gene
 - Testing strategy and coverage
 - Performance considerations
 
-### Example Technical Breakdown
-
-For the dark mode feature:
-```
-Components to Modify:
-├── ThemeProvider.tsx (extend theme context)
-├── SettingsPage.tsx (add toggle component)
-├── Header.tsx (apply theme classes)
-├── Sidebar.tsx (apply theme classes)
-└── 12 additional UI components
-
-New Utilities Needed:
-├── useTheme() hook
-├── ThemeToggle component
-└── localStorage persistence layer
-
-Database Changes:
-└── user_preferences.theme_mode (varchar)
-```
-
 ## Step 5: User Stories & Task Breakdown
 
 ### Automated Story Generation
 Devplan breaks down features into implementation-ready user stories with context-aware estimates based on your actual codebase complexity.
 
-### Real User Stories Example
+<img src={buildPlan} alt="Example banner" style={{width: '600px'}}/>
 
-**From: "User Authentication Feature"**
+### Agentic Score
+Devplan calculates Agentic Score (how likely AI IDE agent is to succeed with this user story) and size for each user 
+story based on its complexity and ambiguity:
 
-:::note Generated Stories
-
-**Story 1: User Registration Form**
-```markdown
-**As a** new user
-**I want** to create an account with email and password
-**So that** I can access the SaaS dashboard
-
-**Acceptance Criteria:**
-- Registration form with email, password, confirm password fields
-- Real-time validation using existing Zod schemas
-- Password strength indicator
-- Email uniqueness validation
-- Success state redirects to dashboard
-- Error handling for duplicate emails
-- Form follows existing Shadcn UI patterns
-- Accessible form labels and error messages
-
-**Technical Requirements:**
-- Extend User model in Prisma schema
-- Create server action for user creation
-- Hash passwords using bcrypt
-- Integrate with existing form validation patterns
-
-**Files to Modify:**
-- `prisma/schema.prisma` (User model)
-- `src/app/(auth)/register/page.tsx` (new)
-- `src/components/auth/RegisterForm.tsx` (new)
-- `src/lib/actions/auth.ts` (new)
-
-**Estimate:** 6 hours | AI Complexity: Medium
-**Dependencies:** Database schema update, email validation service
-```
-
-**Story 2: Login Form**
-```markdown
-**As a** returning user
-**I want** to log in with my credentials
-**So that** I can access my dashboard
-
-**Acceptance Criteria:**
-- Login form with email and password
-- "Remember me" checkbox for persistent sessions
-- "Forgot password" link
-- Invalid credential error handling
-- Rate limiting for failed attempts
-- Redirect to intended page after login
-
-**Technical Requirements:**
-- Session management with NextAuth or similar
-- Credential validation against database
-- Secure session storage
-- Integration with middleware for protected routes
-
-**Estimate:** 4 hours | AI Complexity: Low
-**Dependencies:** Story 1 (User Registration)
-```
-
-**Story 3: Protected Route Middleware**
-```markdown
-**As a** system
-**I want** to protect authenticated routes
-**So that** only logged-in users can access the dashboard
-
-**Acceptance Criteria:**
-- Middleware checks authentication status
-- Unauthenticated users redirect to login
-- Authenticated users can access protected pages
-- Login page redirects authenticated users to dashboard
-
-**Estimate:** 3 hours | AI Complexity: Low
-```
-:::
-
-**Total Feature Estimate:** 13 hours across 3 stories
-**Recommended Sprint Allocation:** 1-2 sprints depending on team capacity
+<img src={agenticScorePopover} alt="Agentic Score" style={{width: '600px'}}/>
 
 ## Step 6: Integration with Project Management
 
@@ -306,119 +196,21 @@ This is where Devplan's context engine really shines. Instead of generic prompts
 - Code patterns and conventions to follow
 - Error handling and edge case considerations
 
-### Real AI Coding Prompt Example
-
-**Generated for: User Authentication Feature**
-
-````markdown
-## Implement User Registration and Login Components
-
-**Context:** Adding authentication to Next.js 14 SaaS dashboard with existing Prisma setup and Shadcn UI components.
-
-**Files to Create/Modify:**
-```
-src/app/(auth)/
-├── login/page.tsx          # Login page
-├── register/page.tsx       # Registration page
-└── layout.tsx             # Auth layout
-
-src/components/auth/
-├── LoginForm.tsx          # Main login form
-├── RegisterForm.tsx       # Registration form
-└── AuthButton.tsx         # Reusable auth button
-
-src/lib/
-└── auth.ts               # Auth utilities
-```
-
-**Implementation Requirements:**
-1. **Form Components**: Use existing form patterns from `src/components/ui/form.tsx` and `src/lib/validations.ts`
-2. **Database Integration**: Extend existing User model in `prisma/schema.prisma` with auth fields
-3. **UI Consistency**: Follow button patterns from `src/components/ui/button.tsx` and input styling from `src/components/ui/input.tsx`
-4. **Error Handling**: Use existing toast system from `src/components/ui/use-toast.ts`
-
-**Code Patterns to Follow:**
-```typescript
-// Follow existing form validation pattern
-import { z } from "zod"
-import { useForm } from "react-hook-form"
-import { zodResolver } from "@hookform/resolvers/zod"
-
-// Use established server action pattern
-import { createUser } from "@/lib/actions/user"
-
-// Follow existing error handling
-import { toast } from "@/components/ui/use-toast"
-```
-
-**Integration Points:**
-- Integrate with existing middleware pattern in `middleware.ts`
-- Use current database connection from `lib/db.ts`
-- Follow existing API route structure in `app/api/`
-- Maintain accessibility standards with proper ARIA labels
-
-**Testing Requirements:**
-- Unit tests following patterns in `__tests__/components/`
-- Integration tests for auth flow
-- Form validation edge cases
-
-**Acceptance Criteria:**
-- [ ] Users can register with email/password
-- [ ] Login form validates and authenticates users
-- [ ] Error states are handled gracefully
-- [ ] Forms are accessible (keyboard navigation, screen readers)
-- [ ] UI matches existing design system
-````
+<img src={promptExample} alt="Prompt Example" style={{width: '600px'}}/>
 
 ## Step 8: CLI Integration
 
 ### Direct IDE Integration
-Devplan's CLI tool integrates project management with local AI-powered IDEs:
+Devplan's CLI tool integrates project management with local AI-powered IDEs. You can copy one-liner CLI commands
+directly from the prompt popover and execute them in your terminal.
 
-**⚡ Core Commands:**
-```bash
-# Focus on a specific feature in your current repository
-devplan focus
-
-# Focus with specific IDE integration
-devplan focus --ide cursor
-
-# Clone repository and focus on feature
-devplan clone --repo repository-name
-```
+<img src={cliCommands} alt="CLI commands" style={{width: '600px'}}/>
 
 **🔧 IDE Integration:**
 - Automatic context file generation for AI assistants
 - Support for multiple IDE platforms
 - Repository and feature context preservation
 - Seamless workflow integration
-
-### Real Development Flow
-
-**Starting Development with Rich Context:**
-
-```bash
-# Navigate to your project
-$ cd my-saas-app
-
-# Focus on the authentication feature
-$ devplan focus --ide cursor
-
-✓ Connecting to Devplan...
-✓ Loading project context...
-✓ Analyzing repository structure...
-✓ Retrieving feature requirements...
-✓ Generating IDE context files...
-
-📋 Feature: User Authentication System
-📁 Context files created:
-   • .cursorrules (Cursor AI configuration)
-   • .devplan/context.md (Feature context)
-   • .devplan/requirements.md (Detailed specs)
-   • .devplan/architecture.md (Technical guidance)
-
-🚀 Opening Cursor with enhanced context...
-```
 
 **What Your AI Assistant Now Knows:**
 
@@ -491,17 +283,6 @@ Devplan monitors development progress and provides real-time updates:
 - ✅ **Use CLI Workflow**: `devplan focus` saves 15-30 minutes per feature
 - ✅ **Document Learnings**: Share discoveries that could improve future estimates
 
-**Pro Tips:**
-```bash
-# Always start with context loading
-devplan focus --ide cursor
-
-# Review requirements before coding
-cat .devplan/requirements.md
-
-# Check architectural guidance
-cat .devplan/architecture.md
-```
 
 ### 🤝 For Teams
 
@@ -519,86 +300,10 @@ cat .devplan/architecture.md
 | Rework Rate | `<10%` | Measure tickets that need significant changes |
 | Context Clarity | >90% | Survey: "Did you have enough context to implement?" |
 
-## Troubleshooting Common Issues
-
-### 🔧 Context and AI Issues
-
-**Problem:** AI prompts seem generic or miss important context
-```bash
-# Check repository analysis status
-devplan repo status
-
-# Re-analyze if needed
-devplan repo refresh
-
-# Verify integration
-devplan auth status
-```
-
-**Problem:** Estimates don't match team velocity
-```markdown
-# In your completed tickets, add feedback:
-"Actual time: 8 hours (estimated 4 hours)
-Reason: Needed to refactor existing auth service"
-
-# System learns from this feedback for future estimates
-```
-
-### 🔗 Integration Issues
-
-**Linear/Jira Sync Problems:**
-
-**Check Integration Status:**
-```bash
-# Verify connection
-devplan integrations list
-
-# Test sync
-devplan sync --dry-run
-
-# Full resync if needed
-devplan sync --force
-```
-
-**Common Fixes:**
-- ✅ Verify API permissions in Linear/Jira
-- ✅ Check webhook URLs are accessible
-- ✅ Ensure project mapping is correct
-- ✅ Validate user permissions for ticket creation
-
-### 💻 CLI and Development Issues
-
-**CLI Not Working:**
-```bash
-# Check authentication
-devplan auth status
-
-# Re-authenticate if needed
-devplan logout && devplan login
-
-# Verify project linking
-devplan project info
-
-# Check you're in correct directory
-pwd  # Should be in your project root
-```
-
-**IDE Context Not Loading:**
-```bash
-# Verify context files were created
-ls .devplan/
-
-# Regenerate if missing
-devplan focus --force
-
-# Check IDE-specific files
-ls .cursorrules  # For Cursor
-ls .claude/     # For Claude Code
-```
 
 :::warning Get Help
-**Still having issues?**
-- 📧 Email: support@devplan.com
+**Having issues?**
+- 📧 Email: info@devplan.com
 - 💬 Slack: [Community Slack]
 - 📖 Docs: /troubleshooting (detailed guide)
 :::
