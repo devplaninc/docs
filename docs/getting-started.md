@@ -323,8 +323,7 @@ Devplan offers special programs for early adopters:
 
 **📋 Common Questions:**
 - **"GitHub analysis is stuck"** - Check repo permissions and size (`<1GB` works best)
-- **"CLI won't authenticate"** - Try `devplan logout && devplan auth`
-- **"Estimates seem off"** - Provide feedback on completed tasks to improve accuracy
+- **"CLI won't authenticate"** - Try `devplan auth --force`
 
 **📧 Support Channels:**
 - Email: info@devplan.com
