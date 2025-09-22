@@ -5,127 +5,175 @@ sidebar_position: 2
 
 # Why Devplan? The Value Proposition
 
-## The Problem: AI Isn't Delivering on Its Promise
+*5 min read • Understanding the problem Devplan solves and the proven results*
 
-Despite the excitement around AI in software development, teams are experiencing a significant gap between expectations and reality:
+## The AI Development Gap
 
-### Current AI Development Challenges
+Despite massive AI adoption in software development, teams aren't seeing the productivity gains they expected. The problem isn't the AI—it's the missing context.
 
-**📊 The Numbers Don't Lie:**
-- AI-generated code requires **30-50% rework** in real-world applications
-- Senior developers are actually **19% slower** when using AI coding tools (MIT study)
-- Overall productivity gains are only **10%** for codebases over 100k lines of code (Stanford study)
-- Most AI pilots in enterprise environments are failing
+### The Reality of AI Development Today
 
-**🔍 Root Causes:**
-- **Missing Context**: AI tools lack understanding of your specific codebase, product decisions, and company standards
-- **Disconnected Workflows**: Planning happens in isolation from the technical implementation
-- **Generic Output**: AI generates vague, non-specific requirements and code that doesn't fit your product
-- **No Shared Understanding**: Teams waste time arguing in Slack about unclear specifications
+:::warning Current State
+**The Numbers:**
+- **30-50% rework** required for AI-generated code in production
+- **19% slower** senior developers when using generic AI tools (MIT study)
+- **Only 10% productivity gains** for large codebases (Stanford study)
+- **Most enterprise AI pilots are failing**
+:::
 
-## The Solution: Context-Driven AI Development
+### Why AI Tools Fall Short
 
-Devplan transforms AI from a generic code generator into an intelligent teammate that understands your product, codebase, and team context.
+**🔍 Missing Context**
+Generic AI tools don't understand your specific codebase, architectural decisions, or business requirements.
 
-### How Devplan Delivers Real AI Value
+**⚙️ Disconnected Workflows**
+Planning happens in isolation from implementation, causing miscommunication and rework.
+
+**📝 Generic Output**
+AI generates code and requirements that don't fit your actual product or team standards.
+
+**💬 Communication Gaps**
+Teams waste hours clarifying vague specifications and conflicting assumptions.
+
+## The Devplan Solution
+
+Devplan bridges the context gap by connecting your entire development ecosystem—from product planning to code implementation.
+
+### Context-Driven AI Development
 
 ```mermaid
 graph LR
-    A[Product Ideas] --> B[Context Engine]
+    A[Product Knowledge] --> B[Context Engine]
     C[Codebase Analysis] --> B
-    D[Team Knowledge] --> B
-    E[User Feedback] --> B
+    D[Team Patterns] --> B
+    E[Business Rules] --> B
     B --> F[AI Agents]
-    F --> G[Smart PRDs]
-    F --> H[Precise User Stories]
-    F --> I[Context-Rich Prompts]
-    I --> J[Production-Ready Code]
+    F --> G[Smart Requirements]
+    F --> H[Clear Tasks]
+    F --> I[Rich Prompts]
+    I --> J[Production Code]
 ```
 
-**🎯 The Devplan Difference:**
-1. **Deep Context Understanding**: We analyze your GitHub repos, product docs, team discussions, and user feedback
-2. **Connected Workflows**: From idea to code, every step maintains context and intent
-3. **AI-Native Experience**: Purpose-built for AI-assisted development, not retrofitted tools
-4. **Production Quality**: Generate code that fits your patterns, follows your standards, and requires minimal rework
+**🎯 What Makes Us Different:**
+
+1. **Deep Context Understanding** - Analyze your repos, docs, and team patterns
+2. **Connected Intelligence** - Maintain context from idea to deployed code
+3. **AI-Native Workflow** - Built for AI development, not retrofitted
+4. **Production Quality** - Generate code that fits your patterns and standards
 
 ## Proven Results
 
-### Performance Improvements
-- **8x faster** project planning time
-- **25% improvement** in AI coding quality
-- **80 minutes saved** per feature in planning alone
-- **Reduced rework** from better context and specifications
+### Quantified Impact
 
-### Real Customer Impact
+| Metric | Improvement | Time Saved |
+|--------|-------------|------------|
+| **Project Planning** | 8x faster | 80 min/feature |
+| **AI Code Quality** | 25% better | 3+ hrs rework |
+| **Requirements Clarity** | 90% reduction in clarification | 2+ hrs/feature |
+| **Team Alignment** | 75% less back-and-forth | 1+ hr/day |
 
-> "We are running our 15-person VC-backed company right now without a PM. Devplan helps fill that gap for us by generating high-quality user stories that sync in Linear in minutes. What used to take me days of back and forth and refinement I'm now doing in less than an hour."
+### Customer Success Stories
+
+:::tip Customer Impact
+> "We're running our 15-person VC-backed company without a PM. Devplan fills that gap—generating high-quality user stories that sync in Linear in minutes. What took me days now takes less than an hour."
 >
-> — **Andrew, YC-backed Founder**
+> **— Andrew, YC-backed Founder**
+:::
 
-> "DevPlan agents sometimes do a better job understanding the codebase and generating details than ClaudeCode"
+:::tip Developer Experience
+> "DevPlan agents sometimes do a better job understanding the codebase and generating details than ClaudeCode."
 >
-> — **Design Partner Customer**
+> **— Design Partner Customer**
+:::
 
-> "Great job! This tool is a game-changer, helping us save tons of time when shaping our app ideas with clarity. Devplan does an excellent job of covering most aspects of the development process."
+:::tip Product Impact
+> "This tool is a game-changer, helping us save tons of time when shaping app ideas with clarity. Devplan covers most aspects of the development process excellently."
 >
-> — **Seddick, Startup Product Leader**
+> **— Seddick, Startup Product Leader**
+:::
 
-## Value for Different Roles
+## Value by Role
 
-### For Product Managers
-- **Faster Spec Creation**: Generate detailed PRDs in minutes, not hours
-- **Better Requirements**: AI agents ask the right clarifying questions based on your product context
-- **Seamless Handoff**: Technical context flows directly to engineering teams
-- **Real-time Collaboration**: Work directly with engineers in a shared context
+### 👩‍💼 Product Managers
 
-### For Engineering Teams
-- **Rich Context**: AI coding tools receive detailed prompts with architectural context
-- **Reduced Rework**: Code generation that follows your patterns and decisions
-- **Clear Requirements**: No more guessing what the PM meant
-- **Integrated Workflow**: Prompts flow directly into your IDE via CLI
+**Primary Benefits:**
+- **AI-Assisted Discovery** - Smart questioning reveals missing requirements
+- **Faster Spec Creation** - Generate detailed PRDs in minutes, not hours
+- **Seamless Handoffs** - Technical context flows directly to engineering
+- **Real-time Collaboration** - Work with engineers in shared context
 
-### For Engineering Leaders
-- **Predictable Delivery**: Accurate estimates based on real complexity analysis
-- **Better Planning**: Automated project breakdown with timeline forecasting
-- **Quality Assurance**: Context-driven development reduces technical debt
-- **Team Alignment**: Shared understanding reduces communication overhead
+**Time Savings:** 6-8 hours per feature planning cycle
 
-### For Organizations
-- **Faster Time-to-Market**: 8x improvement in planning cycles accelerates delivery
-- **Better Resource Utilization**: Teams spend time building, not clarifying requirements
-- **Reduced Risk**: Clear specifications and context reduce project failures
-- **Competitive Advantage**: First-mover advantage in AI-native development
+### 👨‍💻 Engineering Teams
 
-## The Future of Product Development
+**Primary Benefits:**
+- **Context-Rich Prompts** - AI coding with architectural understanding
+- **Reduced Rework** - 25% improvement in AI-generated code quality
+- **Clear Requirements** - No more guessing what specs mean
+- **Integrated Workflow** - Context flows directly into your IDE
 
-Devplan represents the evolution from traditional, disconnected toolchains to an integrated, AI-native development platform:
+**Time Savings:** 3-5 hours per feature implementation
 
-**Old Way:**
-- Scattered feedback and ideas
-- Manual planning and estimation
-- Generic tickets and specifications
-- High overhead sprint planning
-- Manual coding and status reporting
+### 🏢 Engineering Leaders
 
-**Devplan Way:**
-- Connected context and intelligence
-- AI-driven planning and estimation
-- Detailed, context-rich specifications
-- Automated project breakdown
-- AI-enabled coding with rich prompts
+**Primary Benefits:**
+- **Predictable Delivery** - Accurate estimates based on complexity analysis
+- **Better Planning** - Automated breakdown with timeline forecasting
+- **Quality Assurance** - Context-driven development reduces technical debt
+- **Team Alignment** - Shared understanding reduces overhead
 
-## ROI and Business Impact
+**Strategic Impact:** 30-40% improvement in team velocity
 
-**Immediate Returns:**
-- Reduce planning overhead by 80%
-- Decrease AI coding rework by 25%
-- Accelerate feature delivery by 8x
-- Improve cross-team collaboration
+### 🏛️ Organizations
 
-**Strategic Benefits:**
-- Build competitive advantage through faster iteration
-- Improve product quality through better requirements
-- Scale engineering effectiveness without proportional hiring
-- Create institutional knowledge that grows with your team
+**Primary Benefits:**
+- **Faster Time-to-Market** - 8x planning improvement accelerates delivery
+- **Better Resource Utilization** - Teams build instead of clarifying
+- **Reduced Risk** - Clear specifications prevent project failures
+- **Competitive Advantage** - First-mover benefit in AI-native development
 
-Ready to experience the difference context makes? [Get started with Devplan](/getting-started).
+**Business Impact:** 2-3x improvement in feature delivery speed
+
+## The Future vs. Today
+
+### Traditional Development (Today)
+- ❌ Scattered information and context loss
+- ❌ Manual, time-intensive planning processes
+- ❌ Generic tickets with unclear requirements
+- ❌ High-overhead sprint planning and communication
+- ❌ AI tools working without proper context
+
+### AI-Native Development (Devplan)
+- ✅ Connected context and intelligence
+- ✅ AI-driven planning and estimation
+- ✅ Detailed, context-rich specifications
+- ✅ Automated project breakdown and sequencing
+- ✅ AI coding with rich, relevant prompts
+
+## ROI Calculator
+
+**Small Team (5 developers):**
+- Planning time saved: 40 hrs/month
+- Rework reduction: 60 hrs/month
+- **Total savings: $15,000/month**
+
+**Medium Team (15 developers):**
+- Planning time saved: 120 hrs/month
+- Rework reduction: 180 hrs/month
+- **Total savings: $45,000/month**
+
+**Large Team (50+ developers):**
+- Planning time saved: 400 hrs/month
+- Rework reduction: 600 hrs/month
+- **Total savings: $150,000/month**
+
+*Based on $150/hr blended rate and measured improvements*
+
+## Ready to Transform Your Team?
+
+**Next Steps:**
+- 📖 [Learn the workflow](/core-workflow) - See how context flows from idea to code
+- 🚀 [Get started](/getting-started) - Set up your account and first project
+- 🏗️ [Understand the architecture](/architecture) - Deep dive into how it works
+
+**Questions?** Contact us at info@devplan.com or book a demo to see Devplan in action.

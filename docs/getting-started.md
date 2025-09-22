@@ -5,195 +5,221 @@ sidebar_position: 4
 
 # Getting Started with Devplan
 
-Welcome to Devplan! This guide will walk you through setting up your account, configuring integrations, and creating your first AI-powered product development workflow.
+*15 min setup • Complete guide to account setup and your first project*
 
-## Account Setup
+Welcome to Devplan! This guide will get you from zero to your first AI-powered feature in under 30 minutes.
 
-### 1. Create Your Account
-1. Visit [devplan.com](https://devplan.com) and sign up
-2. Choose your pricing plan:
-   - **Starter**: $19/user + AI credits (perfect for small teams and agencies)
-   - **Professional**: $49/user + AI credits (for growing product teams)
-3. Verify your email and complete your profile
+## Quick Setup Overview
 
-### 2. Create Your Company
-1. Set up your company profile with:
-   - **Product Vision**: What your product does and who it serves
-   - **Target Users**: Who will use the product (e.g., startup founders, PMs, engineers)
-   - **Tech Stack**: Your current stack (e.g., Next.js, React, Tailwind, Postgres, FastAPI)
-   - **Company Details**: Team size, stage, budget, priorities
-   - **Constraints**: MVP focus, no enterprise/security needs, etc.
-2. Connect your GitHub repositories for technical analysis
-3. Add company documentation and standards to the knowledge section
+**Total Time: ~15 minutes**
 
-## Essential Integrations
+✅ **Account Setup** (2 min) → ✅ **GitHub Integration** (3 min) → ✅ **CLI Installation** (5 min) → ✅ **First Project** (5 min)
 
-### GitHub Integration (Required)
-Connect your repositories to enable codebase analysis and context generation:
+:::tip Choose Your Path
+🚀 **Fast Track (5 min):** Account + GitHub + CLI → Start building immediately
 
-1. **Navigate to Settings** → Integrations → GitHub
-2. **Authorize Devplan** to access your repositories
-3. **Select Repositories** you want to analyze (up to 10 repos per company, or 2 during free trial)
-4. **Wait for Analysis** (this may take a few minutes for large codebases)
-
-:::tip What gets analyzed?
-Devplan analyzes your code structure, patterns, dependencies, and architectural decisions. Only summary metadata is used - no source code is stored. Refresh the GitHub connection if your code changes significantly.
+🏢 **Complete Setup (15 min):** All integrations + team setup + first project
 :::
 
-### Project Management Integration
-Connect your existing workflow tools:
+## Step 1: Account Setup
 
-#### Linear Setup
-1. Go to **Integrations** → Linear
-2. Generate an API key in your Linear settings
-3. Configure workspace and team mapping
-4. Set up bi-directional sync preferences
+**Time: 2 minutes**
 
-#### Jira Setup
-1. Navigate to **Integrations** → Jira
-2. Provide your Jira instance URL
-3. Create an API token with appropriate permissions
-4. Map projects and issue types
+### Create Your Account
 
-### Optional Integrations
+1. **Sign Up** at [devplan.com](https://devplan.com)
+   - Google SSO for fastest setup
+   - Or magic-link login with email
 
-#### Slack Integration
-- Get notifications about project updates
-- Share planning results with your team
-- Quick access to Devplan from Slack channels
+2. **Choose Plan** (can change later):
+   ```
+   👥 Starter: $19/user + AI credits
+   ✅ Perfect for: Small teams, agencies, startups
 
-#### Notion/Confluence
-- Import existing documentation and requirements
-- Keep product specs synchronized
-- Maintain single source of truth
-
-## CLI Installation
-
-The Devplan CLI integrates Devplan project management with local AI-powered IDEs, enabling you to clone repositories with feature context and focus on specific development tasks.
-
-### Installation
-
-**Direct Installation (Recommended)**
-```bash
-/bin/bash -c "$(curl -fsSL https://app.devplan.com/api/cli/install)"
-```
-
-**Homebrew Installation**
-```bash
-brew tap devplaninc/devplan
-brew install devplan
-```
-
-:::note Homebrew vs Direct Installation
-The Homebrew version has auto-update functionality disabled. Use `brew upgrade devplan` to update. The direct installation includes auto-update capabilities via `devplan update`.
-:::
-
-### Authentication
-
-```bash
-# Authenticate with your Devplan account
-devplan auth
-```
-
-### Core Commands
-
-**Focus on a Feature**
-```bash
-# Focus on a specific feature in your current repository
-devplan focus
-
-# Focus with specific IDE
-devplan focus --ide cursor
-```
-
-**Clone and Start Development**
-```bash
-# Clone a repository and focus on a feature
-devplan clone --repo repository-name
-
-# Clone and immediately start development
-devplan clone --repo repository-name --start
-```
-
-**Utility Commands**
-```bash
-# Check CLI version
-devplan version
-
-# Update CLI to latest version
-devplan update
-
-# Clean up prompt files
-devplan clean
-
-# Reset preferences
-devplan prefs reset
-```
-
-## Your First Project
-
-### Step 1: Create a New Project
-
-1. **Click "New Project"** in your Devplan dashboard
-2. **Choose Your Project Type**:
-   - **MVP**: For brand new products (includes tech stack setup, goal and problem space definition)
-   - **Initiative**: For larger efforts within existing products (multiple features over a week or more)
-   - **Feature**: For smaller, focused improvements (usually completable in 1-3 days)
-3. **Configure Project Settings**:
-   - Link to GitHub repository
-   - Set project management integration
-   - Define team members and roles
-
-### Step 2: Start with a Simple Feature
-
-Let's create a user authentication feature as your first Devplan experience:
-
-1. **Click "New Feature"** in your project
-2. **Enter Your Idea**: "Add user login and registration functionality"
-3. **Work with the Planning Agent**:
-
-The agent will ask questions like:
-- "What authentication method do you prefer? (email/password, OAuth, etc.)"
-- "I see you're using React. Should we integrate with your existing routing setup?"
-- "Do you need password reset functionality?"
-- "What user data should we collect during registration?"
-
-### Step 3: Review Generated PRD
-
-After the discovery session, review the generated Product Requirements Document:
-
-- ✅ **Check Requirements**: Ensure all features are captured correctly
-- ✅ **Review Technical Specs**: Verify the proposed architecture fits your needs
-- ✅ **Validate User Stories**: Confirm acceptance criteria make sense
-- ✅ **Approve Estimates**: Review time and complexity assessments
-
-### Step 4: Generate Development Tasks
-
-1. **Click "Create Build Plan"** to generate user stories
-2. **Review Task Breakdown**: Each story includes:
-   - Detailed acceptance criteria
-   - Technical implementation notes
-   - Time estimates
-   - AI complexity ratings
-3. **Sync with Your Project Management Tool**: Push stories to Linear or Jira
-
-### Step 5: Start Development with AI
-
-1. **Use the CLI** to focus on your feature:
-   ```bash
-   devplan focus --ide cursor
+   📈 Professional: $49/user + AI credits
+   ✅ Perfect for: Growing product teams, scale-ups
    ```
 
-2. **Work with Your AI Coding Assistant**:
-   - The CLI automatically generates context files for your IDE
-   - Open your preferred AI-powered IDE (Cursor, Claude Code, etc.)
-   - Start implementing with rich context and guidance about your specific codebase
+3. **Quick Profile Setup**:
+   - Company name and role
+   - Primary tech stack (we'll analyze your repos for details)
+   - Team size estimate
 
-3. **Context is Automatically Provided**:
-   - Repository structure and patterns
-   - Feature requirements and specifications
-   - Integration points and dependencies
-   - Code conventions and standards
+:::note Free Trial
+**14-day free trial** includes:
+- 2 repository analyses
+- Unlimited projects and features
+- Full CLI access
+- Access to a subset generated prompts for testing. 
+:::
+
+## Step 2: GitHub Integration (Optional, but high recommended)
+
+**Time: 3 minutes**
+
+### Connect Your Repository
+
+**Why this matters:** Devplan analyzes your codebase to understand patterns, architecture, and conventions. 
+This enables AI to generate code that actually fits your project.
+
+```bash
+1. Settings → Integrations → GitHub
+2. "Connect GitHub Account" → Authorize Devplan
+3. Select repositories to analyze (start with 1-2 main repos)
+4. Click "Start Analysis"
+```
+
+**Analysis Progress:**
+```
+⌛ Analyzing repository structure...
+⌛ Detecting frameworks and patterns...
+⌛ Understanding component architecture...
+✓ Analysis complete! (2-5 minutes for most repos)
+```
+
+:::tip Repository Analysis
+**What's Analyzed:**
+- ✅ Framework and tech stack detection
+- ✅ Component patterns and conventions
+- ✅ Database schemas and API structures
+- ✅ Testing and build configurations
+
+**What's NOT Stored:**
+- ❌ Your actual source code
+- ❌ Sensitive data or credentials
+- ❌ Business logic details
+:::
+
+## Step 3: Project Management Integration (Optional)
+
+**Time: 2 minutes each • Can skip and do later**
+
+### Quick Setup Options
+
+**Linear (Recommended):**
+1. Connect Linear in `Settings → Integrations → Linear`
+
+**Jira:**
+1. Install [Devplan Jira Atlassian](https://developer.atlassian.com/console/install/cd539bc3-11b5-4b71-a82d-d8af831435a1?signature=AYABeETqleNeikM5CMnAxz%2B755IAAAADAAdhd3Mta21zAEthcm46YXdzOmttczp1cy1lYXN0LTE6NzA5NTg3ODM1MjQzOmtleS83ZjcxNzcxZC02OWM4LTRlOWItYWU5Ny05MzJkMmNhZjM0NDIAuAECAQB4KVgoNesMySI2pXEz4J5S%2B4but%2FgpPvEEG0vL8V0Jz5cBPXqIpFHwuylgGhQUrD7WFAAAAH4wfAYJKoZIhvcNAQcGoG8wbQIBADBoBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDJcRfkjl7WpHMarLtAIBEIA7mc2prFXlHJjTKbDnNcpmzeACyi2tBtMq3hVrGHdh2akO5mTfwz%2BBy6EHr6bPeNKoM2L60HHHIemHrDIAB2F3cy1rbXMAS2Fybjphd3M6a21zOmV1LXdlc3QtMTo3MDk1ODc4MzUyNDM6a2V5LzU1OWQ0NTE2LWE3OTEtNDdkZi1iYmVkLTAyNjFlODY4ZWE1YwC4AQICAHig7hOcRWe1S%2BcRRsjD9q0WpZcapmXa1oPX3jm4ao883gF4Eo5GpaFrAlXkpsEWdYNKAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMn%2FqaVxEv1dTfPdUbAgEQgDuBVtVlNMJJ47vMCa7oWNLyN%2BfRjcnRrVN%2BiX%2BjGQnibmcqInsNVcfBzPugUtVZ6PNUkDRe%2Bsgm7urUPgAHYXdzLWttcwBLYXJuOmF3czprbXM6dXMtd2VzdC0yOjcwOTU4NzgzNTI0MzprZXkvM2M0YjQzMzctYTQzOS00ZmNhLWEwZDItNDcyYzE2ZWRhZmRjALgBAgIAeBeusbAYURagY7RdQhCHwxFswh7l65V7cwKp%2BDc1WGoHAVlLDoEvXPFCxzm%2FW5nVIsQAAAB%2BMHwGCSqGSIb3DQEHBqBvMG0CAQAwaAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAwoTaqw7IFZWPAYzAYCARCAO3gE%2FMvECQjfUjr0lqu2N5T%2FdiuIAKtBgtXKQypXXfHqYzmqbMPGvL5WjVe8MxHYmGyUnpK0jog1ssaRAgAAAAAMAAAQAAAAAAAAAAAAAAAAAOYf7d4xRr3RzSZt2Jc8A%2Fr%2F%2F%2F%2F%2FAAAAAQAAAAAAAAAAAAAAAQAAADJtmNORi7b8ozuX4AmbPzgLt1wtlQC7ySPPBb8KDvfFhFGzE9BK0iAxszz6eCbUaX2oBe%2FkWOBdho%2BVmvPIwCsBVUY%3D&product=jira) application.
+2. Connect or re-connect Jira from the `Settings -> Integrations` screen
+
+:::note Why Integrate?
+**Project management sync enables:**
+- ✅ Automatic ticket creation from user stories
+- ✅ Real-time status updates
+- ✅ Context links between tickets and requirements
+- ✅ Sprint planning with Devplan estimates
+:::
+
+## Step 3: CLI Installation (Optional, recommended for working with codign prompts)
+
+**Time: 2 minutes • Brings Devplan context directly into your IDE**
+
+### Install the CLI
+
+**Option 1: Homebrew (Recommended)**
+```bash
+# Manual updates required
+brew tap devplaninc/devplan && brew install devplan
+```
+
+**Option 2: Direct Install**
+```bash
+# One-command install with auto-updates
+curl -fsSL https://app.devplan.com/cli/install | bash
+```
+
+### Quick Setup
+
+```bash
+# 1. Authenticate
+devplan auth
+
+# 2. Verify installation
+devplan version
+```
+
+## Step 4: Your First Project
+
+**Time: 10-20 minutes to create for the full cycle**
+
+### Create a Project
+
+**Quick Start:**
+```
+1. Devplan → "New Project"
+2. Enter project details.
+3. Work through the flow.
+```
+
+### Try Your First Feature
+
+**Let's build a simple feature together:**
+
+**Input:** "Add a contact form to our landing page"
+
+**What happens next:**
+
+:::note AI Discovery Session
+**Devplan Agent:** "I see this is a Next.js project with Tailwind CSS. For the contact form:
+
+1. Should this send emails directly, or save to a database?
+2. What fields do you need? (Name, email, message, company?)
+3. I notice you're using Shadcn components. Should the form match that style?
+4. Do you need any validation or spam protection?
+5. Where should users go after submitting?"
+
+**You:** "Send emails via our existing email service, include name/email/message, yes use Shadcn, add basic validation, show a success message."
+
+**Agent:** "Perfect! I'll create a feature spec with those requirements."
+:::
+
+### Review Your Generated Plan
+
+**PRD Generated (2 minutes):**
+✅ Feature overview and business requirements
+✅ Technical implementation using your existing patterns
+✅ User stories with acceptance criteria
+✅ Time estimates based on your codebase complexity
+
+**Sample User Stories:**
+```markdown
+Story 1: Contact Form Component (3 hours)
+- Form with name, email, message fields
+- Shadcn Input and Button components
+- Zod validation schema
+- Loading and error states
+
+Story 2: Email Service Integration (2 hours)
+- Server action for form submission
+- Integration with existing email service
+- Success/error response handling
+
+Total Estimate: 5 hours
+```
+
+### Start Development
+
+**Use the CLI to get context:**
+1. Open "Coding Prompts" tab.
+2. Click `Clone` or `Focus` buttons which will copy corresponding CLI commands to your clipboard.
+3. Run the commands in your terminal.
+4. Ask AI IDE to implement current feature.
+
+**Your AI assistant now knows:**
+- ✓ Your Next.js project structure
+- ✓ Shadcn component patterns you use
+- ✓ Existing form validation approaches
+- ✓ Email service integration details
+- ✓ Specific files to create/modify
+
+:::tip First Feature Success
+**Typical first feature results:**
+- ✅ Implementation matches your existing code style
+- ✅ AI suggestions are relevant to your project
+- ✅ Less back-and-forth clarification needed
+- ✅ Code reviews focus on business logic, not style
+:::
 
 ## Team Collaboration
 
@@ -215,7 +241,7 @@ Devplan offers special programs for early adopters:
 - **2 months free** for up to 10 users
 - **1:1 support** and priority feature requests
 - **Bi-weekly feedback sessions** with the product team
-- **50% discount** after trial period
+- **Meaningful discount** after trial period
 - **No hard commitment** required
 
 ## Common Workflows
@@ -238,64 +264,84 @@ Devplan offers special programs for early adopters:
 3. **Daily standups** with automated status reports
 4. **Retrospectives** with built-in analytics and insights
 
-## Best Practices
+## Quick Wins and Best Practices
 
-### Setting Up for Success
+### Week 1: Get Your Bearings
 
-1. **Complete Repository Analysis**: Ensure all relevant repositories are connected and analyzed
-2. **Maintain Documentation**: Keep company standards and patterns up to date
-3. **Regular Sync**: Set up webhook integrations for real-time updates
-4. **Team Training**: Ensure all team members understand the workflow
+**Day 1-2: Setup and First Feature**
+- ✅ Complete account and GitHub setup
+- ✅ Try one simple feature end-to-end
+- ✅ Install and test CLI workflow
+
+**Day 3-7: Build Confidence**
+- ✅ Create 2-3 more features of varying complexity
+- ✅ Set up project management integration
+- ✅ Invite team members to collaborate
 
 ### Maximizing Value
 
-1. **Detailed Discovery**: Take time during the planning phase to provide context
-2. **Iterative Improvement**: Use feedback loops to improve estimates and processes
-3. **Cross-functional Collaboration**: Include both PM and engineering perspectives
-4. **Continuous Learning**: Document what works and refine your approach
+**For Product Managers:**
+```
+✅ Spend extra time in discovery phase - AI questions reveal edge cases
+✅ Review generated PRDs carefully - they often catch missing requirements
+✅ Use AI review feature to validate completeness
+✅ Link related features and existing user flows
+```
 
-## Troubleshooting
+**For Engineers:**
+```
+✅ Always use `devplan focus` before starting work
+✅ Provide estimate feedback to improve future planning
+✅ Update architectural patterns when they change
+✅ Share learnings that could help teammates
+```
 
-### Integration Issues
+**For Teams:**
+```
+✅ Start with small features to build confidence
+✅ Include both PM and eng in discovery sessions
+✅ Track time savings and quality improvements
+✅ Gradually expand to larger, more complex features
+```
 
-**GitHub Analysis Stuck**
-- Check repository permissions
-- Ensure the repository isn't too large (>1GB)
-- Contact support if analysis doesn't complete within 30 minutes
 
-**Linear/Jira Sync Problems**
-- Verify API permissions
-- Check webhook configurations
-- Ensure project mapping is correct
+## You're Ready! Next Steps
 
-**CLI Authentication Errors**
-- Run `devplan logout` then `devplan login`
-- Check your internet connection
-- Verify your account is active
+### Immediate Actions
 
-### Common Questions
+**🚀 Start Building**
+- Create your first feature using the contact form example above
+- Try the complete workflow: discovery → PRD → tasks → CLI → development
+- Measure the time savings vs. your usual process
 
-**Q: Can I use Devplan with private repositories?**
-A: Yes, Devplan supports private repositories with proper permissions.
+**📚 Learn More**
+- **[Core Workflow](/core-workflow)** - Detailed walkthrough with examples
+- **[Architecture](/architecture)** - How Devplan works under the hood
+- **[Value Proposition](/value-proposition)** - Business case and ROI
 
-**Q: How long does repository analysis take?**
-A: Analysis typically completes within 5-10 minutes for most repositories.
+### Getting Help
 
-**Q: Can I customize the PRD templates?**
-A: Yes, enterprise plans include template customization options.
+**📋 Common Questions:**
+- **"GitHub analysis is stuck"** - Check repo permissions and size (`<1GB` works best)
+- **"CLI won't authenticate"** - Try `devplan logout && devplan auth`
+- **"Estimates seem off"** - Provide feedback on completed tasks to improve accuracy
 
-**Q: Does Devplan work with monorepos?**
-A: Yes, Devplan can analyze and work with monorepo structures.
+**📧 Support Channels:**
+- Email: info@devplan.com
+- Documentation: Detailed troubleshooting guide
 
-## Next Steps
+### Share Your Success
 
-Now that you're set up:
+**📈 Track Your Results:**
+- Time saved in planning phase
+- Reduction in clarification requests
+- Improvement in AI code quality
+- Overall feature delivery speed
 
-1. **Explore the [Core Workflow](/core-workflow)** to understand the complete development process
-2. **Review [Architecture Documentation](/architecture)** to understand how Devplan works
-3. **Join our community** for tips, best practices, and feature updates
-4. **Provide feedback** to help us improve the platform
+**We'd love to hear about your experience!** Share your results at success@devplan.com
 
-Need help? Contact our support team at info@devplan.com.
+---
 
-Ready to transform your development process? Start building your first feature!
+**Ready to transform your development process?** 🚀
+
+Start with a simple feature and experience the difference context-driven development makes.
