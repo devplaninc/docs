@@ -11,8 +11,8 @@ Unlike generic AI tools, Devplan maintains context throughout your entire develo
 ## Platform Overview
 
 **🎯 The Problem We Solve**
-Traditional development workflows lose context at every handoff, resulting in miscommunication, rework, 
-and AI tools that generate code without understanding your specific needs.
+Traditional development workflows lack guidance and lose context at every handoff, resulting in miscommunication, rework, 
+and AI tools that generate code without understanding your specific needs and preferences.
 
 **⚡ The Devplan Solution**
 Context-driven workflows that preserve business intent, technical architecture, and implementation 
