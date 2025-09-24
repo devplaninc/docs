@@ -9,28 +9,24 @@ const config: Config = {
   tagline: 'AI-Native Product Development for Modern Teams',
   favicon: 'img/Logo-Closed.svg',
 
-  // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
+  // Future flags for improved compatibility
   future: {
-    v4: true, // Improve compatibility with the upcoming Docusaurus v4
+    v4: true,
   },
 
-  // Set the production url of your site here
+  // Production URL for the documentation site
   url: 'https://test-docs.devplan.com',
-  // Set the /<baseUrl>/ pathname under which your site is served
-  // For GitHub pages deployment, it is often '/<projectName>/'
+  // Base URL pathname for the site
   baseUrl: '/',
 
-  // GitHub pages deployment config.
-  // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'devplaninc', // Usually your GitHub org/user name.
-  projectName: 'docs', // Usually your repo name.
+  // Deployment configuration
+  organizationName: 'devplaninc',
+  projectName: 'docs',
 
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+  // Internationalization configuration
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -44,7 +40,7 @@ const config: Config = {
           sidebarPath: './sidebars.ts',
           routeBasePath: '/', // Serve the docs at the site's root
         },
-        blog: false, // Disable the blog plugin
+        blog: false, // Blog functionality disabled
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -59,7 +55,7 @@ const config: Config = {
   },
 
   themeConfig: {
-    image: 'img/docusaurus-social-card.jpg',
+    image: 'img/Logo-Closed.svg',
     navbar: {
       title: 'Devplan',
       logo: {
