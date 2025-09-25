@@ -15,7 +15,7 @@ const config: Config = {
   },
 
   // Production URL for the documentation site
-  url: 'https://test-docs.devplan.com',
+  url: 'https://docs.devplan.com',
   // Base URL pathname for the site
   baseUrl: '/',
 
