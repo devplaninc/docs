@@ -18,6 +18,7 @@ const sidebars: SidebarsConfig = {
         'value-proposition',
         'core-workflow',
         'architecture',
+        'access-control',
         'customer-success-story',
       ],
     },
