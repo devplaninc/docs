@@ -25,11 +25,11 @@ some extra tooling for orchestration, status reporting, cloning code, etc.
 
 ### Input Specs
 Input specs include **Product Brief**, **Technical Brief**, **User Stories** and **Tasks**. These specs
-are produced by Devplan as part of a project and server as an input to the SDD workflow.
+are produced by Devplan as part of a project and serve as an input to the SDD workflow.
 
 ### Output Specs
 Output specs include any information produced while a task is being implemented. They typically include 
-**research results** covering research of the code based performed before execution starts; **detailed plan** for
+**research results** covering research of the codebase performed before execution starts; **detailed plan** for
 the code implementation for a task; **coding notes** highlighting affected areas, challenges, areas of attention, etc;
 **AI code review notes** holding AI-generated feedback about the implementation. 
 
@@ -44,7 +44,7 @@ Devplan provides a comprehensive autonomous development workflow that takes your
 research through final implementation and code review. The system operates through a series of interconnected 
 commands that work together to autonomously deliver high-quality code implementations.
 
-Default SDD worfkflow consists of the following steps:
+The default SDD workflow consists of the following steps:
 
 1. **Research**: Systematically investigates your codebase to understand implementation requirements
 2. **Planning**: Creates detailed implementation plans based on research findings
@@ -66,9 +66,9 @@ brew install devplaninc/devplan/devplan
 
 ### Prerequisites
 
-1. You have Devplan CLI install.
+1. You have Devplan CLI installed.
 2. You have ClaudeCode installed and logged in.
-3. You have a project created in Devplan and task for the User Stories are generated.
+3. You have a project created in Devplan and tasks for the User Stories are generated.
 
 ### Start Implementation
 
