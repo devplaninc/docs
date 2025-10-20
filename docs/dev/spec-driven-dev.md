@@ -11,7 +11,7 @@ import worklogModal from '../assets/screenshots/worklog_modal.png';
 
 Devplan provides a scalable, easy-to-use workflow for spec-driven development. This document describes how it works.
 
-## Overview: Core Concepts
+## Main Concepts
 
 1. **Specs**: include documents used as an input into the SDD flow as well as docs produced as an output of
 the implementation.
