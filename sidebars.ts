@@ -28,6 +28,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'getting-started',
+        'dev/spec-driven-dev',
       ],
     },
   ],
