@@ -94,6 +94,26 @@ can see in the UI.
    <img src={taskWorklogBadge} alt="Example banner" style={{width: '600px'}}/>
    
    <img src={worklogModal} alt="Example banner" style={{width: '600px'}}/>
+
+## FAQ
+
+### Why are these specific commands provisioned?
+
+Devplan's version of SDD comes with a set of AI IDE commands reflecting best practices for software development that
+existed for decades now. A software engineer (whether human or AI) should understand the problem space first and
+familizarize themselves with the existing solution, then plan which areas of the codebase need to be updated, 
+then implement the code with proper tests coverage. After that, the code needs to be reviewed and any important issues
+should be addressed. That's exactly the flow that Devplan provides.
+
+In addition to that, AI now allows to capture all the important steps, findings and decision automatically and store
+them along with the codebase.
+
+### Why should all the output specs be committed?
+
+While committing output specs is not strictly necessary, they provide invaluable context for AI agent to iterate on.
+E.g. if output specs for implementing V1 of a feature are committed, they will allow AI agent to know exactly how
+V1 was approached, what were the challenges and decisions made. Which in turn will lead to the higher quality of
+decisions while implementing V2 of the feature.
    
 
 ## 📚 Learn More
