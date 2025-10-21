@@ -36,7 +36,7 @@ the code implementation for a task; **coding notes** highlighting affected areas
 ## AI Coding Agent
 
 As of now, Devplan only supports [ClaudeCode](https://www.claude.com/product/claude-code) as an AI coding agent for the
-SDD workflow
+SDD workflow.
 
 ## SDD Workflow
 
@@ -101,11 +101,11 @@ can see in the UI.
 
 Devplan's version of SDD comes with a set of AI IDE commands reflecting best practices for software development that
 existed for decades now. A software engineer (whether human or AI) should understand the problem space first and
-familizarize themselves with the existing solution, then plan which areas of the codebase need to be updated, 
+familiarize themselves with the existing solution, then plan which areas of the codebase need to be updated,
 then implement the code with proper tests coverage. After that, the code needs to be reviewed and any important issues
 should be addressed. That's exactly the flow that Devplan provides.
 
-In addition to that, AI now allows to capture all the important steps, findings and decision automatically and store
+In addition to that, AI now allows to capture all the important steps, findings and decisions automatically and store
 them along with the codebase.
 
 ### Why should all the output specs be committed?
