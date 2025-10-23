@@ -25,7 +25,23 @@ some extra tooling for orchestration, status reporting, cloning code, etc.
 
 ### Input Specs
 Input specs include **Product Brief**, **Technical Brief**, **User Stories** and **Tasks**. These specs
-are produced by Devplan as part of a project and serve as an input to the SDD workflow.
+are produced by Devplan as part of a project and serve as an input to the SDD workflow. 
+
+Specific input specs produced by Devplan:
+- `[Project]/prd.md` - latest version of the Product Brief for a project
+- `[Project]/tech_brief.md` - latest version of the Technical Brief for a project
+- `[Project]/[Story]/requirements.md` - user story requirements
+- `[Project]/[Story]/[Task]/requirements.md` - high level task requirements
+- `[Project]/[Story]/[Task]/instructions.md` - detailed task instructions
+
+Per-task `instructions.md` file is where a lot of interesting things will be mentioned:
+1. Areas that need to be researched before code implementation.
+2. Other projects, stories and tasks this task is based on, which allows the agent to quickly gather context about
+   how the previous versions of the related functionality were implemented.
+3. General guidelines about testing, scoping and relevant code areas.
+
+All the Input Specs combined allow AI coding agent to ramp up very quickly and deliver a focused implementation based
+on previous learnings.
 
 ### Output Specs
 Output specs include any information produced while a task is being implemented. They typically include 
@@ -33,26 +49,34 @@ Output specs include any information produced while a task is being implemented.
 the code implementation for a task; **coding notes** highlighting affected areas, challenges, areas of attention, etc;
 **AI code review notes** holding AI-generated feedback about the implementation. 
 
-### Example Specs:
+Specific output specs produced by the AI coding agent:
+- `[Project]/[Story]/[Task]/research.md` - learnings from initial task research
+- `[Project]/[Story]/[Task]/plan.md` - detailed coding plan for a task
+- `[Project]/[Story]/[Task]/code.md` - learnings from the coding phase (e.g. how some parts were implemented, of parts 
+ of the requirements were skipped due to issues, how code review was addressed, etc.)
+- `[Project]/[Story]/[Task]/review.md` - automatic code review feedback
+- `[Project]/[Story]/[Task]/findings.md` - full implementation analysis and important findings.
+
+### Illustration of the Specs:
 
 ```bash
 specs
-├── <Project 1>
-│   ├── <User Story 1>
-│   │   ├── <Task 1.1>           # Implemented task:
+├── [Project 1]
+│   ├── [User Story 1]
+│   │   ├── [Task 1.1]           # Implemented task:
 │   │   │   ├── requirements.md  #  input : high level task requirements
-│   │   │   ├── instructions.md  #  input : detailed task instructions.
+│   │   │   ├── instructions.md  #  input : detailed task instructions
 │   │   │   ├── research.md      #  output: learnings from initial task research
 │   │   │   ├── plan.md          #  output: detailed coding plan
 │   │   │   ├── code.md          #  output: learnings from the coding phase
 │   │   │   ├── review.md        #  output: code review results
 │   │   │   └── findings.md      #  output: full implementation analysis and important findings.
-│   │   ├── <Task 1.2>           # Not implemented task             
+│   │   ├── [Task 1.2]           # Not implemented task             
 │   │   │   ├── instructions.md
 │   │   │   └── requirements.md
 │   │   └── requirements.md      # input : user story requirements
-│   ├── <User Story 2>
-│   │   ├── <Task 2.1>
+│   ├── [User Story 2]
+│   │   ├── [Task 2.1]
 │   │   │   ├── instructions.md
 │   │   │   └── requirements.md
 │   │   └── requirements.md
@@ -60,15 +84,6 @@ specs
 │   └── tech_brief.md            # input : technical requirements for a project
 └── focus.md                     # input : description of the current task AI agent should focus on
 ```
-
-Per-task `instructions.md` file is where a lot of interesting things will be mentioned:
-1. Areas that need to be researched before code implementation.
-2. Other projects, stories and tasks this task is based on, which allows the agent to quickly gather context about
-how the previous versions of the related functionality were implemented.
-3. General guidelines about testing, scoping and relevant code areas.
-
-All the Input Specs combined allow AI coding agent to ramp up very quickly and deliver a focused implementation based
-on previous learnings.
 
 ## AI Coding Agent
 
