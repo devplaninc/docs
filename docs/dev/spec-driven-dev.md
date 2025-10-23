@@ -33,6 +33,43 @@ Output specs include any information produced while a task is being implemented.
 the code implementation for a task; **coding notes** highlighting affected areas, challenges, areas of attention, etc;
 **AI code review notes** holding AI-generated feedback about the implementation. 
 
+### Example Specs:
+
+```bash
+specs
+├── <Project 1>
+│   ├── <User Story 1>
+│   │   ├── <Task 1.1>           # Implemented task:
+│   │   │   ├── requirements.md  #  input : high level task requirements
+│   │   │   ├── instructions.md  #  input : detailed task instructions.
+│   │   │   ├── research.md      #  output: learnings from initial task research
+│   │   │   ├── plan.md          #  output: detailed coding plan
+│   │   │   ├── code.md          #  output: learnings from the coding phase
+│   │   │   ├── review.md        #  output: code review results
+│   │   │   └── findings.md      #  output: full implementation analysis and important findings.
+│   │   ├── <Task 1.2>           # Not implemented task             
+│   │   │   ├── instructions.md
+│   │   │   └── requirements.md
+│   │   └── requirements.md      # input : user story requirements
+│   ├── <User Story 2>
+│   │   ├── <Task 2.1>
+│   │   │   ├── instructions.md
+│   │   │   └── requirements.md
+│   │   └── requirements.md
+│   ├── prd.md                   # input : product requirements for a project
+│   └── tech_brief.md            # input : technical requirements for a project
+└── focus.md                     # input : description of the current task AI agent should focus on
+```
+
+Per-task `instructions.md` file is where a lot of interesting things will be mentioned:
+1. Areas that need to be researched before code implementation.
+2. Other projects, stories and tasks this task is based on, which allows the agent to quickly gather context about
+how the previous versions of the related functionality were implemented.
+3. General guidelines about testing, scoping and relevant code areas.
+
+All the Input Specs combined allow AI coding agent to ramp up very quickly and deliver a focused implementation based
+on previous learnings.
+
 ## AI Coding Agent
 
 As of now, Devplan only supports [ClaudeCode](https://www.claude.com/product/claude-code) as an AI coding agent for the
