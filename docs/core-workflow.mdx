@@ -1,7 +1,3 @@
----
-title: "Core Workflow Guide"
-sidebar_position: 3
----
 
 import prdQuestions from './assets/screenshots/PRD_questions.png';
 import prdSelfReview from './assets/screenshots/prd_self_review.png';
@@ -82,28 +78,26 @@ graph LR
 ## Step 2: Agent-Guided Discovery
 
 ### Intelligent Questioning
-Devplan's Planning Agent doesn't just accept your input—it actively helps you think through the requirements by asking targeted questions based on your codebase analysis and project context.
+Devplan's Planning Agent doesn't just accept your input, it actively helps you think through the requirements by asking targeted questions based on your codebase analysis and project context.
 
 <img src={prdQuestions} alt="Example banner" style={{width: '600px'}}/>
 
-:::tip What Makes This Different
+### What Makes This Different
 **Context-Aware Questions:** Unlike generic planning tools, Devplan knows your tech stack, existing patterns, and architectural decisions, so it asks relevant questions that matter for your specific implementation.
-:::
 
-:::note Why This Works
+### Why This Works
 This collaborative process typically uncovers 3-5 critical requirements that would otherwise be discovered during implementation, preventing costly rework.
-:::
 
 ## Step 3: PRD Generation
 
 ### Intelligent Document Creation
-Based on the discovery session, Devplan generates a comprehensive Product Requirements Document (PRD) that includes:
+Based on the discovery session, Devplan generates a brief Product Requirements Document (PRD) that includes:
 
 **📋 Standard PRD Sections:**
 - Executive summary and goals
-- User stories and acceptance criteria
-- Success metrics and KPIs
-- Technical requirements and constraints
+- User flows
+- Key requirements
+- Out of scope requirements 
 
 **🔍 Context-Enhanced Content:**
 - Integration points with existing systems
@@ -121,10 +115,24 @@ Devplan's Review Agent acts as your personal Chief Product Officer, analyzing th
 
 <img src={prdSelfReview} alt="Example banner" style={{width: '600px'}}/>
 
-## Step 4: Technical Design & Architecture
+## Step 4: User Stories 
+
+### Automated Story Generation
+Devplan breaks down features into implementation-ready user stories with context-aware estimates based on your actual codebase complexity.
+
+<img src={buildPlan} alt="Example banner" style={{width: '600px'}}/>
+
+### Agentic Score
+Devplan calculates Agentic Score (how likely AI IDE agent is to succeed with this user story) and size for each user 
+story based on its complexity and ambiguity:
+
+<img src={agenticScorePopover} alt="Agentic Score" style={{width: '600px'}}/>
+
+
+## Step 5: Technical Design & Task Breakdown
 
 ### Code-Aware Planning
-Unlike generic planning tools, Devplan understands your technical stack and generates implementation guidance that considers:
+Devplan understands your technical stack and generates implementation guidance that considers:
 
 **🏗️ Architecture Integration:**
 - How new code fits into existing modules
@@ -138,18 +146,6 @@ Unlike generic planning tools, Devplan understands your technical stack and gene
 - Testing strategy and coverage
 - Performance considerations
 
-## Step 5: User Stories & Task Breakdown
-
-### Automated Story Generation
-Devplan breaks down features into implementation-ready user stories with context-aware estimates based on your actual codebase complexity.
-
-<img src={buildPlan} alt="Example banner" style={{width: '600px'}}/>
-
-### Agentic Score
-Devplan calculates Agentic Score (how likely AI IDE agent is to succeed with this user story) and size for each user 
-story based on its complexity and ambiguity:
-
-<img src={agenticScorePopover} alt="Agentic Score" style={{width: '600px'}}/>
 
 ## Step 6: Integration with Project Management
 
@@ -158,32 +154,17 @@ story based on its complexity and ambiguity:
 **Linear Integration Results:**
 
 When Devplan syncs with Linear, it creates a complete project structure:
-- **Epic Creation:** Main feature becomes a Linear epic with full context
-- **Story Breakdown:** Individual user stories become properly formatted tickets
-- **Time Estimates:** Each ticket includes time estimates and complexity ratings
-- **Context Links:** Every ticket links back to original requirements and technical specs
-- **Technical Details:** Implementation notes and file references included
-- **Acceptance Criteria:** Detailed acceptance criteria for each story
+- **Project Creation:** Product brief becomes a Linear project 
+- **Story Breakdown:** Individual user stories with detailed acceptance criteria become Linear issues
+- **Technical Tasks:** Implementation details and coding prompts are added as Linear sub-issues 
 
 **Jira Integration Results:**
 
 For Jira workspaces, Devplan creates a structured hierarchy:
-- **Epic Management:** Complex features become properly structured epics
-- **Story Points:** Automatic story point assignment based on complexity
-- **Sprint Assignment:** Stories assigned to sprints based on team capacity
-- **Label Application:** Automatic tagging with relevant labels (frontend, backend, etc.)
-- **Custom Fields:** Devplan data maps to your existing Jira custom fields
-- **Workflow Integration:** Stories follow your established Jira workflows
-
-:::tip Context Preservation
-**Smart Linking:** Every ticket maintains a link back to:
-- Original feature requirements
-- Technical design decisions
-- AI-generated implementation prompts
-- Related tickets and dependencies
-
-This ensures developers always have full context, even weeks later.
-:::
+- **Epic Creation:** Product brief becomes structured epics
+- **Story Breakdown:** Individual user stories with detailed acceptance criteria become Jira user stories
+- **Technical Tasks:** Implementation details and coding prompts are added as Jira tasks
+- **Custom Fields:** Devplan can also maps to your existing Jira custom fields
 
 ## Step 7: AI Coding Prompts
 
@@ -239,9 +220,7 @@ with email/password and session management.
 - /prisma/schema.prisma (database schema)
 ```
 
-:::tip Pro Tip
 With this rich context, your AI assistant can now generate code that actually fits your project instead of generic examples!
-:::
 
 ## Step 9: Status Reporting & Monitoring
 
@@ -260,53 +239,8 @@ Devplan monitors development progress and provides real-time updates:
 - Dependency blocking issues
 - Quality regression warnings
 
-## Best Practices for Success
-
-### 👩‍💼 For Product Managers
-
-**During Discovery:**
-- ✅ **Provide Rich Context**: Include user research, analytics, and business goals
-- ✅ **Embrace AI Questions**: Let the agent help you think through edge cases
-- ✅ **Review Generated PRDs**: Use the AI review process to catch gaps
-- ✅ **Link Related Features**: Connect to existing user flows and features
-
-**Common Mistakes to Avoid:**
-- ❌ Rushing through discovery phase
-- ❌ Skipping technical collaboration
-- ❌ Not updating requirements when scope changes
-
-### 👨‍💻 For Engineers
-
-**During Implementation:**
-- ✅ **Trust the Context**: AI prompts include architectural decisions and patterns
-- ✅ **Update Estimates**: Provide feedback when actual time differs from estimates
-- ✅ **Use CLI Workflow**: `devplan focus` saves 15-30 minutes per feature
-- ✅ **Document Learnings**: Share discoveries that could improve future estimates
-
-
-### 🤝 For Teams
-
-**Workflow Integration:**
-- **Sprint Planning**: Use Devplan estimates as starting point for capacity planning
-- **Daily Standups**: Reference ticket links for quick context sharing
-- **Retrospectives**: Review estimate accuracy and process improvements
-- **Knowledge Sharing**: Update coding standards and patterns in Devplan
-
-**Success Metrics to Track:**
-| Metric | Target | How to Measure |
-|--------|--------|----------------|
-| Planning Time | 80% reduction | Compare pre/post Devplan planning sessions |
-| Estimate Accuracy | ±20% of actual | Track story completion times vs estimates |
-| Rework Rate | `<10%` | Measure tickets that need significant changes |
-| Context Clarity | >90% | Survey: "Did you have enough context to implement?" |
-
-
-:::warning Get Help
 **Having issues?**
 - 📧 Email: info@devplan.com
-- 💬 Slack: [Community Slack]
-- 📖 Docs: /troubleshooting (detailed guide)
-:::
 
 ## Next Steps
 
@@ -327,7 +261,6 @@ Devplan monitors development progress and provides real-time updates:
 ### 📚 Learn More
 
 - **[Getting Started Guide](/getting-started)** - Complete setup instructions
-- **[Architecture Overview](/architecture)** - Technical deep dive
 - **[Value Proposition](/value-proposition)** - Business case and ROI
 
-**Questions?** Join our community or contact support at info@devplan.com
+**Questions?** Contact support at info@devplan.com
