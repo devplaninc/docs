@@ -2,13 +2,11 @@
 
 *Complete guide to account setup and your first project*
 
-Welcome to Devplan! This guide will get you from zero to your first AI-powered feature in under 30 minutes.
+Welcome to Devplan! This guide will get you from zero to your first AI-powered project in under 20 minutes.
 
 ## Quick Setup Overview
 
-**Total Time: ~15 minutes**
-
-✅ **Account Setup** (2 min) → ✅ **GitHub Integration** (3 min) → ✅ **CLI Installation** (5 min) → ✅ **First Project** (5 min)
+✅ **Account Setup** (2 min) → ✅ **GitHub Integration** (3 min) → ✅ **CLI Installation** (3 min) → ✅ **First Project** (10 min)
 
 
 ## Step 1: Account Setup
@@ -43,6 +41,7 @@ Welcome to Devplan! This guide will get you from zero to your first AI-powered f
    - Add product overview, target customers, goals 
 
 
+
 ## Step 2: GitHub Integration (Highly Recommended)
 
 ### Connect Your Repositories
@@ -64,7 +63,6 @@ To get started, connect to the GitHub repos that you'll be working with. Devplan
 **What's NOT Stored:**
 - ❌ Your actual source code  
 - ❌ Sensitive data or credentials  
-- ❌ Business logic details  
 
 
 ## Step 3: Project Management Integration (Optional)
@@ -116,23 +114,19 @@ Custom slash commands for Claude Code further standardize and speed up developer
 
 Once setup is complete, you’re ready to start your first project, ideally one with a bit of complexity! 
 
-You can begin with UX notes, an existing PRD, or just a rough idea. The agent will refine the input with you and generate the first set of documents. After user stories are created and approved in the **Product** tab, a tech lead or developer typically takes over on the **Development** tab to create the technical design and tasks, all of which can all be synced to Linear or Jira.
+- **Start with a short description** — UX notes, an existing PRD, or even rough ideas.  
+- **Collaborate with the agent** to refine your input into a clear product brief and initial set of user stories.  
+- **Review and approve stories** in the **Product** tab to finalize scope and requirements.  
+- **Move to the Development tab**, where the agent helps refine technical designs and generate detailed implementation tasks.  
+- **Developers can review, edit, and expand** these designs as needed, ensuring accuracy before syncing downstream.  
+- **Sync all tasks** to **Linear** or **Jira** for visibility and tracking.  
+- **Use the CLI** to pull full project context into your local environment.  
+- **Run `devplan start`** to initialize AI-assisted coding with Claude Code, guided by your approved specs and designs. 
 
-### Example Flow
-
-1. Start with a short description (UX, PRD, or notes)  
-2. The agent refines your input and generates PRD + user stories  
-3. Approve stories → move to technical design and tasks
-4. The agent refines your input and generates tech design + tasks
-5. Optional: sync tasks to Linear or Jira  
-6. Developer uses the CLI to pull context locally  
-7. Run `devplan start` to initialize AI-assisted coding  
-
-:::tip Team Workflow
-- **PMs:** Lead discovery and approve requirements  
-- **Engineers:** Use CLI to spec and execute with AI  
-- **Teams:** Track everything through synced tools  
-:::
+### Team Workflows
+- **PMs:** Lead PRD refinement and approve requirements  
+- **Engineers:** Create technical plan, use CLI to spec and execute with AI  
+- **Managers:** Track everything through Devplan roadmap and synced tools
 
 ## You’re Ready! Best Practices for Success
 
@@ -142,20 +136,14 @@ You can begin with UX notes, an existing PRD, or just a rough idea. The agent wi
 - ✅ **Provide Rich Context**: Include user research, analytics, and business goals
 - ✅ **Embrace AI Questions**: Let the agent help you think through edge cases
 - ✅ **Review Generated PRDs**: Use the AI review process to catch gaps
-- ✅ **Link Related Features**: Connect to existing user flows and features
-
-**Common Mistakes to Avoid:**
-- ❌ Rushing through discovery phase
-- ❌ Skipping collaboration
-- ❌ Not updating requirements when scope changes
+- ✅ **Reference Related Features**: Mention existing user flows and features where appropriate 
 
 ### 👨‍💻 For Engineers
 
 **During Implementation:**
-- ✅ **Trust the Context**: AI prompts include architectural decisions and patterns
-- ✅ **Update Estimates**: Provide feedback when actual time differs from estimates
-- ✅ **Use CLI Workflow**: `devplan focus` saves 15-30 minutes per feature
-- ✅ **Document Learnings**: Share discoveries that could improve future estimates
+- ✅ **Collaborate with the Agent**: Ask follow-up questions or request refinements to generated designs and tasks to ensure clarity before implementation.
+- ✅ **Review the Prompts**: AI prompts include architectural decisions and patterns
+- ✅ **Use CLI Workflow**: `devplan start` with Claude Code saves 15-30 minutes per feature
 
 ## References
 
@@ -170,5 +158,4 @@ You can begin with UX notes, an existing PRD, or just a rough idea. The agent wi
 
 **Need Help?**
 - Email: info@devplan.com  
-- Troubleshooting: [Support Docs](/support)
 
