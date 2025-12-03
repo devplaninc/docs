@@ -29,6 +29,14 @@ const sidebars: SidebarsConfig = {
       items: [
         'getting-started',
         'dev/spec-driven-dev',
+        {
+          type: 'category',
+          label: 'Integrations',
+          collapsed: false,
+          items: [
+            'guides/integrations/jira',
+          ],
+        }
       ],
     },
   ],
