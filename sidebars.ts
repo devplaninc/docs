@@ -28,7 +28,15 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'getting-started',
-        'dev/spec-driven-dev',
+        {
+          type: 'category',
+          label: 'Developer Workflows',
+          collapsed: false,
+          items: [
+            'dev/spec-driven-dev',
+            'dev/git-worktrees',
+          ],
+        },
         {
           type: 'category',
           label: 'Integrations',
