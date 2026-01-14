@@ -33,6 +33,7 @@ const sidebars: SidebarsConfig = {
           label: 'Developer Workflows',
           collapsed: false,
           items: [
+            'dev/cli-cheat-sheet',
             'dev/spec-driven-dev',
             'dev/git-worktrees',
           ],
