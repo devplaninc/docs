@@ -40,6 +40,18 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
+          label: 'Cloud Run',
+          collapsed: true,
+          items: [
+            'cloud-run/index',
+            'cloud-run/setup',
+            'cloud-run/run',
+            'cloud-run/address-comments',
+            'cloud-run/secrets',
+          ],
+        },
+        {
+          type: 'category',
           label: 'Integrations',
           collapsed: false,
           items: [
