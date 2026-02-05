@@ -350,6 +350,6 @@ The secrets table displays the following information:
 
 - Learn how to use secrets in [Setup Scripts](./setup)
 - Understand the full [Running Tasks](./run) workflow
-- Return to the [Cloud Run Overview](./index)
+- Return to the [Cloud Run Overview](./)
 
 **Questions?** Contact support at info@devplan.com
