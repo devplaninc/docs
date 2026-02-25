@@ -1,0 +1,29 @@
+# Quickstart
+
+Get from signup to your first feature in motion in under 10 minutes.
+
+---
+
+## 1. Create an account
+
+Sign up at [devplan.com](https://devplan.com) using Google SSO or magic-link email. The 14-day free trial includes everything you need to run your first project.
+
+---
+
+## 2. Connect GitHub
+
+Go to **Knowledge > Code Research > GitHub Connect**, authorize Devplan, and select the repositories you will be building in. First-time analysis takes around 30 minutes.
+
+---
+
+## 3. Create a project
+
+Hit **New Project** and give the agent a short description — rough ideas, a ticket link, UX notes, or an uploaded doc all work. The agent will ask clarifying questions and turn it into a product brief and user stories.
+
+---
+
+## 4. Start a feature
+
+Review your user stories, move to the **Development** tab for technical design, then sync to Linear or Jira. Grab the CLI command from any task to pull context into your AI IDE and start building.
+
+For a full walkthrough of each step, see [Core Workflow](/core-workflow).
