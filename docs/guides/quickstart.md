@@ -1,3 +1,10 @@
+---
+title: Quickstart
+description: Get Devplan set up and your first feature in motion.
+sidebar_label: Quickstart
+sidebar_position: 1
+---
+
 # Quickstart
 
 Get from signup to your first feature in motion in under 10 minutes.
