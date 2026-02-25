@@ -8,54 +8,6 @@ Devplan sits between your existing tools and your AI development workflow — pu
 
 ---
 
-```mermaid
-graph TB
-    subgraph "Your Data Sources"
-        A[GitHub Repositories]
-        B[Team Communications]
-        C[Project Management]
-        D[Documentation]
-        E[User Feedback]
-        F[Product Analytics]
-    end
-
-    subgraph "Devplan Intelligence"
-        G[Context Processing]
-        H[Knowledge Understanding]
-        I[AI Planning Agents]
-        J[Prompt Generation]
-    end
-
-    subgraph "Your Workflow"
-        K[Project Management Sync]
-        L[Development Tools]
-        M[Team Collaboration]
-        N[Status Tracking]
-    end
-
-    A --> G
-    B --> G
-    C --> G
-    D --> G
-    E --> G
-    F --> G
-
-    G --> H
-    H --> I
-    I --> J
-
-    J --> K
-    J --> L
-    I --> M
-    I --> N
-
-    style H fill:#e1f5fe
-    style I fill:#e8f5e8
-    style J fill:#fff3e0
-```
-
----
-
 ## Context Understanding Engine
 
 Devplan learns about your project by pulling from multiple sources and synthesizing them into a unified model.
