@@ -80,9 +80,6 @@ graph TD
     C --> H[Test Requirements]
     D --> I[Database Schema]
     D --> J[Authentication]
-    style A fill:#e1f5fe
-    style B fill:#e8f5e8
-    style C fill:#fff3e0
 ```
 
 These relationships power three things in practice:
