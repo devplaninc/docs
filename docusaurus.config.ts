@@ -33,13 +33,14 @@ const config: Config = {
   },
 
   presets: [
-    [
-      'classic',
-      {
-        docs: {
-          sidebarPath: './sidebars.ts',
-          routeBasePath: '/', // Serve the docs at the site's root
-        },
+  [
+    'classic',
+    {
+      docs: {
+        sidebarPath: './sidebars.ts',
+        routeBasePath: '/',
+        homePageId: 'quickstart',
+      },
         blog: false, // Blog functionality disabled
         theme: {
           customCss: './src/css/custom.css',
