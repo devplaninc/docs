@@ -11,6 +11,13 @@ Run is currently in beta.
 The Run Button executes your task implementations in the cloud using a Codex agent. Instead of running AI-assisted coding locally, click **Run** on any task and Devplan handles the entire process — from code generation to Pull Request creation.
 
 ---
+## Quick Start
+
+1. Configure secrets in **Settings > Development** (if your repo needs credentials)
+2. Create `.devplan/run/setup.sh` and commit it to your repository
+3. Test via **Settings > Development > Test setup**
+4. Click **Run** on any task
+---
 
 ## How It Works
 
@@ -29,10 +36,6 @@ The agent works through five phases — each visible in the run log:
 ```mermaid
 graph LR
     A[Plan] --> B[Code] --> C[Review] --> D[Address Review] --> E[Prepare Commit]
-
-    style A fill:#e1f5fe
-    style C fill:#fff3e0
-    style E fill:#e8f5e8
 ```
 
 Run times typically range from 20–60 minutes. Cloud Run automatically retries up to 3 times on agent inactivity or missing output files, resuming from the previous state each time.
@@ -89,11 +92,7 @@ Configure the trigger keyword in **Settings > Development > Pull Request Comment
 
 ---
 
-## Quick Start
 
-1. Configure secrets in **Settings > Development** (if your repo needs credentials)
-2. Create `.devplan/run/setup.sh` and commit it to your repository
-3. Test via **Settings > Development > Test setup**
-4. Click **Run** on any task
+Questions: [info@devplan.com](mailto:info@devplan.com)
 
 Questions: [info@devplan.com](mailto:info@devplan.com)
