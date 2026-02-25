@@ -1,36 +1,30 @@
 ---
-title: Quickstart
-description: Get Devplan set up and your first feature in motion.
-sidebar_label: Quickstart
-sidebar_position: 1
+title: Getting Started
 ---
 
-# Quickstart
+# Getting Started
 
-Get from signup to your first feature in motion in under 10 minutes.
+Get up and running in under 10 minutes.
 
 ---
 
-## 1. Create an account
+## For builders
 
-Sign up at [devplan.com](https://devplan.com) using Google SSO or magic-link email. The 14-day free trial includes everything you need to run your first project.
-
----
-
-## 2. Connect GitHub
-
-Go to **Knowledge > Code Research > GitHub Connect**, authorize Devplan, and select the repositories you will be building in. First-time analysis takes around 30 minutes.
+1. Sign up at [devplan.com](https://devplan.com) using Google SSO or magic link. The 14-day free trial includes everything.
+2. Connect GitHub under **Knowledge > Code Research** — first-time analysis takes around 30 minutes.
+3. Hit **New Project**, give the agent a description, and let it generate your product brief and user stories.
+4. Move to the **Development** tab, sync to Linear or Jira, and grab the CLI command from any task to start building.
 
 ---
 
-## 3. Create a project
+## For teams
 
-Hit **New Project** and give the agent a short description — rough ideas, a ticket link, UX notes, or an uploaded doc all work. The agent will ask clarifying questions and turn it into a product brief and user stories.
+1. Go to **Settings > Organization**, create an org, and choose a plan — **Builder** at $24/user/month or **Team** at $49/user/month.
+2. Invite team members under **Settings > Team** and assign roles.
+3. Add product and technical docs under **Knowledge > Company** to give agents shared context.
+4. Connect GitHub under **Knowledge > Code Research** — first-time analysis takes around 30 minutes.
+5. Connect Linear or Jira under **Settings > Integrations**.
+6. Create your first project — attach docs, images, or tickets and kick off the agent.
+7. A shared Slack channel is available on supported plans for onboarding support.
 
----
-
-## 4. Start a feature
-
-Review your user stories, move to the **Development** tab for technical design, then sync to Linear or Jira. Grab the CLI command from any task to pull context into your AI IDE and start building.
-
-For a full walkthrough of each step, see [Core Workflow](/core-workflow).
+For a full walkthrough of the feature planning process, see [Core Workflow](/core-workflow).
