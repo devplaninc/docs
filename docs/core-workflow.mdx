@@ -1,203 +1,126 @@
 
-import prdQuestions from './assets/screenshots/PRD_questions.png';
-import prdSelfReview from './assets/screenshots/prd_self_review.png';
-import buildPlan from './assets/screenshots/build_plan.png';
-import agenticScorePopover from './assets/screenshots/agentic_score_popover.png';
-import promptExample from './assets/screenshots/prompt_example.png';
-import cliCommands from './assets/screenshots/cli_commands.png';
+---
+title: Core Workflow
+description: A step-by-step walkthrough of Devplan's workflow from feature idea to implementation-ready code.
+sidebar_label: Core Workflow
+sidebar_position: 2
+---
 
-# Core Workflow Guide
+# Core Workflow
 
-*8 min read • Step-by-step walkthrough of Devplan's intelligent workflow*
+Devplan moves a feature from idea to implementation-ready code across nine steps. The goal throughout is to preserve context — decisions made at the planning stage are still available when an engineer opens their AI coding assistant.
 
-Devplan transforms how product and engineering teams collaborate by maintaining context throughout the entire development lifecycle. This guide walks you through the complete workflow with practical examples and real CLI interactions.
+| Step | What happens | Your involvement |
+|---|---|---|
+| 1. Input | Feature idea submitted in any format | Submit text, file, mockup, or issue link |
+| 2. Discovery | Planning Agent asks targeted questions | Answer questions in plain language |
+| 3. PRD Generation | Devplan writes and self-reviews a PRD | Review and approve |
+| 4. User Stories | Feature broken into sized, scored stories | Review stories and Agentic Scores |
+| 5. Technical Design | Implementation guidance generated per story | Review technical tasks |
+| 6. PM Tool Sync | Push structure to Linear or Jira | Trigger sync from the Build Plan |
+| 7. Coding Prompts | Context-rich prompts generated per story | Copy prompt to your AI IDE |
+| 8. CLI Integration | Pull context into your local IDE | Run `devplan specs start` in your terminal |
+| 9. Monitoring | Track progress in the Runs view | Review status and blockers |
 
-## Overview: From Idea to Code
+---
 
-```mermaid
-graph TD
-    A[💡 Idea Input] --> B[🤖 Context Processing]
-    B --> C[📋 Agent-Guided Planning]
-    C --> D[📝 PRD Generation]
-    D --> E[🔧 Technical Design]
-    E --> F[📊 User Stories & Tasks]
-    F --> G[🔗 Linear/Jira Sync]
-    G --> H[⚡ AI Coding Prompts]
-    H --> I[💻 IDE Integration]
-    I --> J[🚀 Production Code]
+## Step 1: Input and context processing
 
-    style A fill:#e1f5fe
-    style J fill:#e8f5e8
+Devplan accepts a wide range of input formats.
+
+| Input type | Examples |
+|---|---|
+| Text | Feature ideas, customer feedback, bug reports, existing specs |
+| Visual | UX mockups, design files, user flow diagrams |
+| Data | Analytics insights, interview notes, market research |
+| Issue links | Jira or Linear issues pasted into the feature creation form |
+
+Before any questions are asked, Devplan's Context Engine analyzes your input against your connected repository — examining codebase architecture, existing patterns, current product features, team conventions, and historical project decisions.
+
+---
+
+## Step 2: Agent-guided discovery
+
+The Planning Agent asks questions specific to your implementation rather than generic planning questions, because it already knows your tech stack and architecture.
+
+![Discovery questions](/img/docs/screenshot-agent-prompting.png)
+
+This process typically surfaces 3-5 critical requirements that would otherwise be discovered during implementation, when they are significantly more expensive to address.
+
+---
+
+## Step 3: PRD generation
+
+Devplan generates a PRD covering an executive summary, user flows, key requirements, and out-of-scope items. It also includes integration points with your existing systems, code architecture recommendations, and a risk assessment grounded in your actual codebase.
+
+The Review Agent evaluates the PRD before you see it:
+
+| Quality check | What it evaluates |
+|---|---|
+| Completeness | Are all aspects of the feature covered? |
+| Clarity | Can engineers implement this without follow-up questions? |
+| Feasibility | Are the requirements achievable given your architecture? |
+| Alignment | Does this fit your existing product strategy? |
+
+![PRD editor](/img/docs/screenshot-prd-editor.png)
+
+---
+
+## Step 4: User stories
+
+Devplan breaks the PRD into implementation-ready user stories with complexity estimates calibrated to your actual codebase.
+
+![Build plan](/img/docs/screenshot-build-plan-roadmap.png)
+
+Each story receives an **Agentic Score** — a measure of how likely an AI coding agent is to implement the story correctly without human correction.
+
+| Score | What it means | Recommended action |
+|---|---|---|
+| High | Well-defined, low ambiguity | Good candidate for direct AI implementation |
+| Medium | Some ambiguity present | Review and refine before handing to an agent |
+| Low | Complex or underspecified | Decompose or add detail before using AI |
+
+![Agentic score](/img/docs/screenshot-tech-design-template.png)
+
+:::tip
+Low Agentic Scores are useful signal, not a problem. Use them to identify which stories need more detail before running them through your AI IDE.
+:::
+
+---
+
+## Step 5: Technical design
+
+For each user story, Devplan generates implementation guidance specific to your codebase.
+
+| Area | What is provided |
+|---|---|
+| Architecture integration | How new code fits into existing modules |
+| Database changes | Schema additions or modifications required |
+| API surface | Endpoints that need creation or modification |
+| Dependencies | Service interactions and external dependencies |
+| Technical specs | Component structure, state management, testing strategy |
+
+---
+
+## Step 6: PM tool sync
+
+| Devplan object | Linear | Jira |
+|---|---|---|
+| Project | Linear Project | Jira Epic |
+| User Story | Linear Issue | Jira User Story |
+| Technical task | Linear Sub-issue | Jira Task |
+
+:::note
+Syncs are one-directional. Devplan pushes to your PM tool. Changes made in Linear or Jira after export are not reflected back in Devplan.
+:::
+
+---
+
+## Step 7: AI coding prompts
+
+Each user story generates a prompt containing exact file paths, codebase-specific patterns, integration points with existing code, and edge case considerations.
+
 ```
-
-## Step 1: Input and Context Processing
-
-### Starting Points
-Devplan accepts various input formats to begin the planning process:
-
-**📝 Text Inputs:**
-- Quick feature ideas or requests
-- Customer feedback and bug reports
-- Existing specifications or documentation
-- User stories or epics from other tools
-
-**🎨 Visual Inputs:**
-- UX mockups and design files
-- User flow diagrams
-- Architecture sketches
-
-**📊 Data Inputs:**
-- Analytics insights
-- Customer interview notes
-- Market research findings
-
-### Context Engine Processing
-
-Behind the scenes, Devplan's Context Engine analyzes:
-
-```mermaid
-graph LR
-    A[Your Input] --> B[Context Engine]
-
-    C[GitHub Repos] --> B
-    D[Company Docs] --> B
-    E[Previous Projects] --> B
-    F[Team Standards] --> B
-    G[User Feedback] --> B
-    H[Product Analytics] --> B
-
-    B --> I[Enriched Understanding]
-```
-
-**What Gets Analyzed:**
-- **Codebase Architecture**: Existing patterns, frameworks, and technical decisions
-- **Product Context**: Current features, user flows, and business logic
-- **Team Standards**: Coding conventions, review processes, and documentation styles
-- **Historical Decisions**: Past project learnings and architectural choices
-
-## Step 2: Agent-Guided Discovery
-
-### Intelligent Questioning
-Devplan's Planning Agent doesn't just accept your input, it actively helps you think through the requirements by asking targeted questions based on your codebase analysis and project context.
-
-<img src={prdQuestions} alt="Example banner" style={{width: '600px'}}/>
-
-### What Makes This Different
-**Context-Aware Questions:** Unlike generic planning tools, Devplan knows your tech stack, existing patterns, and architectural decisions, so it asks relevant questions that matter for your specific implementation.
-
-### Why This Works
-This collaborative process typically uncovers 3-5 critical requirements that would otherwise be discovered during implementation, preventing costly rework.
-
-## Step 3: PRD Generation
-
-### Intelligent Document Creation
-Based on the discovery session, Devplan generates a brief Product Requirements Document (PRD) that includes:
-
-**📋 Standard PRD Sections:**
-- Executive summary and goals
-- User flows
-- Key requirements
-- Out of scope requirements 
-
-**🔍 Context-Enhanced Content:**
-- Integration points with existing systems
-- Code architecture recommendations
-- Specific implementation considerations
-- Risk assessment and mitigation strategies
-
-### AI Review Process
-Devplan's Review Agent acts as your personal Chief Product Officer, analyzing the generated PRD for:
-
-- **Completeness**: Are all aspects of the feature covered?
-- **Clarity**: Can engineers implement this without additional clarification?
-- **Feasibility**: Are the requirements technically achievable?
-- **Alignment**: Does this fit with existing product strategy and architecture?
-
-<img src={prdSelfReview} alt="Example banner" style={{width: '600px'}}/>
-
-## Step 4: User Stories 
-
-### Automated Story Generation
-Devplan breaks down features into implementation-ready user stories with context-aware estimates based on your actual codebase complexity.
-
-<img src={buildPlan} alt="Example banner" style={{width: '600px'}}/>
-
-### Agentic Score
-Devplan calculates Agentic Score (how likely AI IDE agent is to succeed with this user story) and size for each user 
-story based on its complexity and ambiguity:
-
-<img src={agenticScorePopover} alt="Agentic Score" style={{width: '600px'}}/>
-
-
-## Step 5: Technical Design & Task Breakdown
-
-### Code-Aware Planning
-Devplan understands your technical stack and generates implementation guidance that considers:
-
-**🏗️ Architecture Integration:**
-- How new code fits into existing modules
-- Database schema changes required
-- API endpoints that need modification
-- Dependencies and service interactions
-
-**⚙️ Technical Specifications:**
-- Component structure and hierarchy
-- State management requirements
-- Testing strategy and coverage
-- Performance considerations
-
-
-## Step 6: Integration with Project Management
-
-### Seamless Sync to Your Tools
-
-**Linear Integration Results:**
-
-When Devplan syncs with Linear, it creates a complete project structure:
-- **Project Creation:** Product brief becomes a Linear project 
-- **Story Breakdown:** Individual user stories with detailed acceptance criteria become Linear issues
-- **Technical Tasks:** Implementation details and coding prompts are added as Linear sub-issues 
-
-**Jira Integration Results:**
-
-For Jira workspaces, Devplan creates a structured hierarchy:
-- **Epic Creation:** Product brief becomes structured epics
-- **Story Breakdown:** Individual user stories with detailed acceptance criteria become Jira user stories
-- **Technical Tasks:** Implementation details and coding prompts are added as Jira tasks
-- **Custom Fields:** Devplan can also maps to your existing Jira custom fields
-
-## Step 7: AI Coding Prompts
-
-### Context-Rich Prompt Generation
-This is where Devplan's context engine really shines. Instead of generic prompts, you get:
-
-**🎯 Specific Implementation Guidance:**
-- Exact file paths and component names
-- Integration points with existing code
-- Code patterns and conventions to follow
-- Error handling and edge case considerations
-
-<img src={promptExample} alt="Prompt Example" style={{width: '600px'}}/>
-
-## Step 8: CLI Integration
-
-### Direct IDE Integration
-Devplan's CLI tool integrates project management with local AI-powered IDEs. You can copy one-liner CLI commands
-directly from the prompt popover and execute them in your terminal.
-
-<img src={cliCommands} alt="CLI commands" style={{width: '600px'}}/>
-
-**🔧 IDE Integration:**
-- Automatic context file generation for AI assistants
-- Support for multiple IDE platforms
-- Repository and feature context preservation
-- Seamless workflow integration
-
-**What Your AI Assistant Now Knows:**
-
-```markdown
-# Auto-generated context for Cursor AI
-
 ## Project Context
 - Next.js 14 app with App Router
 - PostgreSQL + Prisma ORM
@@ -208,59 +131,33 @@ directly from the prompt popover and execute them in your terminal.
 Implement user authentication (login/register)
 with email/password and session management.
 
-## Code Patterns to Follow
-- Server Actions for form handling
-- Zod for validation schemas
-- React Hook Form for form state
-- Shadcn components for UI
-
 ## Files to Reference
 - /src/components/ui/* (existing UI components)
 - /src/lib/validations.ts (validation patterns)
 - /prisma/schema.prisma (database schema)
 ```
 
-With this rich context, your AI assistant can now generate code that actually fits your project instead of generic examples!
+![CLI focus](/img/docs/screenshot-cli-focus.png)
 
-## Step 9: Status Reporting & Monitoring
+---
 
-### Automated Progress Tracking
-Devplan monitors development progress and provides real-time updates:
+## Step 8: CLI
 
-**📊 Progress Metrics:**
-- Story completion rates
-- Time to completion vs. estimates
-- Code quality indicators
-- Integration success rates
+The CLI bridges the Devplan web app and your local AI IDE. Copy the command from any story's prompt popover and run it in your terminal.
 
-**🚨 Risk Detection:**
-- Scope creep identification
-- Timeline deviation alerts
-- Dependency blocking issues
-- Quality regression warnings
 
-**Having issues?**
-- 📧 Email: info@devplan.com
 
-## Next Steps
+See the [CLI Cheat Sheet](/dev/cli-cheat-sheet) for the full command reference.
 
-### 🚀 Ready to Try This Workflow?
+---
 
-**For New Users:**
-1. **[Set up your account](/getting-started)** - 15 minute setup process
-2. **Connect your first repository** - Start with a small project
-3. **Create your first feature** - Follow this exact workflow
-4. **Experience the difference** - See context-driven development in action
+## Step 9: Monitoring
 
-**For Teams:**
-1. **Start with a pilot project** - Pick one feature to test the workflow
-2. **Include both PM and engineering** - Collaborative approach works best
-3. **Measure the results** - Track time savings and quality improvements
-4. **Scale gradually** - Expand to more projects as team adopts workflow
+| What Devplan tracks | Details |
+|---|---|
+| Story completion rates | Progress against the planned build |
+| Time vs. estimate | Deviation from complexity estimates |
+| Scope changes | New items added relative to original plan |
+| Blockers | Dependency issues and stalled tasks |
 
-### 📚 Learn More
-
-- **[Getting Started Guide](/getting-started)** - Complete setup instructions
-- **[Value Proposition](/value-proposition)** - Business case and ROI
-
-**Questions?** Contact support at info@devplan.com
+The [Run Button](/cloud-run/) executes tasks in the cloud and shows a live view of active runs, assignees, and linked pull requests.
