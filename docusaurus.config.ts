@@ -61,7 +61,7 @@ const config: Config = {
       logo: {
         alt: 'Devplan Logo',
         src: 'img/Logo-Closed.svg',
-        href: '/intro',
+        href: '/quickstart',
       },
       hideOnScroll: false,
       items: [
@@ -86,7 +86,7 @@ const config: Config = {
           items: [
             {
               label: 'Getting Started',
-              to: '/getting-started',
+              to: '/quickstart',
             },
             {
               label: 'Core Workflow',
