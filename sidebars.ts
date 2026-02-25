@@ -8,7 +8,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'quickstart',
-        'core-workflow',
+{ type: 'doc', id: 'core-workflow', label: 'Core Workflow' },
         'architecture',
       ],
     },
