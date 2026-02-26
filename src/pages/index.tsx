@@ -5,7 +5,7 @@ export default function HomePage() {
   const history = useHistory();
 
   useEffect(() => {
-    history.replace('/intro');
+    history.replace('/quickstart');
   }, [history]);
 
   return null;
