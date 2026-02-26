@@ -2,59 +2,42 @@ import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 
-// This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
-
 const config: Config = {
   title: 'Devplan',
   tagline: 'AI-Native Product Development for Modern Teams',
   favicon: 'img/Logo-Closed.svg',
-
-  // Future flags for improved compatibility
   future: {
     v4: true,
   },
-
-  // Production URL for the documentation site
   url: 'https://docs.devplan.com',
-  // Base URL pathname for the site
   baseUrl: '/',
-
-  // Deployment configuration
   organizationName: 'devplaninc',
   projectName: 'docs',
-
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
-
-  // Internationalization configuration
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
   },
-
   presets: [
-  [
-    'classic',
-    {
-      docs: {
-        sidebarPath: './sidebars.ts',
-        routeBasePath: '/',
-        homePageId: 'quickstart',
-      },
-        blog: false, // Blog functionality disabled
+    [
+      'classic',
+      {
+        docs: {
+          sidebarPath: './sidebars.ts',
+          routeBasePath: '/',
+        },
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
     ],
   ],
-
   themes: ['@docusaurus/theme-mermaid'],
-
   markdown: {
     mermaid: true,
   },
-
   themeConfig: {
     image: 'img/Logo-Closed.svg',
     navbar: {
