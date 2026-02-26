@@ -5,7 +5,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 const config: Config = {
   title: 'Devplan',
   tagline: 'AI-Native Product Development for Modern Teams',
-  favicon: 'img/Logo-Closed.svg',
+  favicon: 'img/favicon.ico',
   future: {
     v4: true,
   },
