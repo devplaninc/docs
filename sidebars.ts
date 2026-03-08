@@ -30,6 +30,14 @@ const sidebars: SidebarsConfig = {
         'guides/integrations/jira',
       ],
     },
+    {
+      type: 'category',
+      label: 'Guides',
+      collapsed: false,
+      items: [
+        'guides/billing/migrate-to-org-billing',
+      ],
+    }
   ],
 };
 
