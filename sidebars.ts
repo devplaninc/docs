@@ -28,6 +28,7 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'guides/integrations/jira',
+        'guides/integrations/mcp',
       ],
     },
     {
