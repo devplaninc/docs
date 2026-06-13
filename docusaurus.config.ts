@@ -39,12 +39,12 @@ const config: Config = {
     mermaid: true,
   },
   themeConfig: {
-    image: 'img/Logo-Closed.svg',
+    image: 'img/weaver-icon.png',
     navbar: {
       title: 'Devplan',
       logo: {
-        alt: 'Devplan Logo',
-        src: 'img/Logo-Closed.svg',
+        alt: 'Devplan',
+        src: 'img/weaver-icon.png',
         href: '/quickstart',
       },
       hideOnScroll: false,

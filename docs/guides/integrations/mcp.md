@@ -1,6 +1,6 @@
 ---
 title: "MCP Integration"
-sidebar_position: 2
+sidebar_position: 12
 ---
 
 # MCP Integration
@@ -64,7 +64,7 @@ codex mcp add devplan-remote --url https://app.devplan.com/api/v1/mcp
 ## Related Documentation
 
 - [CLI Cheat Sheet](/dev/cli-cheat-sheet) — Install the `devplan` CLI and explore available commands
-- [Access Control](/access-control) — Workspace roles and project permissions
+- [Workspace Members](/settings/workspace-members) — invite members and manage roles
 - [Core Workflow](/core-workflow) — How Devplan projects, PRDs, and user stories work
 - [Jira Integration](/guides/integrations/jira) — Sync Devplan user stories to Jira
 
