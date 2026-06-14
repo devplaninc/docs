@@ -39,13 +39,13 @@ const config: Config = {
     mermaid: true,
   },
   themeConfig: {
-    image: 'img/Logo-Closed.svg',
+    image: 'img/weaver-icon.png',
     navbar: {
       title: 'Devplan',
       logo: {
-        alt: 'Devplan Logo',
-        src: 'img/Logo-Closed.svg',
-        href: '/quickstart',
+        alt: 'Devplan',
+        src: 'img/weaver-icon.png',
+        href: '/getting-started',
       },
       hideOnScroll: false,
       items: [
@@ -70,7 +70,7 @@ const config: Config = {
           items: [
             {
               label: 'Getting Started',
-              to: '/quickstart',
+              to: '/getting-started',
             },
             {
               label: 'Core Workflow',
@@ -78,7 +78,7 @@ const config: Config = {
             },
             {
               label: 'How Devplan Works',
-              to: '/architecture',
+              to: '/how-devplan-works',
             },
           ],
         },

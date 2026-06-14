@@ -1,5 +1,6 @@
 ---
 title: "Secrets Management"
+slug: /secrets-management
 sidebar_position: 4
 ---
 
@@ -348,8 +349,8 @@ The secrets table displays the following information:
 
 ## Next Steps
 
-- Learn how to use secrets in [Setup Scripts](./setup)
-- Understand the full [Running Tasks](./run) workflow
-- Return to the [Cloud Run Overview](./)
+- Learn how to use secrets in [Setup Scripts](/setup-scripts)
+- Understand the full [Running Tasks](/running-tasks) workflow
+- Return to the [Run Button](/run-button) overview
 
 **Questions?** Contact support at info@devplan.com

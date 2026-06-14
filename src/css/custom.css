@@ -4,27 +4,43 @@
  * work well for content-centric websites.
  */
 
-/* You can override the default Infima variables here. */
+/* Weaver cobalt blue — matches webapp --ask-devplan-cobalt */
 :root {
-  --ifm-color-primary: #7c3aed;
-  --ifm-color-primary-dark: #6d28d9;
-  --ifm-color-primary-darker: #6627d4;
-  --ifm-color-primary-darkest: #5b21b6;
-  --ifm-color-primary-light: #8b5cf6;
-  --ifm-color-primary-lighter: #a78bfa;
-  --ifm-color-primary-lightest: #c4b5fd;
+  --ifm-color-primary: #1f3dff;
+  --ifm-color-primary-dark: #1b36e6;
+  --ifm-color-primary-darker: #1831d4;
+  --ifm-color-primary-darkest: #1228b0;
+  --ifm-color-primary-light: #3d5cff;
+  --ifm-color-primary-lighter: #6b85ff;
+  --ifm-color-primary-lightest: #a8b8ff;
+  --ifm-link-color: #1f3dff;
+  --ifm-link-hover-color: #1b36e6;
+  --ifm-menu-color-active: #1f3dff;
+  --ifm-navbar-link-hover-color: #1f3dff;
   --ifm-code-font-size: 95%;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+  --docusaurus-highlighted-code-line-bg: rgba(31, 61, 255, 0.08);
 }
 
-/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: #a78bfa;
-  --ifm-color-primary-dark: #9333ea;
-  --ifm-color-primary-darker: #8b5cf6;
-  --ifm-color-primary-darkest: #7c3aed;
-  --ifm-color-primary-light: #c4b5fd;
-  --ifm-color-primary-lighter: #ddd6fe;
-  --ifm-color-primary-lightest: #ede9fe;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary: #5a77ff;
+  --ifm-color-primary-dark: #4f6ae6;
+  --ifm-color-primary-darker: #4560d4;
+  --ifm-color-primary-darkest: #364fb0;
+  --ifm-color-primary-light: #7a91ff;
+  --ifm-color-primary-lighter: #9aabff;
+  --ifm-color-primary-lightest: #c5d1ff;
+  --ifm-link-color: #5a77ff;
+  --ifm-link-hover-color: #7a91ff;
+  --ifm-menu-color-active: #5a77ff;
+  --ifm-navbar-link-hover-color: #5a77ff;
+  --docusaurus-highlighted-code-line-bg: rgba(90, 119, 255, 0.15);
+}
+
+/* Markdown links */
+.theme-doc-markdown a {
+  color: var(--ifm-link-color);
+}
+
+.theme-doc-markdown a:hover {
+  color: var(--ifm-link-hover-color);
 }

@@ -1,49 +1,67 @@
 ---
 title: How Devplan Works
+slug: /how-devplan-works
 ---
 
 # How Devplan Works
 
-Devplan sits between your existing tools and your AI development workflow — pulling context from repositories, documentation, project management, and team knowledge so every planning session and coding prompt is grounded in your specific product rather than generic assumptions.
+Devplan is a product intelligence platform that learns about your product from the tools and documents you already use — then surfaces what matters through daily digests, insights, and a conversational assistant. On top of that foundation, Devplan also supports structured feature planning: PRDs, user stories, technical designs, and export to your PM tools.
+
+Two layers work together:
+
+1. **Product intelligence** — Devplan ingests workspace context, integrations, and uploads; builds a knowledge graph and feature catalogue; extracts signals; synthesizes insights; and delivers a [Daily Digest](/today).
+2. **Feature planning** — When you are ready to build, Devplan turns ideas into implementation-ready specs and coding prompts grounded in everything it already knows.
+
+For step-by-step setup and timelines, see [Getting Started](/getting-started) and [Core Workflow](/core-workflow). For what each page does in the app, see [Platform Overview](/platform-overview).
 
 ---
 
-## Context Understanding Engine
+## Product intelligence pipeline
 
-Devplan learns about your project by pulling from multiple sources and synthesizing them into a unified model.
+Devplan does not start from a blank slate. It continuously reads from connected tools, uploaded documents, and workspace context to build a living model of your product.
 
-```mermaid
-graph TD
-    A[Repository Analysis] --> D[Context Engine]
-    B[Documentation] --> D
-    C[Team Knowledge] --> D
-    E[Product Analytics] --> D
-    F[User Feedback] --> D
-    D --> G[Intelligent Understanding]
-    G --> H[AI Agents]
-    H --> I[Smart Requirements]
-    H --> J[Context-Rich Prompts]
-    H --> K[Accurate Estimates]
-```
+| Layer | What it is | Where you see it |
+|-------|------------|------------------|
+| **Workspace context** | Company details, goals, customers, competitors — what you tell Devplan directly | [Workspace](/workspace), onboarding wizard |
+| **Integrations** | Live data from GitHub, Slack, Jira, Confluence, and other tools | [Integrations](/integrations) |
+| **Document uploads** | Files ingested into the workspace knowledge graph | **Knowledge > Integrations** uploads |
+| **Knowledge graph** | Connected model of people, features, research, and uploaded content | Powers Ask Devplan, signals, and cross-source reasoning |
+| **Feature catalogue** | Structured map of your product's features, grounded in code and docs | [Product](/product) |
+| **Signals** | Individual evidence items extracted from sources | [Signals](/signals) |
+| **Insights** | Synthesized, role-aware takeaways built from signals | [Insights](/insights) |
+| **Daily Digest** | AI-generated summary of what changed, with evidence links | [Today](/today) |
 
-### Repository analysis
+---
 
-When you connect a repository, Devplan analyzes it across six dimensions:
+## Inputs
 
-| What gets analyzed | What Devplan learns |
-|---|---|
-| Tech stack and frameworks | Languages, libraries, and build tools in use |
-| Architecture patterns | How the codebase is structured and organized |
-| Component conventions | Naming, file organization, and reuse patterns |
-| Data models | Database schema and entity relationships |
-| API surface area | Existing endpoints and service boundaries |
-| Testing patterns | Test structure, coverage approach, and tooling |
+### Workspace context
 
-This analysis is stored and updated as your codebase evolves.
+During [onboarding](/getting-started) and on the [Workspace](/workspace) page, you tell Devplan who you are, what you are building toward, and who you serve. This context frames how Devplan interprets signals, ranks insights, and tailors digests — even before integrations finish processing.
 
-### Feature Catalogue
+### Integrations
 
-The Feature Catalogue is Devplan's structured representation of your product. It stores detailed information about each feature — descriptions, references to related code and documentation, and semantic embeddings that power context-aware search.
+Each connected source feeds a different part of the pipeline. Code repos drive catalogue bootstrap and code-change signals. Slack, Jira, Linear, and Confluence contribute discussion and delivery evidence. Documentation providers enrich the knowledge graph.
+
+Background jobs ingest and analyze connected data on a schedule — not instantly. Repository bootstrap typically takes 30 minutes or longer; signals and insights grow richer over hours and days. See [Core Workflow](/core-workflow) for category-by-category detail and typical timelines.
+
+### Document uploads
+
+Uploads are not stored in isolation. PDFs, spreadsheets, decks, and images are parsed and **ingested into the knowledge graph** alongside integration data. Image attachments receive AI-generated descriptions so their content is accessible in text-only contexts. Upload content surfaces in signals, insights, Ask Devplan answers, and daily digests as processing completes.
+
+---
+
+## Knowledge graph
+
+The knowledge graph is Devplan's connected model of your product — linking workspace context, uploaded research, catalogue features, ticket history, and code structure into one reasoning layer.
+
+This is what allows Devplan to answer cross-source questions in [Ask Devplan](/ask-devplan), cite evidence on Today and Insights, and connect informal product reasoning (Slack threads, call notes) to formal artefacts (PRs, tickets, specs).
+
+---
+
+## Feature catalogue
+
+The feature catalogue is Devplan's structured representation of your product — descriptions, user flows, technical design, and links to related code and documentation.
 
 | Element | Purpose |
 |---|---|
@@ -52,7 +70,39 @@ The Feature Catalogue is Devplan's structured representation of your product. It
 | Embeddings | Vector representations that power semantic search |
 | Feature IDs (ULIDs) | Stable unique identifiers per feature |
 
-The Catalogue can be bootstrapped from an existing codebase by analyzing your repository and connected issue trackers. You can also build it incrementally as you plan new features.
+**Catalogue bootstrap** runs after code repositories are connected and configured. Devplan analyzes repository structure — tech stack, architecture patterns, component conventions, data models, API surface, and testing patterns — and maps features to code. Jira and Linear context from allowed projects enriches the bootstrap.
+
+The catalogue is not static. Periodic **catalogue update** jobs keep the [Product](/product) page and [Updates](/updates) feed current as your codebase and integrations evolve.
+
+---
+
+## Signals and insights
+
+**Signals** are the raw evidence items Devplan extracts from everything it reads — a merged PR, a Slack thread, a Jira comment, an uploaded research doc, a Confluence page update. They appear chronologically on the [Signals](/signals) page and can be filtered by source type.
+
+**Insights** synthesize related signals into role-aware takeaways — risks, opportunities, feedback themes, and alignment gaps. Your [Preferences](/preferences) stakeholder role selections personalize which insights surface most prominently.
+
+Both layers feed the [Daily Digest](/today): a concise summary of what changed across your workspace, with inline evidence pills linking back to the original sources.
+
+---
+
+## Feature planning
+
+When you move from understanding your product to planning what to build next, Devplan applies the same context model to structured project work.
+
+Devplan maps relationships between requirements, components, APIs, and data models. This powers impact analysis during spec generation, dependency-aware user story sequencing, and context-rich coding prompts that preserve the chain from business requirement to technical constraint.
+
+### AI agents
+
+Devplan uses specialized agents during planning and review:
+
+| Agent | Role |
+|---|---|
+| Planning Agent | Runs requirement discovery, asks targeted questions grounded in your codebase |
+| Review Agent | Evaluates generated PRDs for completeness, clarity, feasibility, and alignment |
+| Embedding Agent | Processes attachments and generates descriptions for images and documents |
+
+A typical planning flow moves from discovery through PRD, user stories, technical design, PM tool export, and AI coding prompts. See [Core Workflow](/core-workflow) for the full nine-step planning workflow.
 
 ### Attachments
 
@@ -61,52 +111,16 @@ The Catalogue can be bootstrapped from an existing codebase by analyzing your re
 | Workspace | Available across all projects | Architecture decision records, design systems, company standards |
 | Project | Scoped to a single project | Feature mockups, research notes, customer feedback |
 
-Image attachments receive AI-generated descriptions so their content is accessible to agents in text-only contexts.
-
----
-
-## Intelligent Relationships
-
-Devplan maps the relationships between everything it knows — connecting technical components, product requirements, and team knowledge into a unified model. This is what allows context to flow across your project ecosystem rather than treating each feature in isolation.
-
-```mermaid
-graph TD
-    A[Feature Request] --> B[UI Component]
-    A --> C[User Story]
-    A --> D[API Endpoint]
-    B --> E[Design System]
-    B --> F[Dependencies]
-    C --> G[Acceptance Criteria]
-    C --> H[Test Requirements]
-    D --> I[Database Schema]
-    D --> J[Authentication]
-```
-
-These relationships power three things in practice:
-
-**Impact analysis** — when you plan a new feature, Devplan knows which existing components, APIs, and data models it touches, so generated specs include accurate integration guidance rather than generic advice.
-
-**Dependency tracking** — user stories are sequenced based on what needs to exist before each can be implemented, surfacing blockers before they become problems during development.
-
-**Context preservation** — decisions made during planning stay connected to the tasks they produced. When an engineer opens a task in their AI IDE, the full chain from business requirement to technical constraint is available.
-
----
-
-## AI Agents
-
-Devplan uses multiple specialized agents that collaborate during planning and review.
-
-| Agent | Role |
-|---|---|
-| Planning Agent | Runs requirement discovery, asks targeted questions grounded in your codebase |
-| Review Agent | Evaluates generated PRDs for completeness, clarity, feasibility, and alignment |
-| Embedding Agent | Processes attachments and generates descriptions for images and documents |
-
 ---
 
 ## Integrations
 
-Devplan syncs two-ways with both Linear and Jira — Devplan pushes structure and changes in either tool sync back to Devplan. See [Integrations](/guides/integrations/jira) for setup details.
+Jira and Linear serve two distinct purposes in Devplan:
+
+1. **Ingestion (into Devplan)** — Connected ticket data feeds background jobs that build your feature catalogue and generate [Signals](/signals). Jira uses **Allowed JIRA Projects** on the integration manage page to scope which projects are included; if none are selected, Jira data is excluded from catalogue operations. Linear includes connected teams when the integration is active.
+2. **Export (from Devplan)** — From a project, the **Sync** menu opens a one-way export that pushes Devplan structure to your PM tool. The UI labels this **Jira Sync** / **Linear Sync**, but the action is **Export to JIRA** or **Export to Linear** — Devplan project → Jira Epic / Linear Project, user stories → issues. Changes made in Jira or Linear after export are not reflected back in Devplan.
+
+See [Jira Integration](/jira-integration) for setup and [Integrations](/integrations) for the full provider list.
 
 ### CLI
 
@@ -124,27 +138,14 @@ The CLI pulls user story context from Devplan and writes a context file for your
 
 ## Access Control
 
-| Role | Key permissions |
-|---|---|
-| Owner | Full access — manage content, users, roles, billing, and settings |
-| Editor | Create and edit content and projects, manage integrations, no user management |
-| Projects Owner | Full project and document management, manage integrations, no user management |
-| Engineering | View all content, manage repositories and technical tools, regenerate tasks |
-| Product | View all content, manage repositories and integrations, regenerate user stories |
-| Marketing | View all content, create comments, read-only on most features |
-| Viewer | Read-only access to all company content |
+Devplan uses two workspace roles:
 
-Permissions are cumulative when users have multiple roles. Only Owners can manage user roles and company settings.
+| Role (UI) | Internal name | Key permissions |
+|---|---|---|
+| **Admin** | `OWNER` | Full workspace access — members, settings, integrations, and all content |
+| **User** | `EDITOR` | Create and manage projects, documents, and integrations — no member or settings management |
 
-| Permission | Owner | Editor | Projects Owner | Engineering | Product | Marketing | Viewer |
-|---|---|---|---|---|---|---|---|
-| Create/Edit PRD | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ |
-| Create/Edit Tech Brief | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Delete Projects | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| Linear/Jira Sync | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Regenerate User Stories | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ |
-| Regenerate Tasks | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
-| Manage Users and Roles | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
+Only **Admins** can manage user roles and workspace settings. See [Workspace Members](/workspace-members) for inviting and assigning roles.
 
 ---
 

@@ -1,5 +1,6 @@
 ---
 title: Run Button
+slug: /run-button
 ---
 
 # Run Button

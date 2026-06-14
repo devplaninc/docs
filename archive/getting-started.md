@@ -153,7 +153,7 @@ Once setup is complete, you’re ready to start your first project, ideally one 
 
 **📚 Learn More**
 - [Core Workflow](/core-workflow)  
-- [Architecture](/architecture)  
+- [Architecture](/how-devplan-works)  
 - [Value Proposition](/value-proposition)  
 
 **Need Help?**

@@ -1,13 +1,241 @@
 ---
 title: Core Workflow
-description: A step-by-step walkthrough of Devplan's workflow from feature idea to implementation-ready code.
+slug: /core-workflow
+description: How Devplan learns about your product from connected sources, generates signals and insights, delivers daily digests, and moves features from idea to implementation-ready code.
 sidebar_label: Core Workflow
 sidebar_position: 2
 ---
 
 # Core Workflow
 
-Devplan moves a feature from idea to implementation-ready code across nine steps. The goal throughout is to preserve context — decisions made at the planning stage are still available when an engineer opens their AI coding assistant.
+Devplan has two interconnected workflows. The first is how Devplan **learns about your product** — ingesting context from integrations and uploads, building a feature catalogue, processing signals, and synthesizing insights into daily digests. The second is how Devplan **plans and builds features** — moving an idea through discovery, specs, and implementation.
+
+The product intelligence layer powers everything else. The more sources you connect and the richer your workspace context, the better your [Today](/today) digests, [Insights](/insights), [Ask Devplan](/ask-devplan) answers, and project planning output become.
+
+---
+
+## How Devplan learns about your product
+
+Devplan does not start from a blank slate. It continuously reads from your connected tools, uploaded documents, and workspace context to build a living model of your product.
+
+| Layer | What it is | Where you see it |
+|-------|------------|------------------|
+| **Workspace context** | Company details, goals, customers, competitors — what you tell Devplan directly | [Workspace](/workspace), onboarding wizard |
+| **Integrations** | Live data from GitHub, Slack, Jira, Confluence, and other tools | [Integrations](/integrations) |
+| **Document uploads** | Files ingested into the workspace knowledge graph | **Knowledge > Integrations** uploads |
+| **Knowledge graph** | Connected model of people, features, research, and uploaded content | Powers Ask Devplan, signals, and cross-source reasoning |
+| **Feature catalogue** | Structured map of your product's features, grounded in code and docs | [Product](/product) |
+| **Signals** | Individual evidence items extracted from sources | [Signals](/signals) |
+| **Insights** | Synthesized, role-aware takeaways built from signals | [Insights](/insights) |
+| **Daily Digest** | AI-generated summary of what changed, with evidence links | [Today](/today) |
+
+---
+
+## Step 1: Set workspace context
+
+Before Devplan reads from your tools, it needs to know who you are and what you are building toward. This context is captured during [onboarding](/getting-started) and editable anytime under **Knowledge > Workspace**.
+
+| Field | How Devplan uses it |
+|-------|---------------------|
+| **Company name and website** | Identifies your workspace; website scanning drafts an initial product overview |
+| **What you do** | Frames how Devplan interprets signals and catalogue content |
+| **Company goals** | Ranks insights and digests toward what your team is working toward |
+| **Target customers** | Filters customer-facing signals and feedback themes |
+| **Competitors** | Grounds positioning context in insights and briefs |
+| **Additional background** | Strategy docs, decks, or context that does not fit elsewhere |
+
+You can also attach documents directly during onboarding (goals, background) or from the Workspace page. These attachments are available across the workspace, not scoped to a single project.
+
+Workspace context alone improves output quality — but Devplan becomes significantly smarter once integrations and uploads start flowing in.
+
+---
+
+## Step 2: Connect integrations
+
+Integrations are the primary way Devplan learns about your product. Each connected source feeds a different part of the intelligence pipeline.
+
+Open **Knowledge > Integrations** and connect the tools your team already uses. See the [Integrations](/integrations) page for the full provider list.
+
+### Integration categories and what they feed
+
+| Category | Providers | What Devplan reads | What it powers |
+|----------|-----------|-------------------|----------------|
+| **Code** | GitHub, Bitbucket | Repositories, pull requests, commits, code structure | Feature catalogue bootstrap, implementation context, code-change signals |
+| **Documentation** | Notion, Google Drive, Confluence | Pages, folders, specs, strategy docs | Catalogue enrichment, documentation signals |
+| **Customer Feedback** | Jira, Linear, Notion, Google Docs, Confluence | Issues, research notes, feedback artifacts | Feedback-theme signals and insights |
+| **Project Management** | Jira, Linear | Epics, issues, projects, delivery history | Execution traceability, scope-change signals |
+| **Communication** | Slack, Confluence | Channels, threads, decisions, announcements | Discussion signals, alignment gaps, informal product reasoning |
+| **Call Recordings** | Google Drive, Granola | Meeting notes, transcripts, call summaries | Stakeholder and customer interview signals |
+| **Custom Context** | Notion, Google Drive, Confluence | Any additional pages or folders you want considered | Flexible context beyond standard categories |
+
+### Connect and configure
+
+Connecting an account is only the first step. For most providers you must also **Configure** or **Select folders** to tell Devplan exactly what to read:
+
+- **GitHub / Bitbucket** — select which repositories to analyze. Repository analysis is the foundation of the feature catalogue.
+- **Slack** — choose which channels Devplan monitors.
+- **Confluence / Notion / Google Drive** — pick spaces, pages, or folders.
+- **Jira / Linear** — select projects and issue scopes.
+
+The narrower and more accurate your configuration, the more relevant your signals and insights will be. Connecting a provider without configuring scope often means Devplan has access but nothing indexed yet.
+
+### Processing time
+
+Integrations do not populate your workspace instantly. Devplan runs background jobs to ingest, analyze, and synthesize data.
+
+| Source | What happens after connecting | Typical timeline |
+|--------|------------------------------|------------------|
+| **Code repositories** | Repository analysis and **catalogue bootstrap** — Devplan maps your codebase into a structured feature catalogue | **30 minutes or longer** for first-time analysis, depending on repo size |
+| **Jira / Linear** | Ticket and project data ingested into signals processing | Hours to days as periodic jobs run |
+| **Slack** | Channel history read incrementally | Signal volume grows over hours and days |
+| **Confluence / Notion / Google Drive** | Pages and files read on demand during signal processing | New content appears as processing cycles complete |
+| **Granola / call notes** | Transcripts and summaries ingested as signals | Depends on volume of connected recordings |
+
+During initial processing:
+
+- The [Product](/product) catalogue may be sparse until bootstrap completes
+- [Signals](/signals) and [Insights](/insights) start thin and become richer over time
+- [Today](/today) digests may show "no changes" until enough data has flowed in
+- [Updates](/updates) populate as the catalogue matures
+
+Adding a **new** integration later triggers processing for that source — expect a similar delay before its data fully surfaces. Connect integrations early and give Devplan time to catch up.
+
+Provider-specific setup guides: [Integrations overview](/integrations-overview).
+
+---
+
+## Step 3: Upload documents
+
+Not everything lives in a connected tool. Devplan supports **document uploads** as a first-class input alongside integrations — strategy decks, research exports, customer lists, interview notes, competitive analysis, or any file your team wants Devplan to know about.
+
+### Where to upload
+
+There are three upload surfaces:
+
+**Integrations uploads** — under **Knowledge > Integrations**, open the uploads section to add files to your workspace. All uploads go into a single library — you do not need to pick a category. Upload whatever context matters: product specs, customer research, strategy decks, meeting notes, or data exports.
+
+**Workspace and onboarding attachments** — during onboarding or on the [Workspace](/workspace) page, attach docs to specific context sections (goals, background). These are workspace-scoped and available across all projects.
+
+**Project attachments** — when creating or editing a project, attach mockups, research, or specs scoped to that project.
+
+### Supported file types
+
+- **Documents** — PDF, DOCX, Markdown
+- **Spreadsheets** — CSV, XLSX
+- **Images** — JPEG, PNG (Devplan generates AI descriptions so image content is accessible in text-only contexts)
+
+### How uploads feed the pipeline
+
+Uploaded documents are not just stored — they are **ingested into the workspace knowledge graph**, the same structured model Devplan uses to connect people, features, signals, and research across your product.
+
+1. Files are indexed and parsed for text, structure, and key entities
+2. Content is added to the **knowledge graph**, linked to your workspace, projects, and other sources
+3. During **signals processing**, Devplan reads upload content alongside Slack messages, PRs, tickets, and docs from connected tools
+4. Relevant excerpts become **signals** in the [Signals](/signals) feed
+5. Related signals are synthesized into **insights** on the [Insights](/insights) page
+6. Upload content also enriches [Ask Devplan](/ask-devplan) answers and may surface in your [Daily Digest](/today)
+
+Upload documents early — especially customer research, strategy decks, and competitive analysis — to give Devplan context that integrations alone may not capture. New uploads take time to ingest; allow processing to complete before expecting them in signals and insights.
+
+---
+
+## Step 4: Build the feature catalogue
+
+Once code repositories are connected and configured, Devplan runs a **catalogue bootstrap** job. This analyzes your codebase and connected issue trackers to build a structured [Product](/product) catalogue — a map of your product's features with descriptions, user flows, and technical design.
+
+| What bootstrap does | Result |
+|---------------------|--------|
+| Analyzes repository structure | Tech stack, architecture patterns, component conventions |
+| Maps features to code | Links catalogue entries to relevant files and modules |
+| Incorporates Jira/Linear context | Connects tickets and epics to feature areas |
+| Generates specs | User flow and tech design tabs per feature |
+
+The catalogue is not static. As your codebase evolves and new integrations are connected, Devplan runs periodic **catalogue update** jobs to keep the [Product](/product) page and [Updates](/updates) feed current.
+
+Bootstrap requires a successful code integration. If the catalogue is empty, check that GitHub or Bitbucket is connected and repositories are selected.
+
+---
+
+## Step 5: Signals — raw evidence from your sources
+
+**Signals** are the individual evidence items Devplan extracts from everything it reads — a Slack thread, a merged PR, a Jira comment, an uploaded research doc, a Confluence page update.
+
+Open **Knowledge > Signals** to browse the raw feed. Each signal shows:
+
+- A headline summarizing what was observed
+- Source tags indicating which integration or upload produced it
+- Timestamps and links to the original artifact
+
+Signals processing runs periodically after catalogue bootstrap completes. It gathers data from all connected integrations and uploaded documents over a time window and extracts high-confidence evidence items.
+
+Signals are the **inputs** to insights. They are useful on their own for auditing what Devplan has observed, but their primary purpose is feeding the synthesis layer.
+
+See [Signals](/signals) for browsing, filtering, and inspecting evidence flyouts.
+
+---
+
+## Step 6: Insights — synthesized takeaways from signals
+
+**Insights** are where signals become actionable. Devplan groups related signals, evaluates them against your workspace context and role preferences, and produces prioritized briefs.
+
+| Insight kind | Example |
+|--------------|---------|
+| **Risk** | A recurring blocker or architectural concern surfaced across multiple PRs and Slack threads |
+| **Problem / opportunity** | A customer pain point mentioned in call notes and support tickets |
+| **Feedback theme** | A pattern in user feedback across Jira issues and uploaded research |
+
+Each insight card shows how many signals and sources back it. Click an **evidence pill** to inspect the raw references, or **Read brief** for the full synthesized narrative.
+
+Insights are filtered by the roles you select in [Preferences](/preferences). Adjust your roles to change which insights surface for you.
+
+The insight creation pipeline runs after signals processing, using in-period signals, existing insights, and the feature catalogue as inputs.
+
+See [Insights](/insights) for the full experience.
+
+---
+
+## Step 7: Daily Digest — your daily summary
+
+The [Today](/today) page delivers AI-generated **Daily Digests** that summarize what changed across your workspace. Digests are the primary way most teams consume the intelligence pipeline day to day.
+
+### Workspace vs. personal digests
+
+| Digest | Who it is for | How it is configured |
+|--------|---------------|----------------------|
+| **Workspace** | Everyone on the team | Default instructions and delivery set in [Workspace Daily Digest](/workspace-daily-digest) settings |
+| **Personal** | You | Custom instructions via **Personalize** on the Today page; email toggle in [Preferences](/preferences) |
+
+Toggle between **Workspace** and **Personal** on the Today page to switch views.
+
+### What digests include
+
+Daily Digests synthesize recent activity from signals, insights, catalogue changes, and connected sources. Content includes:
+
+- What changed in the product and why it matters
+- Inline **evidence pills** linking to source PRs, tickets, Slack threads, and documents
+- Grouped sections by topic or product area
+
+Click any evidence pill to open a flyout with the full source references behind a claim.
+
+### Delivery options
+
+- **Email** — workspace digests emailed to eligible members on a schedule; personal digests emailed on demand or on schedule
+- **Slack** — workspace digest posted to a configured channel (requires Slack integration)
+- **In-app** — always available on [Today](/today) with previous digest history
+
+### Personalize your digest
+
+Click **Personalize** on the Today page to write custom instructions for your personal digest — tone, formatting, what to prioritize, and how to link evidence. See [Today](/today) for details.
+
+### Related: Updates feed
+
+The [Updates](/updates) page shows a complementary view — a chronological feed of product catalogue changes ("what shipped recently"), grouped by product area and date. Updates and Today digests draw from the same underlying catalogue and signal data but serve different browsing patterns.
+
+---
+
+## Feature planning workflow
+
+Once Devplan knows your product, you can plan and build features with full context. Devplan moves a feature from idea to implementation-ready code across nine steps. The goal throughout is to preserve context — decisions made at the planning stage are still available when an engineer opens their AI coding assistant.
 
 | Step | What happens | Your involvement |
 |---|---|---|
@@ -16,14 +244,16 @@ Devplan moves a feature from idea to implementation-ready code across nine steps
 | 3. PRD Generation | Devplan writes and self-reviews a PRD | Review and approve |
 | 4. User Stories | Feature broken into sized, scored stories | Review stories and Agentic Scores |
 | 5. Technical Design | Implementation guidance generated per story | Review technical tasks |
-| 6. PM Tool Sync | Push structure to Linear or Jira | Trigger sync from the Build Plan |
+| 6. PM Tool Export | Push structure to Linear or Jira (one-way) | **Sync** menu on the Build Plan → **Export to JIRA** / **Export to Linear** |
 | 7. Coding Prompts | Context-rich prompts generated per story | Copy prompt to your AI IDE |
 | 8. CLI Integration | Pull context into your local IDE | Run `devplan specs start` in your terminal |
 | 9. Monitoring | Track progress in the Runs view | Review status and blockers |
 
+Because Devplan already knows your product from integrations, uploads, and the feature catalogue, planning agents ask implementation-specific questions rather than generic ones — and generated specs reference your actual architecture, patterns, and conventions.
+
 ---
 
-## Step 1: Input and context processing
+### Planning Step 1: Input and context processing
 
 Devplan accepts a wide range of input formats.
 
@@ -33,12 +263,13 @@ Devplan accepts a wide range of input formats.
 | Visual | UX mockups, design files, user flow diagrams |
 | Data | Analytics insights, interview notes, market research |
 | Issue links | Jira or Linear issues pasted into the feature creation form |
+| Attachments | Upload docs, images, or spreadsheets to the project |
 
-Before any questions are asked, Devplan's Context Engine analyzes your input against your connected repository — examining codebase architecture, existing patterns, current product features, team conventions, and historical project decisions.
+Before any questions are asked, Devplan's Context Engine analyzes your input against the feature catalogue, connected repositories, uploaded documents, and workspace context.
 
 ---
 
-## Step 2: Agent-guided discovery
+### Planning Step 2: Agent-guided discovery
 
 The Planning Agent asks questions specific to your implementation rather than generic planning questions, because it already knows your tech stack and architecture.
 
@@ -48,7 +279,7 @@ This process typically surfaces 3-5 critical requirements that would otherwise b
 
 ---
 
-## Step 3: PRD generation
+### Planning Step 3: PRD generation
 
 Devplan generates a PRD covering an executive summary, user flows, key requirements, and out-of-scope items. It also includes integration points with your existing systems, code architecture recommendations, and a risk assessment grounded in your actual codebase.
 
@@ -63,7 +294,7 @@ The Review Agent evaluates the PRD before you see it:
 
 ---
 
-## Step 4: User stories
+### Planning Step 4: User stories
 
 Devplan breaks the PRD into implementation-ready user stories with complexity estimates calibrated to your actual codebase.
 
@@ -77,14 +308,13 @@ Each story receives an **Agentic Score** — a measure of how likely an AI codin
 | Medium | Some ambiguity present | Review and refine before handing to an agent |
 | Low | Complex or underspecified | Decompose or add detail before using AI |
 
-
 :::tip
 Low Agentic Scores are useful signal, not a problem. Use them to identify which stories need more detail before running them through your AI IDE.
 :::
 
 ---
 
-## Step 5: Technical design
+### Planning Step 5: Technical design
 
 For each user story, Devplan generates implementation guidance specific to your codebase.
 
@@ -100,7 +330,9 @@ For each user story, Devplan generates implementation guidance specific to your 
 
 ---
 
-## Step 6: PM tool sync
+### Planning Step 6: PM tool export
+
+From the project's **Build Plan** tab, open the **Sync** dropdown and choose **Jira Sync** or **Linear Sync** to export. The menu label says "Sync," but the action is a one-way **Export to JIRA** or **Export to Linear**.
 
 | Devplan object | Linear | Jira |
 |---|---|---|
@@ -109,12 +341,12 @@ For each user story, Devplan generates implementation guidance specific to your 
 | Technical task | Linear Sub-issue | Jira Task |
 
 :::note
-Syncs are one-directional. Devplan pushes to your PM tool. Changes made in Linear or Jira after export are not reflected back in Devplan.
+Export is one-directional. Devplan pushes to your PM tool. Changes made in Linear or Jira after export are not reflected back in Devplan. Ingestion from Jira/Linear into Signals is a separate background process — see [Jira Integration](/jira-integration).
 :::
 
 ---
 
-## Step 7: AI coding prompts
+### Planning Step 7: AI coding prompts
 
 Each user story generates a prompt containing exact file paths, codebase-specific patterns, integration points with existing code, and edge case considerations.
 
@@ -137,17 +369,15 @@ with email/password and session management.
 
 ---
 
-## Step 8: CLI
+### Planning Step 8: CLI
 
 The CLI bridges the Devplan web app and your local AI IDE. Copy the command from any story's prompt popover and run it in your terminal.
 
-
-
-See the [CLI Cheat Sheet](/dev/cli-cheat-sheet) for the full command reference.
+See the [CLI Cheat Sheet](/cli-cheat-sheet) for the full command reference.
 
 ---
 
-## Step 9: Monitoring
+### Planning Step 9: Monitoring
 
 | What Devplan tracks | Details |
 |---|---|
@@ -156,4 +386,31 @@ See the [CLI Cheat Sheet](/dev/cli-cheat-sheet) for the full command reference.
 | Scope changes | New items added relative to original plan |
 | Blockers | Dependency issues and stalled tasks |
 
-The [Run Button](/cloud-run/) executes tasks in the cloud and shows a live view of active runs, assignees, and linked pull requests.
+The [Run Button](/run-button) executes tasks in the cloud and shows a live view of active runs, assignees, and linked pull requests.
+
+---
+
+## Putting it together
+
+A typical Devplan workflow:
+
+1. **Set up** — complete [onboarding](/getting-started), connect integrations, upload key documents
+2. **Wait for processing** — let catalogue bootstrap and signal processing run (especially after new integrations)
+3. **Review daily** — read your [Daily Digest](/today), scan [Insights](/insights), browse [Signals](/signals)
+4. **Ask questions** — use [Ask Devplan](/ask-devplan) to dig into product changes, blockers, and priorities
+5. **Plan features** — create a project and run through the nine-step planning workflow with full product context
+6. **Keep feeding Devplan** — add integrations, upload new research, and update workspace context as your product evolves
+
+The intelligence layer and the planning workflow reinforce each other. Better sources produce better digests and insights, which produce better specs and prompts when you build.
+
+---
+
+## Related pages
+
+- [Getting Started](/getting-started) — account setup, onboarding wizard, and first integrations
+- [Platform Overview](/platform-overview) — tour of every page in the sidebar
+- [Integrations](/integrations) — connect and manage data sources
+- [Today](/today) — daily digest and personalization
+- [Insights](/insights) — synthesized takeaways
+- [Signals](/signals) — raw evidence feed
+- [How Devplan Works](/how-devplan-works) — technical deep dive on product intelligence and feature planning

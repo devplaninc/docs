@@ -1,5 +1,6 @@
 ---
 title: "Addressing PR Comments"
+slug: /addressing-pr-comments
 sidebar_position: 5
 ---
 
@@ -68,8 +69,8 @@ The agent works best with comments that are:
 
 ## Next Steps
 
-- Learn about [Running Tasks](./run) to create the initial PR
-- Configure [Secrets Management](./secrets) if your repo needs credentials
-- Review [Setup Scripts](./setup) for environment configuration
+- Learn about [Running Tasks](/running-tasks) to create the initial PR
+- Configure [Secrets Management](/secrets-management) if your repo needs credentials
+- Review [Setup Scripts](/setup-scripts) for environment configuration
 
 **Questions?** Contact support at info@devplan.com

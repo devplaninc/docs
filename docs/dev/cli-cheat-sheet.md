@@ -1,5 +1,6 @@
 ---
 title: "CLI Cheat Sheet"
+slug: /cli-cheat-sheet
 sidebar_position: 1
 ---
 
@@ -214,6 +215,6 @@ specs/
 
 ## Learn More
 
-- **[Spec Driven Development](/dev/spec-driven-dev)** - Full SDD workflow documentation
+- **[Spec Driven Development](/spec-driven-development)** - Full SDD workflow documentation
 - **[Git Worktrees](/dev/git-worktrees)** - How Devplan uses git worktrees
 - **[Getting Started](/getting-started)** - Initial setup guide

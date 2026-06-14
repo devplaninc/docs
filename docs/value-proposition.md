@@ -174,6 +174,6 @@ graph LR
 **Next Steps:**
 - 📖 [Learn the workflow](/core-workflow) - See how context flows from idea to code
 - 🚀 [Get started](/getting-started) - Set up your account and first project
-- 🏗️ [Understand the architecture](/architecture) - Deep dive into how it works
+- 🏗️ [Understand the architecture](/how-devplan-works) - Deep dive into how it works
 
 **Questions?** Contact us at info@devplan.com or book a demo to see Devplan in action.
