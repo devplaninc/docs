@@ -1,11 +1,12 @@
 ---
 title: Confluence Integration
+slug: /confluence-integration
 sidebar_position: 9
 ---
 
 # Confluence
 
-Connect Confluence and attach spaces or pages so Devplan can read them on demand during signal processing — feeding [Signals](/platform/signals), [Insights](/platform/insights), and [Ask Devplan](/platform/ask-devplan).
+Connect Confluence and attach spaces or pages so Devplan can read them on demand during signal processing — feeding [Signals](/signals), [Insights](/insights), and [Ask Devplan](/ask-devplan).
 
 ---
 
@@ -83,6 +84,6 @@ Good candidates to attach: product specs, architecture docs, decision logs, cust
 
 ## Related pages
 
-- [Jira](/guides/integrations/jira) — connect Jira on the same Atlassian site
-- [Notion](/guides/integrations/notion) — attach Notion pages and databases
+- [Jira](/jira-integration) — connect Jira on the same Atlassian site
+- [Notion](/notion-integration) — attach Notion pages and databases
 - [Core Workflow](/core-workflow) — how document sources feed the pipeline

@@ -1,5 +1,6 @@
 ---
 title: Today
+slug: /today
 sidebar_label: Today
 sidebar_position: 1
 ---
@@ -66,7 +67,7 @@ You must add instructions before **Generate** is enabled.
 
 ### Communication settings
 
-Use **Manage communication settings** in the panel footer to control whether you receive Daily Digest emails. This opens your [Preferences](/settings/preferences) for the workspace.
+Use **Manage communication settings** in the panel footer to control whether you receive Daily Digest emails. This opens your [Preferences](/preferences) for the workspace.
 
 ### Save or cancel
 
@@ -87,8 +88,8 @@ Click **Save** to persist your instructions without generating a new digest. Cli
 
 ## Related pages
 
-- [Updates](/platform/updates) — detailed feed of product catalog changes
-- [Insights](/platform/insights) — synthesized takeaways from workspace signals
-- [Ask Devplan](/platform/ask-devplan) — ask follow-up questions about recent activity
-- [Workspace Daily Digest](/settings/workspace-daily-digest) — workspace-wide digest settings (admin)
-- [Preferences](/settings/preferences) — per-user email delivery settings
+- [Updates](/updates) — detailed feed of product catalog changes
+- [Insights](/insights) — synthesized takeaways from workspace signals
+- [Ask Devplan](/ask-devplan) — ask follow-up questions about recent activity
+- [Workspace Daily Digest](/workspace-daily-digest) — workspace-wide digest settings (admin)
+- [Preferences](/preferences) — per-user email delivery settings

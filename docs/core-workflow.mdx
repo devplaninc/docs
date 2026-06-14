@@ -1,5 +1,6 @@
 ---
 title: Core Workflow
+slug: /core-workflow
 description: How Devplan learns about your product from connected sources, generates signals and insights, delivers daily digests, and moves features from idea to implementation-ready code.
 sidebar_label: Core Workflow
 sidebar_position: 2
@@ -9,7 +10,7 @@ sidebar_position: 2
 
 Devplan has two interconnected workflows. The first is how Devplan **learns about your product** — ingesting context from integrations and uploads, building a feature catalogue, processing signals, and synthesizing insights into daily digests. The second is how Devplan **plans and builds features** — moving an idea through discovery, specs, and implementation.
 
-The product intelligence layer powers everything else. The more sources you connect and the richer your workspace context, the better your [Today](/platform/today) digests, [Insights](/platform/insights), [Ask Devplan](/platform/ask-devplan) answers, and project planning output become.
+The product intelligence layer powers everything else. The more sources you connect and the richer your workspace context, the better your [Today](/today) digests, [Insights](/insights), [Ask Devplan](/ask-devplan) answers, and project planning output become.
 
 ---
 
@@ -19,20 +20,20 @@ Devplan does not start from a blank slate. It continuously reads from your conne
 
 | Layer | What it is | Where you see it |
 |-------|------------|------------------|
-| **Workspace context** | Company details, goals, customers, competitors — what you tell Devplan directly | [Workspace](/platform/workspace), onboarding wizard |
-| **Integrations** | Live data from GitHub, Slack, Jira, Confluence, and other tools | [Integrations](/platform/integrations) |
+| **Workspace context** | Company details, goals, customers, competitors — what you tell Devplan directly | [Workspace](/workspace), onboarding wizard |
+| **Integrations** | Live data from GitHub, Slack, Jira, Confluence, and other tools | [Integrations](/integrations) |
 | **Document uploads** | Files ingested into the workspace knowledge graph | **Knowledge > Integrations** uploads |
 | **Knowledge graph** | Connected model of people, features, research, and uploaded content | Powers Ask Devplan, signals, and cross-source reasoning |
-| **Feature catalogue** | Structured map of your product's features, grounded in code and docs | [Product](/platform/product) |
-| **Signals** | Individual evidence items extracted from sources | [Signals](/platform/signals) |
-| **Insights** | Synthesized, role-aware takeaways built from signals | [Insights](/platform/insights) |
-| **Daily Digest** | AI-generated summary of what changed, with evidence links | [Today](/platform/today) |
+| **Feature catalogue** | Structured map of your product's features, grounded in code and docs | [Product](/product) |
+| **Signals** | Individual evidence items extracted from sources | [Signals](/signals) |
+| **Insights** | Synthesized, role-aware takeaways built from signals | [Insights](/insights) |
+| **Daily Digest** | AI-generated summary of what changed, with evidence links | [Today](/today) |
 
 ---
 
 ## Step 1: Set workspace context
 
-Before Devplan reads from your tools, it needs to know who you are and what you are building toward. This context is captured during [onboarding](/quickstart) and editable anytime under **Knowledge > Workspace**.
+Before Devplan reads from your tools, it needs to know who you are and what you are building toward. This context is captured during [onboarding](/getting-started) and editable anytime under **Knowledge > Workspace**.
 
 | Field | How Devplan uses it |
 |-------|---------------------|
@@ -53,7 +54,7 @@ Workspace context alone improves output quality — but Devplan becomes signific
 
 Integrations are the primary way Devplan learns about your product. Each connected source feeds a different part of the intelligence pipeline.
 
-Open **Knowledge > Integrations** and connect the tools your team already uses. See the [Integrations](/platform/integrations) page for the full provider list.
+Open **Knowledge > Integrations** and connect the tools your team already uses. See the [Integrations](/integrations) page for the full provider list.
 
 ### Integration categories and what they feed
 
@@ -92,14 +93,14 @@ Integrations do not populate your workspace instantly. Devplan runs background j
 
 During initial processing:
 
-- The [Product](/platform/product) catalogue may be sparse until bootstrap completes
-- [Signals](/platform/signals) and [Insights](/platform/insights) start thin and become richer over time
-- [Today](/platform/today) digests may show "no changes" until enough data has flowed in
-- [Updates](/platform/updates) populate as the catalogue matures
+- The [Product](/product) catalogue may be sparse until bootstrap completes
+- [Signals](/signals) and [Insights](/insights) start thin and become richer over time
+- [Today](/today) digests may show "no changes" until enough data has flowed in
+- [Updates](/updates) populate as the catalogue matures
 
 Adding a **new** integration later triggers processing for that source — expect a similar delay before its data fully surfaces. Connect integrations early and give Devplan time to catch up.
 
-Provider-specific setup guides: [Integrations overview](/guides/integrations).
+Provider-specific setup guides: [Integrations overview](/integrations-overview).
 
 ---
 
@@ -113,7 +114,7 @@ There are three upload surfaces:
 
 **Integrations uploads** — under **Knowledge > Integrations**, open the uploads section to add files to your workspace. All uploads go into a single library — you do not need to pick a category. Upload whatever context matters: product specs, customer research, strategy decks, meeting notes, or data exports.
 
-**Workspace and onboarding attachments** — during onboarding or on the [Workspace](/platform/workspace) page, attach docs to specific context sections (goals, background). These are workspace-scoped and available across all projects.
+**Workspace and onboarding attachments** — during onboarding or on the [Workspace](/workspace) page, attach docs to specific context sections (goals, background). These are workspace-scoped and available across all projects.
 
 **Project attachments** — when creating or editing a project, attach mockups, research, or specs scoped to that project.
 
@@ -130,9 +131,9 @@ Uploaded documents are not just stored — they are **ingested into the workspac
 1. Files are indexed and parsed for text, structure, and key entities
 2. Content is added to the **knowledge graph**, linked to your workspace, projects, and other sources
 3. During **signals processing**, Devplan reads upload content alongside Slack messages, PRs, tickets, and docs from connected tools
-4. Relevant excerpts become **signals** in the [Signals](/platform/signals) feed
-5. Related signals are synthesized into **insights** on the [Insights](/platform/insights) page
-6. Upload content also enriches [Ask Devplan](/platform/ask-devplan) answers and may surface in your [Daily Digest](/platform/today)
+4. Relevant excerpts become **signals** in the [Signals](/signals) feed
+5. Related signals are synthesized into **insights** on the [Insights](/insights) page
+6. Upload content also enriches [Ask Devplan](/ask-devplan) answers and may surface in your [Daily Digest](/today)
 
 Upload documents early — especially customer research, strategy decks, and competitive analysis — to give Devplan context that integrations alone may not capture. New uploads take time to ingest; allow processing to complete before expecting them in signals and insights.
 
@@ -140,7 +141,7 @@ Upload documents early — especially customer research, strategy decks, and com
 
 ## Step 4: Build the feature catalogue
 
-Once code repositories are connected and configured, Devplan runs a **catalogue bootstrap** job. This analyzes your codebase and connected issue trackers to build a structured [Product](/platform/product) catalogue — a map of your product's features with descriptions, user flows, and technical design.
+Once code repositories are connected and configured, Devplan runs a **catalogue bootstrap** job. This analyzes your codebase and connected issue trackers to build a structured [Product](/product) catalogue — a map of your product's features with descriptions, user flows, and technical design.
 
 | What bootstrap does | Result |
 |---------------------|--------|
@@ -149,7 +150,7 @@ Once code repositories are connected and configured, Devplan runs a **catalogue 
 | Incorporates Jira/Linear context | Connects tickets and epics to feature areas |
 | Generates specs | User flow and tech design tabs per feature |
 
-The catalogue is not static. As your codebase evolves and new integrations are connected, Devplan runs periodic **catalogue update** jobs to keep the [Product](/platform/product) page and [Updates](/platform/updates) feed current.
+The catalogue is not static. As your codebase evolves and new integrations are connected, Devplan runs periodic **catalogue update** jobs to keep the [Product](/product) page and [Updates](/updates) feed current.
 
 Bootstrap requires a successful code integration. If the catalogue is empty, check that GitHub or Bitbucket is connected and repositories are selected.
 
@@ -169,7 +170,7 @@ Signals processing runs periodically after catalogue bootstrap completes. It gat
 
 Signals are the **inputs** to insights. They are useful on their own for auditing what Devplan has observed, but their primary purpose is feeding the synthesis layer.
 
-See [Signals](/platform/signals) for browsing, filtering, and inspecting evidence flyouts.
+See [Signals](/signals) for browsing, filtering, and inspecting evidence flyouts.
 
 ---
 
@@ -185,24 +186,24 @@ See [Signals](/platform/signals) for browsing, filtering, and inspecting evidenc
 
 Each insight card shows how many signals and sources back it. Click an **evidence pill** to inspect the raw references, or **Read brief** for the full synthesized narrative.
 
-Insights are filtered by the roles you select in [Preferences](/settings/preferences). Adjust your roles to change which insights surface for you.
+Insights are filtered by the roles you select in [Preferences](/preferences). Adjust your roles to change which insights surface for you.
 
 The insight creation pipeline runs after signals processing, using in-period signals, existing insights, and the feature catalogue as inputs.
 
-See [Insights](/platform/insights) for the full experience.
+See [Insights](/insights) for the full experience.
 
 ---
 
 ## Step 7: Daily Digest — your daily summary
 
-The [Today](/platform/today) page delivers AI-generated **Daily Digests** that summarize what changed across your workspace. Digests are the primary way most teams consume the intelligence pipeline day to day.
+The [Today](/today) page delivers AI-generated **Daily Digests** that summarize what changed across your workspace. Digests are the primary way most teams consume the intelligence pipeline day to day.
 
 ### Workspace vs. personal digests
 
 | Digest | Who it is for | How it is configured |
 |--------|---------------|----------------------|
-| **Workspace** | Everyone on the team | Default instructions and delivery set in [Workspace Daily Digest](/settings/workspace-daily-digest) settings |
-| **Personal** | You | Custom instructions via **Personalize** on the Today page; email toggle in [Preferences](/settings/preferences) |
+| **Workspace** | Everyone on the team | Default instructions and delivery set in [Workspace Daily Digest](/workspace-daily-digest) settings |
+| **Personal** | You | Custom instructions via **Personalize** on the Today page; email toggle in [Preferences](/preferences) |
 
 Toggle between **Workspace** and **Personal** on the Today page to switch views.
 
@@ -220,15 +221,15 @@ Click any evidence pill to open a flyout with the full source references behind 
 
 - **Email** — workspace digests emailed to eligible members on a schedule; personal digests emailed on demand or on schedule
 - **Slack** — workspace digest posted to a configured channel (requires Slack integration)
-- **In-app** — always available on [Today](/platform/today) with previous digest history
+- **In-app** — always available on [Today](/today) with previous digest history
 
 ### Personalize your digest
 
-Click **Personalize** on the Today page to write custom instructions for your personal digest — tone, formatting, what to prioritize, and how to link evidence. See [Today](/platform/today) for details.
+Click **Personalize** on the Today page to write custom instructions for your personal digest — tone, formatting, what to prioritize, and how to link evidence. See [Today](/today) for details.
 
 ### Related: Updates feed
 
-The [Updates](/platform/updates) page shows a complementary view — a chronological feed of product catalogue changes ("what shipped recently"), grouped by product area and date. Updates and Today digests draw from the same underlying catalogue and signal data but serve different browsing patterns.
+The [Updates](/updates) page shows a complementary view — a chronological feed of product catalogue changes ("what shipped recently"), grouped by product area and date. Updates and Today digests draw from the same underlying catalogue and signal data but serve different browsing patterns.
 
 ---
 
@@ -340,7 +341,7 @@ From the project's **Build Plan** tab, open the **Sync** dropdown and choose **J
 | Technical task | Linear Sub-issue | Jira Task |
 
 :::note
-Export is one-directional. Devplan pushes to your PM tool. Changes made in Linear or Jira after export are not reflected back in Devplan. Ingestion from Jira/Linear into Signals is a separate background process — see [Jira Integration](/guides/integrations/jira).
+Export is one-directional. Devplan pushes to your PM tool. Changes made in Linear or Jira after export are not reflected back in Devplan. Ingestion from Jira/Linear into Signals is a separate background process — see [Jira Integration](/jira-integration).
 :::
 
 ---
@@ -372,7 +373,7 @@ with email/password and session management.
 
 The CLI bridges the Devplan web app and your local AI IDE. Copy the command from any story's prompt popover and run it in your terminal.
 
-See the [CLI Cheat Sheet](/dev/cli-cheat-sheet) for the full command reference.
+See the [CLI Cheat Sheet](/cli-cheat-sheet) for the full command reference.
 
 ---
 
@@ -385,7 +386,7 @@ See the [CLI Cheat Sheet](/dev/cli-cheat-sheet) for the full command reference.
 | Scope changes | New items added relative to original plan |
 | Blockers | Dependency issues and stalled tasks |
 
-The [Run Button](/cloud-run/) executes tasks in the cloud and shows a live view of active runs, assignees, and linked pull requests.
+The [Run Button](/run-button) executes tasks in the cloud and shows a live view of active runs, assignees, and linked pull requests.
 
 ---
 
@@ -393,10 +394,10 @@ The [Run Button](/cloud-run/) executes tasks in the cloud and shows a live view 
 
 A typical Devplan workflow:
 
-1. **Set up** — complete [onboarding](/quickstart), connect integrations, upload key documents
+1. **Set up** — complete [onboarding](/getting-started), connect integrations, upload key documents
 2. **Wait for processing** — let catalogue bootstrap and signal processing run (especially after new integrations)
-3. **Review daily** — read your [Daily Digest](/platform/today), scan [Insights](/platform/insights), browse [Signals](/platform/signals)
-4. **Ask questions** — use [Ask Devplan](/platform/ask-devplan) to dig into product changes, blockers, and priorities
+3. **Review daily** — read your [Daily Digest](/today), scan [Insights](/insights), browse [Signals](/signals)
+4. **Ask questions** — use [Ask Devplan](/ask-devplan) to dig into product changes, blockers, and priorities
 5. **Plan features** — create a project and run through the nine-step planning workflow with full product context
 6. **Keep feeding Devplan** — add integrations, upload new research, and update workspace context as your product evolves
 
@@ -406,10 +407,10 @@ The intelligence layer and the planning workflow reinforce each other. Better so
 
 ## Related pages
 
-- [Getting Started](/quickstart) — account setup, onboarding wizard, and first integrations
-- [Platform Overview](/platform) — tour of every page in the sidebar
-- [Integrations](/platform/integrations) — connect and manage data sources
-- [Today](/platform/today) — daily digest and personalization
-- [Insights](/platform/insights) — synthesized takeaways
-- [Signals](/platform/signals) — raw evidence feed
-- [How Devplan Works](/architecture) — technical deep dive on product intelligence and feature planning
+- [Getting Started](/getting-started) — account setup, onboarding wizard, and first integrations
+- [Platform Overview](/platform-overview) — tour of every page in the sidebar
+- [Integrations](/integrations) — connect and manage data sources
+- [Today](/today) — daily digest and personalization
+- [Insights](/insights) — synthesized takeaways
+- [Signals](/signals) — raw evidence feed
+- [How Devplan Works](/how-devplan-works) — technical deep dive on product intelligence and feature planning

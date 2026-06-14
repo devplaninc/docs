@@ -1,5 +1,6 @@
 ---
 title: Platform Overview
+slug: /platform-overview
 sidebar_label: Overview
 sidebar_position: 0
 ---
@@ -16,11 +17,11 @@ These pages are your starting point each day.
 
 | Page | What it does |
 |------|--------------|
-| [Today](/platform/today) | AI-generated daily digests of what's changing across your workspace |
-| [Ask Devplan](/platform/ask-devplan) | Conversational AI assistant scoped to your workspace |
-| [Projects](/platform/projects) | Track and manage active projects |
-| [Updates](/platform/updates) | Feed of what shipped recently in your product catalog |
-| [Insights](/platform/insights) | Synthesized, role-aware takeaways from workspace signals |
+| [Today](/today) | AI-generated daily digests of what's changing across your workspace |
+| [Ask Devplan](/ask-devplan) | Conversational AI assistant scoped to your workspace |
+| [Projects](/projects) | Track and manage active projects |
+| [Updates](/updates) | Feed of what shipped recently in your product catalog |
+| [Insights](/insights) | Synthesized, role-aware takeaways from workspace signals |
 
 ---
 
@@ -30,7 +31,7 @@ Planning views for your project portfolio. **Roadmap** appears under **Specs** w
 
 | Page | What it does |
 |------|--------------|
-| [Roadmap](/platform/roadmap) | Portfolio planning across releases, kanban, and timeline views |
+| [Roadmap](/roadmap) | Portfolio planning across releases, kanban, and timeline views |
 
 ---
 
@@ -40,10 +41,10 @@ Context and data sources that power AI output across the platform.
 
 | Page | What it does |
 |------|--------------|
-| [Workspace](/platform/workspace) | Edit core workspace context — customers, goals, competitors |
-| [Product](/platform/product) | Browse auto-generated feature catalogue and specs |
-| [Signals](/platform/signals) | Raw evidence feed from connected sources |
-| [Integrations](/platform/integrations) | Connect external tools that feed knowledge and signals |
+| [Workspace](/workspace) | Edit core workspace context — customers, goals, competitors |
+| [Product](/product) | Browse auto-generated feature catalogue and specs |
+| [Signals](/signals) | Raw evidence feed from connected sources |
+| [Integrations](/integrations) | Connect external tools that feed knowledge and signals |
 
 ---
 
@@ -68,7 +69,7 @@ flowchart LR
 
 ## Evidence pills
 
-On [Today](/platform/today), [Insights](/platform/insights), and [Ask Devplan](/platform/ask-devplan), you'll see inline **evidence pills** — small badges showing source icons and a count like `3 sources`. Click a pill to open a flyout listing the references behind a claim, with links to the original PRs, tickets, Slack threads, and other connected sources.
+On [Today](/today), [Insights](/insights), and [Ask Devplan](/ask-devplan), you'll see inline **evidence pills** — small badges showing source icons and a count like `3 sources`. Click a pill to open a flyout listing the references behind a claim, with links to the original PRs, tickets, Slack threads, and other connected sources.
 
 ---
 
@@ -77,4 +78,4 @@ On [Today](/platform/today), [Insights](/platform/insights), and [Ask Devplan](/
 - **Roadmap** — visible when specs are enabled for your workspace
 - **Insights** and **Signals** — may not appear in all workspaces
 
-For setup steps, see [Getting Started](/quickstart). For the feature planning workflow, see [Core Workflow](/core-workflow). For account and workspace configuration, see [Settings Overview](/settings).
+For setup steps, see [Getting Started](/getting-started). For the feature planning workflow, see [Core Workflow](/core-workflow). For account and workspace configuration, see [Settings Overview](/settings-overview).

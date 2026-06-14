@@ -1,12 +1,13 @@
 ---
 title: Signals
+slug: /signals
 sidebar_label: Signals
 sidebar_position: 3
 ---
 
 # Signals
 
-The raw evidence feed from your connected sources. **Signals** shows the individual data points — from code, tickets, docs, Slack, and more — that Devplan synthesizes into [Insights](/platform/insights).
+The raw evidence feed from your connected sources. **Signals** shows the individual data points — from code, tickets, docs, Slack, and more — that Devplan synthesizes into [Insights](/insights).
 
 ---
 
@@ -44,5 +45,5 @@ If you don't see Signals in the sidebar, contact your workspace admin.
 
 ## Related pages
 
-- [Insights](/platform/insights) — synthesized briefs built from signals
-- [Integrations](/platform/integrations) — connect the sources that produce signals
+- [Insights](/insights) — synthesized briefs built from signals
+- [Integrations](/integrations) — connect the sources that produce signals

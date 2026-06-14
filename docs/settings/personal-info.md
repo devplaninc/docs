@@ -1,5 +1,6 @@
 ---
 title: Personal Info
+slug: /personal-info
 sidebar_label: Personal Info
 sidebar_position: 1
 ---
@@ -49,5 +50,5 @@ Open **Settings** from your profile menu, then click **Personal Info** under **P
 
 ## Related pages
 
-- [Preferences](/settings/preferences) — role and appearance settings
-- [Workspace Members](/settings/workspace-members) — invite others to a workspace you manage
+- [Preferences](/preferences) — role and appearance settings
+- [Workspace Members](/workspace-members) — invite others to a workspace you manage

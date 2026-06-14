@@ -1,12 +1,13 @@
 ---
 title: Workspace API Keys
+slug: /workspace-api-keys
 sidebar_label: API Keys
 sidebar_position: 4
 ---
 
 # Workspace API Keys
 
-Create and manage workspace-scoped API keys for programmatic access, including the [MCP Integration](/guides/integrations/mcp).
+Create and manage workspace-scoped API keys for programmatic access, including the [MCP Integration](/mcp-integration).
 
 ---
 
@@ -41,7 +42,7 @@ This page is only visible when API keys are enabled for your workspace.
 
 ### Use an API key with MCP
 
-Follow the [MCP Integration](/guides/integrations/mcp) guide to configure your AI coding assistant with the key.
+Follow the [MCP Integration](/mcp-integration) guide to configure your AI coding assistant with the key.
 
 ### Revoke a key
 
@@ -57,5 +58,5 @@ If you lose a key, delete it and create a new one. Keys cannot be recovered.
 
 ## Related pages
 
-- [MCP Integration](/guides/integrations/mcp) — connect Devplan to AI coding assistants
-- [Workspace Members](/settings/workspace-members) — invite members and manage roles
+- [MCP Integration](/mcp-integration) — connect Devplan to AI coding assistants
+- [Workspace Members](/workspace-members) — invite members and manage roles

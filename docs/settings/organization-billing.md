@@ -1,5 +1,6 @@
 ---
 title: Organization Billing
+slug: /organization-billing
 sidebar_label: Billing
 sidebar_position: 3
 ---
@@ -26,7 +27,7 @@ Organization settings are only visible when you belong to an organization.
 - **Manage Enterprise Subscription** — open the Stripe customer portal to update payment method, view invoices, or change plan
 - **Subscription status** — see whether the organization has an active enterprise subscription
 
-An active enterprise subscription is required for [Organization Workspaces](/settings/organization-workspaces) management.
+An active enterprise subscription is required for [Organization Workspaces](/organization-workspaces) management.
 
 ---
 
@@ -46,12 +47,12 @@ An active enterprise subscription is required for [Organization Workspaces](/set
 
 ### Enable workspace management
 
-After enrolling, return to [Organization Workspaces](/settings/organization-workspaces) to create or add workspaces.
+After enrolling, return to [Organization Workspaces](/organization-workspaces) to create or add workspaces.
 
 ---
 
 ## Related pages
 
-- [Organization Workspaces](/settings/organization-workspaces) — manage workspaces after enrolling
-- [Migrate to Org Billing](/guides/billing/migrate-to-org-billing) — migrate from personal to org billing
-- [Getting Started](/quickstart) — plan overview for builders and teams
+- [Organization Workspaces](/organization-workspaces) — manage workspaces after enrolling
+- [Migrate to Org Billing](/migrate-to-organization-billing) — migrate from personal to org billing
+- [Getting Started](/getting-started) — plan overview for builders and teams

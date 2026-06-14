@@ -1,5 +1,6 @@
 ---
 title: Organization Workspaces
+slug: /organization-workspaces
 sidebar_label: Workspaces
 sidebar_position: 2
 ---
@@ -46,12 +47,12 @@ Organization settings are only visible when you belong to an organization. Works
 
 ### Enroll in enterprise billing first
 
-If workspace management is disabled, enroll your organization in an enterprise plan from [Organization Billing](/settings/organization-billing) first.
+If workspace management is disabled, enroll your organization in an enterprise plan from [Organization Billing](/organization-billing) first.
 
 ---
 
 ## Related pages
 
-- [Organization Billing](/settings/organization-billing) — required for workspace management
-- [Workspace General](/settings/workspace-general) — settings for an individual workspace
-- [Migrate to Org Billing](/guides/billing/migrate-to-org-billing) — billing migration guide
+- [Organization Billing](/organization-billing) — required for workspace management
+- [Workspace General](/workspace-general) — settings for an individual workspace
+- [Migrate to Org Billing](/migrate-to-organization-billing) — billing migration guide

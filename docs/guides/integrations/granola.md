@@ -1,11 +1,12 @@
 ---
 title: Granola Integration
+slug: /granola-integration
 sidebar_position: 11
 ---
 
 # Granola
 
-Connect Granola to sync call notes and meeting summaries into your workspace — contributing to [Signals](/platform/signals), [Insights](/platform/insights), and your [Daily Digest](/platform/today).
+Connect Granola to sync call notes and meeting summaries into your workspace — contributing to [Signals](/signals), [Insights](/insights), and your [Daily Digest](/today).
 
 ---
 
@@ -67,6 +68,6 @@ Good folders to sync: customer interview notes, sales call summaries, user resea
 
 ## Related pages
 
-- [Google Drive](/guides/integrations/google-drive) — attach folders with meeting recordings or transcripts
-- [Uploads](/guides/integrations/uploads) — upload interview notes directly
+- [Google Drive](/google-drive-integration) — attach folders with meeting recordings or transcripts
+- [Uploads](/upload-files) — upload interview notes directly
 - [Core Workflow](/core-workflow) — how call content feeds the signals pipeline

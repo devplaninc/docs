@@ -1,5 +1,6 @@
 ---
 title: "Running Tasks"
+slug: /running-tasks
 sidebar_position: 3
 ---
 
@@ -77,7 +78,7 @@ A successful run creates a PR with the implemented changes. After completion:
 2. Run additional tests locally
 3. Request human review before merging
 
-Once you have review comments, see [Addressing PR Comments](./address-comments) to have the agent address them automatically.
+Once you have review comments, see [Addressing PR Comments](/addressing-pr-comments) to have the agent address them automatically.
 
 ## FAQ
 
@@ -92,8 +93,8 @@ Cloud Run creates a new branch for each run, used for the Pull Request.
 
 ## Next Steps
 
-- Configure [Secrets Management](./secrets) for credentials
-- Review [Setup Scripts](./setup) for environment configuration
-- Learn about [Addressing PR Comments](./address-comments)
+- Configure [Secrets Management](/secrets-management) for credentials
+- Review [Setup Scripts](/setup-scripts) for environment configuration
+- Learn about [Addressing PR Comments](/addressing-pr-comments)
 
 **Questions?** Contact support at info@devplan.com

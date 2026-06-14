@@ -1,5 +1,6 @@
 ---
 title: Workspace
+slug: /workspace
 sidebar_label: Workspace
 sidebar_position: 1
 ---
@@ -38,6 +39,6 @@ Click **Workspace** under the **Knowledge** section in the left sidebar.
 
 ## Related pages
 
-- [Product](/platform/product) — auto-generated feature catalogue built from your context
-- [Insights](/platform/insights) — takeaways shaped by workspace context
-- [Integrations](/platform/integrations) — connect sources that enrich workspace knowledge
+- [Product](/product) — auto-generated feature catalogue built from your context
+- [Insights](/insights) — takeaways shaped by workspace context
+- [Integrations](/integrations) — connect sources that enrich workspace knowledge

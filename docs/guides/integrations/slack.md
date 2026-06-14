@@ -1,11 +1,12 @@
 ---
 title: Slack Integration
+slug: /slack-integration
 sidebar_position: 6
 ---
 
 # Slack
 
-Connect Slack so Devplan can ingest messages from channels where the Devplan bot is a member — surfacing discussion context as [Signals](/platform/signals) and [Insights](/platform/insights).
+Connect Slack so Devplan can ingest messages from channels where the Devplan bot is a member — surfacing discussion context as [Signals](/signals) and [Insights](/insights).
 
 ---
 
@@ -67,7 +68,7 @@ Once connected, the manage page shows:
 
 ## What Devplan reads
 
-Devplan ingests new messages from bot-member channels during **signals processing**. Slack threads, decisions, and informal product discussions can surface as signals and contribute to insights and your [Daily Digest](/platform/today).
+Devplan ingests new messages from bot-member channels during **signals processing**. Slack threads, decisions, and informal product discussions can surface as signals and contribute to insights and your [Daily Digest](/today).
 
 Signal volume grows over hours and days as messages accumulate. Connect Slack early and add the bot to your product, engineering, and customer-facing channels for the richest context.
 
@@ -84,5 +85,5 @@ Signal volume grows over hours and days as messages accumulate. Connect Slack ea
 ## Related pages
 
 - [Core Workflow](/core-workflow) — how Slack feeds the signals pipeline
-- [Signals](/platform/signals) — browse evidence from Slack and other sources
-- [Today](/platform/today) — daily digest with Slack-sourced evidence
+- [Signals](/signals) — browse evidence from Slack and other sources
+- [Today](/today) — daily digest with Slack-sourced evidence

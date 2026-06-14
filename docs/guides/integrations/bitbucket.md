@@ -1,11 +1,12 @@
 ---
 title: Bitbucket Integration
+slug: /bitbucket-integration
 sidebar_position: 3
 ---
 
 # Bitbucket
 
-Connect Bitbucket so Devplan can analyze your repositories, bootstrap your [feature catalogue](/platform/product), and ground project planning in your actual codebase.
+Connect Bitbucket so Devplan can analyze your repositories, bootstrap your [feature catalogue](/product), and ground project planning in your actual codebase.
 
 ---
 
@@ -61,9 +62,9 @@ Repositories with **Analyze** unchecked show as **Disabled** and are excluded fr
 When at least one repository has **Analyze** enabled:
 
 1. **Repository analysis** — Devplan reads code structure, tech stack, architecture patterns, component conventions, data models, API surface, and testing patterns.
-2. **Catalogue bootstrap** — a background job maps your codebase into the structured [Product](/platform/product) catalogue.
-3. **Catalogue updates** — periodic jobs keep the catalogue and [Updates](/platform/updates) feed current.
-4. **Signals** — merged PRs, commits, and code-change activity contribute to [Signals](/platform/signals) over time.
+2. **Catalogue bootstrap** — a background job maps your codebase into the structured [Product](/product) catalogue.
+3. **Catalogue updates** — periodic jobs keep the catalogue and [Updates](/updates) feed current.
+4. **Signals** — merged PRs, commits, and code-change activity contribute to [Signals](/signals) over time.
 
 First-time analysis typically takes **30 minutes or longer**, depending on repository size.
 
@@ -79,6 +80,6 @@ First-time analysis typically takes **30 minutes or longer**, depending on repos
 
 ## Related pages
 
-- [GitHub](/guides/integrations/github) — same repository analysis flow for GitHub
+- [GitHub](/github-integration) — same repository analysis flow for GitHub
 - [Core Workflow](/core-workflow) — catalogue bootstrap and processing timelines
-- [Product](/platform/product) — browse the auto-generated feature catalogue
+- [Product](/product) — browse the auto-generated feature catalogue

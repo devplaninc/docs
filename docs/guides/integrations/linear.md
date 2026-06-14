@@ -1,11 +1,12 @@
 ---
 title: Linear Integration
+slug: /linear-integration
 sidebar_position: 5
 ---
 
 # Linear
 
-Connect Linear so Devplan can ingest ticket and team data for [Signals](/platform/signals) and [Insights](/platform/insights), and export planned work from Devplan projects into Linear.
+Connect Linear so Devplan can ingest ticket and team data for [Signals](/signals) and [Insights](/insights), and export planned work from Devplan projects into Linear.
 
 ---
 
@@ -51,7 +52,7 @@ Unlike Jira, Linear does not use an allowlist — all synced teams participate i
 
 ## Ingestion: signals
 
-After Linear is connected, Devplan reads issue and team activity as part of periodic **signals processing** jobs. Ticket data surfaces as evidence in [Signals](/platform/signals) and is synthesized into [Insights](/platform/insights) and your [Daily Digest](/platform/today).
+After Linear is connected, Devplan reads issue and team activity as part of periodic **signals processing** jobs. Ticket data surfaces as evidence in [Signals](/signals) and is synthesized into [Insights](/insights) and your [Daily Digest](/today).
 
 Linear data does not feed catalogue bootstrap the way Jira allowed projects do — catalogue bootstrap is driven primarily by code repositories and Jira context.
 
@@ -85,6 +86,6 @@ Re-export anytime to update Linear issues to match the latest Devplan user stori
 
 ## Related pages
 
-- [Jira](/guides/integrations/jira) — Jira connect, allowed projects, and export
+- [Jira](/jira-integration) — Jira connect, allowed projects, and export
 - [Core Workflow](/core-workflow) — PM tool export (planning step 6)
-- [Signals](/platform/signals) — raw evidence from Linear and other sources
+- [Signals](/signals) — raw evidence from Linear and other sources

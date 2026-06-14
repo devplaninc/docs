@@ -1,5 +1,6 @@
 ---
 title: Spec Driven Development
+slug: /spec-driven-development
 ---
 
 # Spec Driven Development

@@ -1,5 +1,6 @@
 ---
 title: Workspace Members
+slug: /workspace-members
 sidebar_label: Members
 sidebar_position: 2
 ---
@@ -52,5 +53,5 @@ The invitee can accept from **Settings > Profile > Personal Info** or via the in
 
 ## Related pages
 
-- [Personal Info](/settings/personal-info) — where invitees accept invitations
-- [Organization General](/settings/organization-general) — manage organization-level owners
+- [Personal Info](/personal-info) — where invitees accept invitations
+- [Organization General](/organization-general) — manage organization-level owners

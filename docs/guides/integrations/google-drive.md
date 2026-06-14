@@ -1,11 +1,12 @@
 ---
 title: Google Drive Integration
+slug: /google-drive-integration
 sidebar_position: 8
 ---
 
 # Google Drive
 
-Attach Google Drive folders so Devplan can read documents on demand during signal processing — feeding [Signals](/platform/signals), [Insights](/platform/insights), and [Ask Devplan](/platform/ask-devplan).
+Attach Google Drive folders so Devplan can read documents on demand during signal processing — feeding [Signals](/signals), [Insights](/insights), and [Ask Devplan](/ask-devplan).
 
 ---
 
@@ -70,7 +71,7 @@ Good folders to attach: product specs, strategy decks, customer research, interv
 
 ## Related pages
 
-- [Notion](/guides/integrations/notion) — attach Notion pages and databases
-- [Confluence](/guides/integrations/confluence) — attach Confluence spaces and pages
-- [Uploads](/guides/integrations/uploads) — upload files directly without Google Drive
+- [Notion](/notion-integration) — attach Notion pages and databases
+- [Confluence](/confluence-integration) — attach Confluence spaces and pages
+- [Uploads](/upload-files) — upload files directly without Google Drive
 - [Core Workflow](/core-workflow) — how document sources feed the pipeline

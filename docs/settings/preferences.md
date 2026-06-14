@@ -1,5 +1,6 @@
 ---
 title: Preferences
+slug: /preferences
 sidebar_label: Preferences
 sidebar_position: 2
 ---
@@ -20,7 +21,7 @@ Open **Settings** from your profile menu, then click **Preferences** under **Pro
 
 ### Select your role
 
-Pick the stakeholder roles you care about (e.g. Product Manager, Engineering Lead). Devplan uses these selections to personalize content like [Insights](/platform/insights). Selections save automatically.
+Pick the stakeholder roles you care about (e.g. Product Manager, Engineering Lead). Devplan uses these selections to personalize content like [Insights](/insights). Selections save automatically.
 
 Leave all roles unchecked for the default experience.
 
@@ -34,7 +35,7 @@ When specs are enabled in any of your workspaces:
 
 Control whether you receive Daily Digest emails for each workspace you belong to. Toggle the **Email** switch per workspace.
 
-This is the same setting linked from **Manage communication settings** on the [Today](/platform/today) personalize panel.
+This is the same setting linked from **Manage communication settings** on the [Today](/today) personalize panel.
 
 ### Appearance
 
@@ -53,6 +54,6 @@ This is the same setting linked from **Manage communication settings** on the [T
 
 ## Related pages
 
-- [Today](/platform/today) — personalize digest content and generate on demand
-- [Insights](/platform/insights) — role-based insight filtering
-- [Workspace Daily Digest](/settings/workspace-daily-digest) — workspace-wide digest settings (admin)
+- [Today](/today) — personalize digest content and generate on demand
+- [Insights](/insights) — role-based insight filtering
+- [Workspace Daily Digest](/workspace-daily-digest) — workspace-wide digest settings (admin)

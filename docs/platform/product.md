@@ -1,5 +1,6 @@
 ---
 title: Product
+slug: /product
 sidebar_label: Product
 sidebar_position: 2
 ---
@@ -39,5 +40,5 @@ Click **Product** under the **Knowledge** section in the left sidebar.
 
 ## Related pages
 
-- [Updates](/platform/updates) — see what changed recently in the catalogue
-- [Workspace](/platform/workspace) — context that shapes catalogue generation
+- [Updates](/updates) — see what changed recently in the catalogue
+- [Workspace](/workspace) — context that shapes catalogue generation

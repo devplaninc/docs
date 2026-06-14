@@ -1,5 +1,6 @@
 ---
 title: Organization General
+slug: /organization-general
 sidebar_label: General
 sidebar_position: 1
 ---
@@ -57,6 +58,6 @@ Deleting an organization is irreversible.
 
 ## Related pages
 
-- [Organization Workspaces](/settings/organization-workspaces) — manage workspaces in the org
-- [Organization Billing](/settings/organization-billing) — enterprise subscription
-- [Migrate to Org Billing](/guides/billing/migrate-to-org-billing) — transition from personal billing
+- [Organization Workspaces](/organization-workspaces) — manage workspaces in the org
+- [Organization Billing](/organization-billing) — enterprise subscription
+- [Migrate to Org Billing](/migrate-to-organization-billing) — transition from personal billing

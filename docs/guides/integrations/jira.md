@@ -1,5 +1,6 @@
 ---
 title: "Jira Integration"
+slug: /jira-integration
 sidebar_position: 4
 ---
 
@@ -36,13 +37,13 @@ On the manage page, configure:
 
 Use **Refresh** to re-sync project metadata from Jira. Use **Disconnect JIRA** to remove the connection.
 
-Connecting Jira also enables [Confluence](/guides/integrations/confluence) on the same Atlassian site — Confluence content must still be attached separately.
+Connecting Jira also enables [Confluence](/confluence-integration) on the same Atlassian site — Confluence content must still be attached separately.
 
 ---
 
 ## Ingestion: signals and catalogue
 
-After Jira is connected, Devplan reads ticket and project data from your Jira site as part of background processing — the same pipeline that powers [Signals](/platform/signals), [Insights](/platform/insights), and the feature catalogue.
+After Jira is connected, Devplan reads ticket and project data from your Jira site as part of background processing — the same pipeline that powers [Signals](/signals), [Insights](/insights), and the feature catalogue.
 
 ### Allowed JIRA Projects
 
@@ -91,10 +92,10 @@ The target Jira project must support Epic and User Story issue types.
 
 ## Related pages
 
-- [Linear](/guides/integrations/linear) — Linear connect and export
-- [Confluence](/guides/integrations/confluence) — Confluence on the same Atlassian site
-- [Integrations overview](/guides/integrations) — all integration guides
-- [Signals](/platform/signals) — raw evidence from Jira and other sources
+- [Linear](/linear-integration) — Linear connect and export
+- [Confluence](/confluence-integration) — Confluence on the same Atlassian site
+- [Integrations overview](/integrations-overview) — all integration guides
+- [Signals](/signals) — raw evidence from Jira and other sources
 - [Core Workflow](/core-workflow) — planning step 6 (PM tool export) and integration timelines
 
 Please share feedback or suggestions if you run into issues with the beta integration.

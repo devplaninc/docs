@@ -1,5 +1,6 @@
 ---
 title: Upload Files
+slug: /upload-files
 sidebar_position: 10
 ---
 
@@ -7,7 +8,7 @@ sidebar_position: 10
 
 Upload documents directly to Devplan when content does not live in a connected tool — strategy decks, research exports, customer lists, interview notes, competitive analysis, or any file your team wants Devplan to know about.
 
-Uploaded files are ingested into the workspace **knowledge graph** and feed [Signals](/platform/signals), [Insights](/platform/insights), [Ask Devplan](/platform/ask-devplan), and your [Daily Digest](/platform/today).
+Uploaded files are ingested into the workspace **knowledge graph** and feed [Signals](/signals), [Insights](/insights), [Ask Devplan](/ask-devplan), and your [Daily Digest](/today).
 
 ---
 
@@ -18,7 +19,7 @@ Uploaded files are ingested into the workspace **knowledge graph** and feed [Sig
 
 This opens the uploads manage page.
 
-You can also attach documents during [onboarding](/quickstart) or on the [Workspace](/platform/workspace) page — those attachments are workspace-scoped and available across all projects.
+You can also attach documents during [onboarding](/getting-started) or on the [Workspace](/workspace) page — those attachments are workspace-scoped and available across all projects.
 
 ---
 
@@ -62,9 +63,9 @@ Uploaded documents are not just stored — they are processed into the same inte
 1. Files are indexed and parsed for text, structure, and key entities.
 2. Content is added to the **knowledge graph**, linked to your workspace and other sources.
 3. During **signals processing**, Devplan reads upload content alongside Slack messages, PRs, tickets, and connected docs.
-4. Relevant excerpts become **signals** in the [Signals](/platform/signals) feed.
-5. Related signals are synthesized into **insights** on the [Insights](/platform/insights) page.
-6. Upload content enriches [Ask Devplan](/platform/ask-devplan) answers and may surface in your [Daily Digest](/platform/today).
+4. Relevant excerpts become **signals** in the [Signals](/signals) feed.
+5. Related signals are synthesized into **insights** on the [Insights](/insights) page.
+6. Upload content enriches [Ask Devplan](/ask-devplan) answers and may surface in your [Daily Digest](/today).
 
 New uploads take time to ingest — allow processing to complete before expecting them in signals and insights.
 
@@ -87,7 +88,7 @@ Upload early — especially research and strategy content that integrations alon
 
 ## Related pages
 
-- [Notion](/guides/integrations/notion) — attach live Notion pages instead of exporting files
-- [Google Drive](/guides/integrations/google-drive) — attach Drive folders for ongoing doc sync
-- [Workspace](/platform/workspace) — attach docs to workspace context sections
+- [Notion](/notion-integration) — attach live Notion pages instead of exporting files
+- [Google Drive](/google-drive-integration) — attach Drive folders for ongoing doc sync
+- [Workspace](/workspace) — attach docs to workspace context sections
 - [Core Workflow](/core-workflow) — how uploads feed the knowledge graph

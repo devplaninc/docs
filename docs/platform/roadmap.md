@@ -1,5 +1,6 @@
 ---
 title: Roadmap
+slug: /roadmap
 sidebar_label: Roadmap
 sidebar_position: 1
 ---
@@ -43,5 +44,5 @@ Roadmap is only visible when specs are enabled for your workspace.
 
 ## Related pages
 
-- [Projects](/platform/projects) — list view of all tracked projects
+- [Projects](/projects) — list view of all tracked projects
 - [Core Workflow](/core-workflow) — planning workflow from idea to implementation

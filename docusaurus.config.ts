@@ -45,7 +45,7 @@ const config: Config = {
       logo: {
         alt: 'Devplan',
         src: 'img/weaver-icon.png',
-        href: '/quickstart',
+        href: '/getting-started',
       },
       hideOnScroll: false,
       items: [
@@ -70,7 +70,7 @@ const config: Config = {
           items: [
             {
               label: 'Getting Started',
-              to: '/quickstart',
+              to: '/getting-started',
             },
             {
               label: 'Core Workflow',
@@ -78,7 +78,7 @@ const config: Config = {
             },
             {
               label: 'How Devplan Works',
-              to: '/architecture',
+              to: '/how-devplan-works',
             },
           ],
         },

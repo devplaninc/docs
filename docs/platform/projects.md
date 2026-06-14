@@ -1,5 +1,6 @@
 ---
 title: Projects
+slug: /projects
 sidebar_label: Projects
 sidebar_position: 3
 ---
@@ -38,5 +39,5 @@ Click **Projects** in the left sidebar, or use the **+ Add** button to create a 
 
 ## Related pages
 
-- [Roadmap](/platform/roadmap) — portfolio planning across releases and phases
+- [Roadmap](/roadmap) — portfolio planning across releases and phases
 - [Core Workflow](/core-workflow) — full walkthrough from idea to implementation

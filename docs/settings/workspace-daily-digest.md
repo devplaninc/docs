@@ -1,12 +1,13 @@
 ---
 title: Workspace Daily Digest
+slug: /workspace-daily-digest
 sidebar_label: Daily Digest
 sidebar_position: 3
 ---
 
 # Workspace Daily Digest
 
-Configure workspace-wide Daily Digest generation, delivery schedule, email recipients, and Slack posting. These settings apply to the workspace digest shown on [Today](/platform/today).
+Configure workspace-wide Daily Digest generation, delivery schedule, email recipients, and Slack posting. These settings apply to the workspace digest shown on [Today](/today).
 
 ---
 
@@ -28,7 +29,7 @@ Free-form text guiding how the workspace Daily Digest is generated. Leave empty 
 
 ### Generate workspace Daily Digest
 
-Manually generate a workspace report for the last 24 hours. The result appears on [Today](/platform/today) but is not emailed.
+Manually generate a workspace report for the last 24 hours. The result appears on [Today](/today) but is not emailed.
 
 ### Delivery time slot
 
@@ -39,14 +40,14 @@ Set the time of day (in your local timezone) when Daily Digests are emailed to e
 Control who receives the workspace Daily Digest by email:
 
 - **All** — send to every member unless they opt out individually
-- **Role defaults** — limit to specific roles (e.g. Admin, User). Members can still opt in via [Preferences](/settings/preferences)
+- **Role defaults** — limit to specific roles (e.g. Admin, User). Members can still opt in via [Preferences](/preferences)
 
 ### Slack channel
 
 Post the workspace Daily Digest to a Slack channel:
 
 - Enable **Send workspace Daily Digest to Slack**
-- Select a channel (requires Slack to be connected under [Integrations](/platform/integrations))
+- Select a channel (requires Slack to be connected under [Integrations](/integrations))
 
 ---
 
@@ -64,6 +65,6 @@ Post the workspace Daily Digest to a Slack channel:
 
 ## Related pages
 
-- [Today](/platform/today) — where digests appear; personalize your personal digest
-- [Preferences](/settings/preferences) — per-user email opt-in/opt-out
-- [Integrations](/platform/integrations) — connect Slack for channel delivery
+- [Today](/today) — where digests appear; personalize your personal digest
+- [Preferences](/preferences) — per-user email opt-in/opt-out
+- [Integrations](/integrations) — connect Slack for channel delivery

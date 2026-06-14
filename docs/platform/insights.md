@@ -1,5 +1,6 @@
 ---
 title: Insights
+slug: /insights
 sidebar_label: Insights
 sidebar_position: 5
 ---
@@ -54,12 +55,12 @@ Click the evidence pill to open a **Sources** flyout on the right side of the sc
 2. Filter by kind (e.g. Risk, Feedback theme) to focus on what matters most.
 3. Click an **evidence pill** to inspect the sources behind an insight.
 4. Click **Read brief** to read the full insight narrative and related signals.
-5. Adjust your role in **Settings > Profile > Preferences** to change which insights surface for you. See [Preferences](/settings/preferences) for details.
+5. Adjust your role in **Settings > Profile > Preferences** to change which insights surface for you. See [Preferences](/preferences) for details.
 6. Follow links to related signals for the raw evidence behind an insight.
 
 ---
 
 ## Related pages
 
-- [Signals](/platform/signals) — raw evidence feed that feeds into insights
-- [Workspace](/platform/workspace) — workspace context that shapes insight relevance
+- [Signals](/signals) — raw evidence feed that feeds into insights
+- [Workspace](/workspace) — workspace context that shapes insight relevance

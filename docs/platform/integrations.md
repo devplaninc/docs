@@ -1,5 +1,6 @@
 ---
 title: Integrations
+slug: /integrations
 sidebar_label: Integrations
 sidebar_position: 4
 ---
@@ -29,18 +30,18 @@ Click **Integrations** under the **Knowledge** section in the left sidebar.
 
 | Integration | Guide |
 |-------------|-------|
-| GitHub | [GitHub setup](/guides/integrations/github) |
-| Bitbucket | [Bitbucket setup](/guides/integrations/bitbucket) |
-| Jira | [Jira setup](/guides/integrations/jira) |
-| Linear | [Linear setup](/guides/integrations/linear) |
-| Slack | [Slack setup](/guides/integrations/slack) |
-| Notion | [Notion setup](/guides/integrations/notion) |
-| Google Drive | [Google Drive setup](/guides/integrations/google-drive) |
-| Confluence | [Confluence setup](/guides/integrations/confluence) |
-| Upload files | [Uploads](/guides/integrations/uploads) |
-| Granola | [Granola setup](/guides/integrations/granola) |
+| GitHub | [GitHub setup](/github-integration) |
+| Bitbucket | [Bitbucket setup](/bitbucket-integration) |
+| Jira | [Jira setup](/jira-integration) |
+| Linear | [Linear setup](/linear-integration) |
+| Slack | [Slack setup](/slack-integration) |
+| Notion | [Notion setup](/notion-integration) |
+| Google Drive | [Google Drive setup](/google-drive-integration) |
+| Confluence | [Confluence setup](/confluence-integration) |
+| Upload files | [Uploads](/upload-files) |
+| Granola | [Granola setup](/granola-integration) |
 
-See the [Integrations overview](/guides/integrations) for a summary of what each source feeds.
+See the [Integrations overview](/integrations-overview) for a summary of what each source feeds.
 
 ---
 
@@ -55,8 +56,8 @@ See the [Integrations overview](/guides/integrations) for a summary of what each
 
 ## Related pages
 
-- [Integrations overview](/guides/integrations) — summary and links to all setup guides
-- [MCP Integration](/guides/integrations/mcp) — connect Devplan to AI coding assistants
-- [Workspace](/platform/workspace) — context enriched by connected sources
-- [Signals](/platform/signals) — raw evidence from your integrations
+- [Integrations overview](/integrations-overview) — summary and links to all setup guides
+- [MCP Integration](/mcp-integration) — connect Devplan to AI coding assistants
+- [Workspace](/workspace) — context enriched by connected sources
+- [Signals](/signals) — raw evidence from your integrations
 - [Core Workflow](/core-workflow) — how integrations feed the product intelligence pipeline

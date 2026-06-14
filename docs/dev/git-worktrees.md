@@ -318,7 +318,7 @@ No, changes are automatically synchronized because all worktrees share the same 
 
 ## Related Documentation
 
-- [Spec Driven Development Workflow](/dev/spec-driven-dev) - How Devplan generates specs and tasks
+- [Spec Driven Development Workflow](/spec-driven-development) - How Devplan generates specs and tasks
 - [Getting Started](/getting-started) - Initial setup and installation
 - [Core Workflow](/core-workflow) - Understanding Devplan's full workflow
 

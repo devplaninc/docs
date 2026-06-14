@@ -1,5 +1,6 @@
 ---
 title: "Setup Scripts"
+slug: /setup-scripts
 sidebar_position: 2
 ---
 
@@ -317,7 +318,7 @@ sdk install maven 3.9.6
 
 # Configure Maven settings for private repositories
 mkdir -p ~/.m2
-cat > ~/.m2/settings.xml << EOF
+cat > ~/.m2/settings-overview.xml << EOF
 <settings>
   <servers>
     <server>
@@ -326,7 +327,7 @@ cat > ~/.m2/settings.xml << EOF
       <password>${MAVEN_PASSWORD}</password>
     </server>
   </servers>
-</settings>
+</settings-overview>
 EOF
 
 # Download dependencies
@@ -579,7 +580,7 @@ echo "GOOGLE_APPLICATION_CREDENTIALS=/tmp/service-account.json" >> "$DEVPLAN_ENV
 
 ## Next Steps
 
-- Learn about [Running Tasks](./run) to execute your configured environment
-- Configure [Secrets Management](./secrets) for secure credential storage
+- Learn about [Running Tasks](/running-tasks) to execute your configured environment
+- Configure [Secrets Management](/secrets-management) for secure credential storage
 
 **Questions?** Contact support at info@devplan.com

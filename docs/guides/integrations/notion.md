@@ -1,11 +1,12 @@
 ---
 title: Notion Integration
+slug: /notion-integration
 sidebar_position: 7
 ---
 
 # Notion
 
-Connect Notion and attach specific pages or databases so Devplan can read them on demand during signal processing — feeding [Signals](/platform/signals), [Insights](/platform/insights), and [Ask Devplan](/platform/ask-devplan).
+Connect Notion and attach specific pages or databases so Devplan can read them on demand during signal processing — feeding [Signals](/signals), [Insights](/insights), and [Ask Devplan](/ask-devplan).
 
 ---
 
@@ -54,7 +55,7 @@ The attached content table shows:
 | **Type** | Page or database |
 | **Actions** | Remove the attachment |
 
-After attaching new content, allow time for the next signals processing cycle before expecting it in [Signals](/platform/signals) or [Insights](/platform/insights).
+After attaching new content, allow time for the next signals processing cycle before expecting it in [Signals](/signals) or [Insights](/insights).
 
 ---
 
@@ -81,7 +82,7 @@ Good candidates to attach: product specs, strategy docs, customer research datab
 
 ## Related pages
 
-- [Google Drive](/guides/integrations/google-drive) — attach folders from Google Drive
-- [Confluence](/guides/integrations/confluence) — attach Confluence spaces and pages
-- [Uploads](/guides/integrations/uploads) — upload files directly to Devplan
+- [Google Drive](/google-drive-integration) — attach folders from Google Drive
+- [Confluence](/confluence-integration) — attach Confluence spaces and pages
+- [Uploads](/upload-files) — upload files directly to Devplan
 - [Core Workflow](/core-workflow) — how document sources feed the pipeline

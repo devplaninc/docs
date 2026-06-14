@@ -1,5 +1,6 @@
 ---
 title: Updates
+slug: /updates
 sidebar_label: Updates
 sidebar_position: 4
 ---
@@ -39,5 +40,5 @@ Click **Updates** in the left sidebar.
 
 ## Related pages
 
-- [Product](/platform/product) — browse the feature catalogue those updates describe
-- [Today](/platform/today) — daily digest that summarizes recent changes
+- [Product](/product) — browse the feature catalogue those updates describe
+- [Today](/today) — daily digest that summarizes recent changes

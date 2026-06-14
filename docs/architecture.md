@@ -1,5 +1,6 @@
 ---
 title: How Devplan Works
+slug: /how-devplan-works
 ---
 
 # How Devplan Works
@@ -8,10 +9,10 @@ Devplan is a product intelligence platform that learns about your product from t
 
 Two layers work together:
 
-1. **Product intelligence** — Devplan ingests workspace context, integrations, and uploads; builds a knowledge graph and feature catalogue; extracts signals; synthesizes insights; and delivers a [Daily Digest](/platform/today).
+1. **Product intelligence** — Devplan ingests workspace context, integrations, and uploads; builds a knowledge graph and feature catalogue; extracts signals; synthesizes insights; and delivers a [Daily Digest](/today).
 2. **Feature planning** — When you are ready to build, Devplan turns ideas into implementation-ready specs and coding prompts grounded in everything it already knows.
 
-For step-by-step setup and timelines, see [Getting Started](/quickstart) and [Core Workflow](/core-workflow). For what each page does in the app, see [Platform Overview](/platform).
+For step-by-step setup and timelines, see [Getting Started](/getting-started) and [Core Workflow](/core-workflow). For what each page does in the app, see [Platform Overview](/platform-overview).
 
 ---
 
@@ -21,14 +22,14 @@ Devplan does not start from a blank slate. It continuously reads from connected 
 
 | Layer | What it is | Where you see it |
 |-------|------------|------------------|
-| **Workspace context** | Company details, goals, customers, competitors — what you tell Devplan directly | [Workspace](/platform/workspace), onboarding wizard |
-| **Integrations** | Live data from GitHub, Slack, Jira, Confluence, and other tools | [Integrations](/platform/integrations) |
+| **Workspace context** | Company details, goals, customers, competitors — what you tell Devplan directly | [Workspace](/workspace), onboarding wizard |
+| **Integrations** | Live data from GitHub, Slack, Jira, Confluence, and other tools | [Integrations](/integrations) |
 | **Document uploads** | Files ingested into the workspace knowledge graph | **Knowledge > Integrations** uploads |
 | **Knowledge graph** | Connected model of people, features, research, and uploaded content | Powers Ask Devplan, signals, and cross-source reasoning |
-| **Feature catalogue** | Structured map of your product's features, grounded in code and docs | [Product](/platform/product) |
-| **Signals** | Individual evidence items extracted from sources | [Signals](/platform/signals) |
-| **Insights** | Synthesized, role-aware takeaways built from signals | [Insights](/platform/insights) |
-| **Daily Digest** | AI-generated summary of what changed, with evidence links | [Today](/platform/today) |
+| **Feature catalogue** | Structured map of your product's features, grounded in code and docs | [Product](/product) |
+| **Signals** | Individual evidence items extracted from sources | [Signals](/signals) |
+| **Insights** | Synthesized, role-aware takeaways built from signals | [Insights](/insights) |
+| **Daily Digest** | AI-generated summary of what changed, with evidence links | [Today](/today) |
 
 ---
 
@@ -36,7 +37,7 @@ Devplan does not start from a blank slate. It continuously reads from connected 
 
 ### Workspace context
 
-During [onboarding](/quickstart) and on the [Workspace](/platform/workspace) page, you tell Devplan who you are, what you are building toward, and who you serve. This context frames how Devplan interprets signals, ranks insights, and tailors digests — even before integrations finish processing.
+During [onboarding](/getting-started) and on the [Workspace](/workspace) page, you tell Devplan who you are, what you are building toward, and who you serve. This context frames how Devplan interprets signals, ranks insights, and tailors digests — even before integrations finish processing.
 
 ### Integrations
 
@@ -54,7 +55,7 @@ Uploads are not stored in isolation. PDFs, spreadsheets, decks, and images are p
 
 The knowledge graph is Devplan's connected model of your product — linking workspace context, uploaded research, catalogue features, ticket history, and code structure into one reasoning layer.
 
-This is what allows Devplan to answer cross-source questions in [Ask Devplan](/platform/ask-devplan), cite evidence on Today and Insights, and connect informal product reasoning (Slack threads, call notes) to formal artefacts (PRs, tickets, specs).
+This is what allows Devplan to answer cross-source questions in [Ask Devplan](/ask-devplan), cite evidence on Today and Insights, and connect informal product reasoning (Slack threads, call notes) to formal artefacts (PRs, tickets, specs).
 
 ---
 
@@ -71,17 +72,17 @@ The feature catalogue is Devplan's structured representation of your product —
 
 **Catalogue bootstrap** runs after code repositories are connected and configured. Devplan analyzes repository structure — tech stack, architecture patterns, component conventions, data models, API surface, and testing patterns — and maps features to code. Jira and Linear context from allowed projects enriches the bootstrap.
 
-The catalogue is not static. Periodic **catalogue update** jobs keep the [Product](/platform/product) page and [Updates](/platform/updates) feed current as your codebase and integrations evolve.
+The catalogue is not static. Periodic **catalogue update** jobs keep the [Product](/product) page and [Updates](/updates) feed current as your codebase and integrations evolve.
 
 ---
 
 ## Signals and insights
 
-**Signals** are the raw evidence items Devplan extracts from everything it reads — a merged PR, a Slack thread, a Jira comment, an uploaded research doc, a Confluence page update. They appear chronologically on the [Signals](/platform/signals) page and can be filtered by source type.
+**Signals** are the raw evidence items Devplan extracts from everything it reads — a merged PR, a Slack thread, a Jira comment, an uploaded research doc, a Confluence page update. They appear chronologically on the [Signals](/signals) page and can be filtered by source type.
 
-**Insights** synthesize related signals into role-aware takeaways — risks, opportunities, feedback themes, and alignment gaps. Your [Preferences](/settings/preferences) stakeholder role selections personalize which insights surface most prominently.
+**Insights** synthesize related signals into role-aware takeaways — risks, opportunities, feedback themes, and alignment gaps. Your [Preferences](/preferences) stakeholder role selections personalize which insights surface most prominently.
 
-Both layers feed the [Daily Digest](/platform/today): a concise summary of what changed across your workspace, with inline evidence pills linking back to the original sources.
+Both layers feed the [Daily Digest](/today): a concise summary of what changed across your workspace, with inline evidence pills linking back to the original sources.
 
 ---
 
@@ -116,10 +117,10 @@ A typical planning flow moves from discovery through PRD, user stories, technica
 
 Jira and Linear serve two distinct purposes in Devplan:
 
-1. **Ingestion (into Devplan)** — Connected ticket data feeds background jobs that build your feature catalogue and generate [Signals](/platform/signals). Jira uses **Allowed JIRA Projects** on the integration manage page to scope which projects are included; if none are selected, Jira data is excluded from catalogue operations. Linear includes connected teams when the integration is active.
+1. **Ingestion (into Devplan)** — Connected ticket data feeds background jobs that build your feature catalogue and generate [Signals](/signals). Jira uses **Allowed JIRA Projects** on the integration manage page to scope which projects are included; if none are selected, Jira data is excluded from catalogue operations. Linear includes connected teams when the integration is active.
 2. **Export (from Devplan)** — From a project, the **Sync** menu opens a one-way export that pushes Devplan structure to your PM tool. The UI labels this **Jira Sync** / **Linear Sync**, but the action is **Export to JIRA** or **Export to Linear** — Devplan project → Jira Epic / Linear Project, user stories → issues. Changes made in Jira or Linear after export are not reflected back in Devplan.
 
-See [Jira Integration](/guides/integrations/jira) for setup and [Integrations](/platform/integrations) for the full provider list.
+See [Jira Integration](/jira-integration) for setup and [Integrations](/integrations) for the full provider list.
 
 ### CLI
 
@@ -144,7 +145,7 @@ Devplan uses two workspace roles:
 | **Admin** | `OWNER` | Full workspace access — members, settings, integrations, and all content |
 | **User** | `EDITOR` | Create and manage projects, documents, and integrations — no member or settings management |
 
-Only **Admins** can manage user roles and workspace settings. See [Workspace Members](/settings/workspace-members) for inviting and assigning roles.
+Only **Admins** can manage user roles and workspace settings. See [Workspace Members](/workspace-members) for inviting and assigning roles.
 
 ---
 

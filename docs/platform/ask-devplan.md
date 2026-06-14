@@ -1,5 +1,6 @@
 ---
 title: Ask Devplan
+slug: /ask-devplan
 sidebar_label: Ask Devplan
 sidebar_position: 2
 ---
@@ -53,6 +54,6 @@ While a response is still streaming, evidence pills may appear after Devplan fin
 
 ## Related pages
 
-- [Workspace](/platform/workspace) — context that shapes AI responses
-- [Signals](/platform/signals) — raw evidence behind many answers
-- [Insights](/platform/insights) — synthesized takeaways you can explore further
+- [Workspace](/workspace) — context that shapes AI responses
+- [Signals](/signals) — raw evidence behind many answers
+- [Insights](/insights) — synthesized takeaways you can explore further

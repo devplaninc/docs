@@ -1,5 +1,6 @@
 ---
 title: Workspace General
+slug: /workspace-general
 sidebar_label: General
 sidebar_position: 1
 ---
@@ -20,7 +21,7 @@ Open **Settings** from your profile menu, then click **General** under **Workspa
 
 - **Workspace name** — the display name shown in the sidebar and company switcher
 - **Logo** — upload a workspace icon
-- **Website** — the URL Devplan uses when scanning your product for context (also editable under [Workspace](/platform/workspace) in the app)
+- **Website** — the URL Devplan uses when scanning your product for context (also editable under [Workspace](/workspace) in the app)
 - **Danger Zone** — delete the workspace (collapsed by default)
 
 ---
@@ -47,5 +48,5 @@ Deleting a workspace is irreversible. Only workspace owners should perform this 
 
 ## Related pages
 
-- [Workspace](/platform/workspace) — edit AI context (customers, goals, competitors)
-- [Organization Workspaces](/settings/organization-workspaces) — manage workspaces at the org level
+- [Workspace](/workspace) — edit AI context (customers, goals, competitors)
+- [Organization Workspaces](/organization-workspaces) — manage workspaces at the org level
