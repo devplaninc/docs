@@ -6,84 +6,27 @@ sidebar_position: 9
 
 # Confluence
 
-Connect Confluence and attach spaces or pages so Devplan can read them on demand during signal processing — feeding [Signals](/signals), [Insights](/insights), and [Ask Devplan](/ask-devplan).
+Connect Confluence and attach spaces or pages for on-demand reads during signal processing.
 
 ---
 
-## How to access
+## Prerequisites
 
-1. Open **Knowledge > Integrations** in the sidebar.
-2. Find the **Confluence** card and click **Connect** or **Configure**.
-
-This opens the Confluence manage page.
+Install the [Devplan Forge app for Jira](https://developer.atlassian.com/console/install/cd539bc3-11b5-4b71-a82d-d8af831435a1?signature=AYABeETqleNeikM5CMnAxz%2B755IAAAADAAdhd3Mta21zAEthcm46YXdzOmttczp1cy1lYXN0LTE6NzA5NTg3ODM1MjQzOmtleS83ZjcxNzcxZC02OWM4LTRlOWItYWU5Ny05MzJkMmNhZjM0NDIAuAECAQB4KVgoNesMySI2pXEz4J5S%2B4but%2FgpPvEEG0vL8V0Jz5cBPXqIpFHwuylgGhQUrD7WFAAAAH4wfAYJKoZIhvcNAQcGoG8wbQIBADBoBgkqhkiG9w0BBwEwHgYJYIZIAWUDBAEuMBEEDJcRfkjl7WpHMarLtAIBEIA7mc2prFXlHJjTKbDnNcpmzeACyi2tBtMq3hVrGHdh2akO5mTfwz%2BBy6EHr6bPeNKoM2L60HHHIemHrDIAB2F3cy1rbXMAS2Fybjphd3M6a21zOmV1LXdlc3QtMTo3MDk1ODc4MzUyNDM6a2V5LzU1OWQ0NTE2LWE3OTEtNDdkZi1iYmVkLTAyNjFlODY4ZWE1YwC4AQICAHig7hOcRWe1S%2BcRRsjD9q0WpZcapmXa1oPX3jm4ao883gF4Eo5GpaFrAlXkpsEWdYNKAAAAfjB8BgkqhkiG9w0BBwagbzBtAgEAMGgGCSqGSIb3DQEHATAeBglghkgBZQMEAS4wEQQMn%2FqaVxEv1dTfPdUbAgEQgDuBVtVlNMJJ47vMCa7oWNLyN%2BfRjcnRrVN%2BiX%2BjGQnibmcqInsNVcfBzPugUtVZ6PNUkDRe%2Bsgm7urUPgAHYXdzLWttcwBLYXJuOmF3czprbXM6dXMtd2VzdC0yOjcwOTU4NzgzNTI0MzprZXkvM2M0YjQzMzctYTQzOS00ZmNhLWEwZDItNDcyYzE2ZWRhZmRjALgBAgIAeBeusbAYURagY7RdQhCHwxFswh7l65V7cwKp%2BDc1WGoHAVlLDoEvXPFCxzm%2FW5nVIsQAAAB%2BMHwGCSqGSIb3DQEHBqBvMG0CAQAwaAYJKoZIhvcNAQcBMB4GCWCGSAFlAwQBLjARBAwoTaqw7IFZWPAYzAYCARCAO3gE%2FMvECQjfUjr0lqu2N5T%2FdiuIAKtBgtXKQypXXfHqYzmqbMPGvL5WjVe8MxHYmGyUnpK0jog1ssaRAgAAAAAMAAAQAAAAAAAAAAAAAAAAAOYf7d4xRr3RzSZt2Jc8A%2Fr%2F%2F%2F%2F%2FAAAAAQAAAAAAAAAAAAAAAQAAADJtmNORi7b8ozuX4AmbPzgLt1wtlQC7ySPPBb8KDvfFhFGzE9BK0iAxszz6eCbUaX2oBe%2FkWOBdho%2BVmvPIwCsBVUY%3D&product=jira) on your Atlassian site. The same Forge app covers Confluence and is required to keep access tokens fresh.
 
 ---
 
-## Connect Confluence
+## Connect and attach
 
-Confluence uses the same Atlassian OAuth flow as Jira.
+1. Open **Knowledge > Integrations** → **Confluence** → **Connect Confluence**.
+2. Complete Atlassian OAuth; pick your site if prompted.
+3. Click **Attach Confluence content** and select spaces or individual pages.
 
-1. On the Confluence manage page, click **Connect Confluence**.
-2. Complete Atlassian OAuth and grant Devplan access.
-3. If your Atlassian account has access to multiple sites, Devplan prompts you to **Choose Atlassian site** — select the Confluence site for this workspace.
-4. After authorization, the page shows a **Connected** badge.
-
-Install the **Devplan Forge app for Confluence** in your Atlassian site if prompted — this is required for token refresh and ongoing access.
-
----
-
-## Attach spaces and pages
-
-Once Confluence is connected, attach the specific content Devplan should read.
-
-1. Click **Attach Confluence content** to open the picker.
-2. Browse available Confluence spaces. You can attach:
-   - **Spaces** — an entire Confluence space
-   - **Pages** — expand a space to select individual pages inside it
-3. Select one or more items and confirm.
-
-Attached content appears in the **Attached Confluence content** table with the item name and type (space or page). Use the row actions to remove attachments.
-
-Devplan reads attached Confluence content **on demand during signal processing**. Add or remove attachments anytime to change what Devplan considers.
-
-If no spaces appear immediately after connecting, click **Refresh** to sync the space list from your Atlassian site.
-
----
-
-## Manage the integration
-
-| Action | What it does |
-|--------|--------------|
-| **Attach Confluence content** | Open the picker to add spaces or pages |
-| **Refresh** | Re-sync Confluence spaces and connection metadata |
-| **Disconnect Confluence** | Remove the Confluence connection from this workspace |
-| Remove attachment | Stop reading a specific space or page |
-
----
-
-## What Devplan uses Confluence for
-
-Attached Confluence spaces and pages contribute to:
-
-- **Signals** — page updates, comments, and specs surface as evidence
-- **Insights** — related signals are synthesized into takeaways
-- **Ask Devplan** — Confluence content is available when answering workspace questions
-- **Knowledge graph** — Confluence pages link to PRs, tickets, and other sources
-
-Good candidates to attach: product specs, architecture docs, decision logs, customer research, and team runbooks.
-
----
-
-## Tips
-
-- Attach specific spaces or pages rather than expecting Devplan to read your entire Confluence instance.
-- If you already connected Jira, Confluence may share the same Atlassian token — you still need to attach Confluence content separately.
-- Use **Refresh** after creating new spaces in Confluence if they do not appear in the picker.
+Devplan reads attached content on demand during signal processing. Use **Refresh** if new spaces do not appear.
 
 ---
 
 ## Related pages
 
-- [Jira](/jira-integration) — connect Jira on the same Atlassian site
-- [Notion](/notion-integration) — attach Notion pages and databases
-- [Core Workflow](/core-workflow) — how document sources feed the pipeline
+- [Jira integration](/jira-integration) — same Atlassian site
+- [Integrations overview](/integrations-overview)

@@ -25,12 +25,6 @@ const sidebars: SidebarsConfig = {
         'platform/insights',
         {
           type: 'category',
-          label: 'Specs',
-          collapsed: false,
-          items: ['platform/roadmap'],
-        },
-        {
-          type: 'category',
           label: 'Knowledge',
           collapsed: false,
           items: [
@@ -41,6 +35,12 @@ const sidebars: SidebarsConfig = {
           ],
         },
       ],
+    },
+    {
+      type: 'category',
+      label: 'Preview',
+      collapsed: false,
+      items: ['platform/roadmap'],
     },
     {
       type: 'category',

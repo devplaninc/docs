@@ -6,72 +6,35 @@ sidebar_position: 8
 
 # Google Drive
 
-Attach Google Drive folders so Devplan can read documents on demand during signal processing — feeding [Signals](/signals), [Insights](/insights), and [Ask Devplan](/ask-devplan).
+Attach Google Drive folders for on-demand reads during signal processing.
 
 ---
 
-## How to access
+## Setup
 
-1. Open **Knowledge > Integrations** in the sidebar.
-2. Find the **Google Drive** card and click **Select folders** or **Configure**.
+1. Open **Knowledge > Integrations** → **Google Drive** → **Select folders**.
+2. Click **Attach folders** and sign in with Google if prompted.
+3. Pick folders in the picker and confirm.
 
-This opens the Google Drive manage page.
-
----
-
-## Connect and attach folders
-
-Google Drive uses folder attachments rather than a persistent "connected" badge. You authenticate when you attach your first folders.
-
-1. On the Google Drive manage page, click **Attach folders**.
-2. If prompted, complete Google OAuth and grant Devplan access to your Google account.
-3. In the folder picker, select one or more folders to attach.
-4. Confirm your selection.
-
-Attached folders appear in the **Attached Google Drive folders** table. Each row links to the folder on Google Drive. Use the remove action to detach a folder Devplan should no longer read.
-
-You can attach additional folders anytime by clicking **Attach folders** again.
+Attached folders appear in the manage table. Remove any you no longer want Devplan to read.
 
 ---
 
-## Manage attached folders
+## Service account access
 
-| Action | What it does |
-|--------|--------------|
-| **Attach folders** | Open the Google Drive picker to add more folders |
-| **Remove** | Detach a folder — Devplan stops reading its contents on future processing cycles |
-| Folder name link | Open the folder directly in Google Drive |
+When you attach a folder, Devplan grants **reader access to a workspace-specific Google service account** on that folder. That lets Devplan read folder contents during background processing without requiring your personal OAuth session to stay active.
 
-The manage page shows how many folders are attached. A workspace with no folders attached is not yet reading Google Drive content.
+Your OAuth step authorizes the picker; ongoing access uses the service account on each attached folder.
 
 ---
 
-## What Devplan reads
+## What it feeds
 
-Devplan reads files inside attached folders **on demand during signal processing**. Supported content includes Google Docs, Sheets, Slides, and other files in the selected folders.
-
-Attached Drive content contributes to:
-
-- **Signals** — document updates and relevant excerpts surface as evidence
-- **Insights** — synthesized takeaways from document and cross-source signals
-- **Ask Devplan** — folder content is available when answering questions
-- **Knowledge graph** — Drive documents link to other workspace sources
-
-Good folders to attach: product specs, strategy decks, customer research, interview notes, competitive analysis, and shared team documentation.
-
----
-
-## Tips
-
-- Attach folders with stable, team-maintained content rather than personal scratch directories.
-- Narrow folder selection improves signal relevance — attach the folders your product team actually uses.
-- If OAuth fails, try **Attach folders** again to re-authenticate.
+Google Docs, Sheets, Slides, and other files in attached folders can surface in [Signals](/signals), [Insights](/insights), and [Ask Devplan](/ask-devplan).
 
 ---
 
 ## Related pages
 
-- [Notion](/notion-integration) — attach Notion pages and databases
-- [Confluence](/confluence-integration) — attach Confluence spaces and pages
-- [Uploads](/upload-files) — upload files directly without Google Drive
-- [Core Workflow](/core-workflow) — how document sources feed the pipeline
+- [Upload files](/upload-files) — upload directly without Drive
+- [Integrations overview](/integrations-overview)
