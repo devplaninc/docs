@@ -7,75 +7,55 @@ sidebar_position: 0
 
 # Platform Overview
 
-Devplan's sidebar organizes your workspace into three areas: daily work, planning, and knowledge. Use this guide to understand what each page does and how they connect.
+The sidebar groups pages into **daily work**, **knowledge**, and **preview** features.
 
 ---
 
 ## Daily work
 
-These pages are your starting point each day.
-
 | Page | What it does |
 |------|--------------|
-| [Today](/today) | AI-generated daily digests of what's changing across your workspace |
-| [Ask Devplan](/ask-devplan) | Conversational AI assistant scoped to your workspace |
-| [Projects](/projects) | Track and manage active projects |
-| [Updates](/updates) | Feed of what shipped recently in your product catalog |
-| [Insights](/insights) | Synthesized, role-aware takeaways from workspace signals |
-
----
-
-## Specs
-
-Planning views for your project portfolio. **Roadmap** appears under **Specs** when specs are enabled for your workspace.
-
-| Page | What it does |
-|------|--------------|
-| [Roadmap](/roadmap) | Portfolio planning across releases, kanban, and timeline views |
+| [Today](/today) | AI daily digest |
+| [Ask Devplan](/ask-devplan) | Workspace-scoped AI assistant |
+| [Projects](/projects) | Active projects |
+| [Updates](/updates) | Recent product catalog changes |
+| [Insights](/insights) | Synthesized takeaways from signals |
 
 ---
 
 ## Knowledge
 
-Context and data sources that power AI output across the platform.
-
 | Page | What it does |
 |------|--------------|
-| [Workspace](/workspace) | Edit core workspace context — customers, goals, competitors |
-| [Product](/product) | Browse auto-generated feature catalogue and specs |
-| [Signals](/signals) | Raw evidence feed from connected sources |
-| [Integrations](/integrations) | Connect external tools that feed knowledge and signals |
+| [Workspace](/workspace) | Company context — goals, customers, competitors |
+| [Product](/product) | Auto-generated feature catalog |
+| [Signals](/signals) | Raw evidence from connected sources |
+| [Integrations](/integrations) | Connect and configure data sources |
+
+**Flow:** Integrations → Signals → Insights → Today. Workspace and Product context shape relevance.
 
 ---
 
-## How the pages connect
+## Preview
 
-```mermaid
-flowchart LR
-  Integrations --> Signals
-  Integrations --> Product
-  Workspace --> Insights
-  Workspace --> Product
-  Signals --> Insights
-  Product --> Updates
-  Updates --> Today
-  Insights --> Today
-  Projects --> Roadmap
-```
+| Page | What it does |
+|------|--------------|
+| [Roadmap](/roadmap) | Portfolio planning (Roadmap, Kanban, Timeline) |
 
-**Integrations** bring in data from GitHub, Slack, Jira, and other tools. That data surfaces as **Signals**, which Devplan synthesizes into **Insights**. **Workspace** and **Product** context shape how relevant those outputs are. **Updates** and **Today** give you a daily view of what's changing, while **Projects** and **Roadmap** help you plan what to build next.
+:::note
+**Roadmap** is in preview and is not enabled for all workspaces yet.
+:::
 
 ---
 
 ## Evidence pills
 
-On [Today](/today), [Insights](/insights), and [Ask Devplan](/ask-devplan), you'll see inline **evidence pills** — small badges showing source icons and a count like `3 sources`. Click a pill to open a flyout listing the references behind a claim, with links to the original PRs, tickets, Slack threads, and other connected sources.
+On [Today](/today), [Insights](/insights), and [Ask Devplan](/ask-devplan), **evidence pills** show source icons and a count (e.g. `3 sources`). Click to see linked PRs, tickets, Slack threads, and documents.
 
 ---
 
-## Availability notes
+## Next steps
 
-- **Roadmap** — visible when specs are enabled for your workspace
-- **Insights** and **Signals** — may not appear in all workspaces
-
-For setup steps, see [Getting Started](/getting-started). For the feature planning workflow, see [Core Workflow](/core-workflow). For account and workspace configuration, see [Settings Overview](/settings-overview).
+- [Getting Started](/getting-started)
+- [Core Workflow](/core-workflow)
+- [Settings Overview](/settings-overview)

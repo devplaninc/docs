@@ -7,37 +7,20 @@ sidebar_position: 3
 
 # Projects
 
-Track and manage active projects in your workspace. **Projects** is where you browse, filter, and create the initiatives Devplan helps you plan and build.
+Browse, filter, and create projects. Each project has tabs for summary, specs, development plan, and more.
 
 ---
 
-## How to access
+## What you can do
 
-Click **Projects** in the left sidebar, or use the **+ Add** button to create a new project directly.
-
----
-
-## Key features
-
-- **Project list** — sortable, filterable view of all tracked projects
-- **Visibility toggles** — show or hide done and archived projects
-- **Group by release** — organize projects by release when planning delivery
-- **Inline creation** — create new projects from the sidebar or list view
-- **Project detail** — click any project to open tabs for summary, product specs, development, and more
-
----
-
-## Common workflows
-
-1. Open **Projects** to see everything currently in flight.
-2. Use filters to show or hide done and archived projects.
-3. Click **+ Add** to create a new project with a description, docs, or ticket links.
-4. Open a project to review its product brief, user stories, and development plan.
-5. Use **Group by release** when you need a delivery-oriented view.
+- Filter and toggle done/archived projects
+- **Group by release** for delivery-oriented views
+- **+ Add** to create a project from text, docs, or ticket links
+- Open a project to review briefs, user stories, and build plan
 
 ---
 
 ## Related pages
 
-- [Roadmap](/roadmap) — portfolio planning across releases and phases
-- [Core Workflow](/core-workflow) — full walkthrough from idea to implementation
+- [Roadmap](/roadmap) — portfolio planning (preview)
+- [Core Workflow](/core-workflow) — idea to implementation
