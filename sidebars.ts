@@ -2,13 +2,14 @@ import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
 const sidebars: SidebarsConfig = {
   tutorialSidebar: [
+    'overview',
     {
       type: 'category',
       label: 'The Workflow',
       collapsed: false,
       items: [
         'quickstart',
-{ type: 'doc', id: 'core-workflow', label: 'Core Workflow' },
+        { type: 'doc', id: 'core-workflow', label: 'Core Workflow' },
         'architecture',
       ],
     },

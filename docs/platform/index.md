@@ -56,6 +56,6 @@ On [Today](/today), [Insights](/insights), and [Ask Devplan](/ask-devplan), **ev
 
 ## Next steps
 
+- [Overview](/overview)
 - [Getting Started](/getting-started)
-- [Core Workflow](/core-workflow)
-- [Settings Overview](/settings-overview)
+- [How Devplan Works](/how-devplan-works)

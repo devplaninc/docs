@@ -49,7 +49,7 @@ Background jobs need time to ingest data.
 - **[Insights](/insights)** — synthesized takeaways
 - **[Ask Devplan](/ask-devplan)** — ask questions with workspace context
 - **[Product](/product)** — auto-generated feature catalog
-- **Projects** — plan features when ready; see [Core Workflow](/core-workflow)
+- **Projects** — plan features when ready
 
 ---
 
@@ -64,6 +64,7 @@ Background jobs need time to ingest data.
 
 ## Next steps
 
+- [Overview](/overview)
 - [Platform Overview](/platform-overview)
 - [Core Workflow](/core-workflow)
 - [Integrations overview](/integrations-overview)

@@ -45,7 +45,7 @@ const config: Config = {
       logo: {
         alt: 'Devplan',
         src: 'img/weaver-icon.png',
-        href: '/getting-started',
+        href: '/overview',
       },
       hideOnScroll: false,
       items: [
@@ -68,6 +68,10 @@ const config: Config = {
         {
           title: 'Documentation',
           items: [
+            {
+              label: 'Overview',
+              to: '/overview',
+            },
             {
               label: 'Getting Started',
               to: '/getting-started',

@@ -23,4 +23,4 @@ Browse, filter, and create projects. Each project has tabs for summary, specs, d
 ## Related pages
 
 - [Roadmap](/roadmap) — portfolio planning (preview)
-- [Core Workflow](/core-workflow) — idea to implementation
+- [Core Workflow](/core-workflow) — how Devplan learns about your product
