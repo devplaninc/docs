@@ -12,7 +12,7 @@ Two layers:
 1. **Product intelligence** — ingest context and integrations, build a knowledge graph and feature catalog, extract signals, synthesize insights, deliver [Today](/today).
 2. **Feature planning** — turn ideas into implementation-ready specs and coding prompts grounded in that context.
 
-See [Getting Started](/getting-started), [Core Workflow](/core-workflow), and [Platform Overview](/platform-overview).
+See [Overview](/overview), [Getting Started](/getting-started), [Core Workflow](/core-workflow), and [Platform Overview](/platform-overview).
 
 ---
 
@@ -37,7 +37,7 @@ See [Getting Started](/getting-started), [Core Workflow](/core-workflow), and [P
 
 The knowledge graph links workspace context, uploads, catalog features, tickets, and code — enabling cross-source answers in [Ask Devplan](/ask-devplan) and evidence citations on Today and Insights.
 
-The **feature catalog** maps features to code and docs. **Catalog bootstrap** runs after code repos are connected; **catalog update** jobs keep [Product](/product) and [Updates](/updates) current. Jira and Linear context from allowed projects enriches bootstrap.
+The **feature catalog** maps features to code and docs. **Catalog bootstrap** runs after code repos are connected; **catalog update** jobs keep [Product](/product) and [Updates](/updates) current. Jira context from allowed projects enriches bootstrap.
 
 ---
 
@@ -45,18 +45,30 @@ The **feature catalog** maps features to code and docs. **Catalog bootstrap** ru
 
 **Signals** are raw evidence — PRs, Slack threads, tickets, uploads. **Insights** synthesize related signals into risks, opportunities, and themes, personalized by [Preferences](/preferences) roles. Both feed [Today](/today).
 
-For feature planning, Devplan maps requirements to components and APIs for impact analysis, story sequencing, and context-rich coding prompts. Planning agents run discovery, PRD review, and attachment processing. See [Core Workflow](/core-workflow) for the full planning flow.
+For feature planning, Devplan maps requirements to components and APIs for impact analysis, story sequencing, and context-rich coding prompts. Planning agents run discovery, PRD review, and attachment processing. See [Spec Driven Development](/spec-driven-development) for the planning workflow.
 
 ---
 
 ## Integrations
 
-Jira and Linear serve two roles:
+Connect sources under **Knowledge > Integrations**. For most providers, **Connect** is only the first step — you also enable repos, attach pages or folders, invite the Slack bot, or select Jira projects before data flows in.
 
-1. **Ingestion** — ticket data feeds catalog and [Signals](/signals). Jira scopes via **Allowed JIRA Projects** on the manage page; Linear includes connected teams when active.
-2. **Export** — one-way push from a Devplan project to Jira or Linear via **Sync** → **Export to JIRA** / **Export to Linear**. Changes in Jira or Linear after export are not synced back.
+| Integration | What Devplan reads | What it powers |
+|-------------|-------------------|----------------|
+| [GitHub](/github-integration) | Repos, PRs, commits, code structure | Catalog bootstrap, code-change signals, planning context |
+| [Bitbucket](/bitbucket-integration) | Same as GitHub (requires Forge app) | Catalog bootstrap, code-change signals |
+| [Jira](/jira-integration) | Issues and project activity from **Allowed JIRA Projects** (requires Forge app) | Catalog enrichment, [Signals](/signals), [Insights](/insights) |
+| [Linear](/linear-integration) | Issues and team activity from connected teams | [Signals](/signals), [Insights](/insights) |
+| [Slack](/slack-integration) | Messages in channels where the Devplan bot is a member | Discussion signals, alignment gaps |
+| [Notion](/notion-integration) | Attached pages and databases (on demand) | Signals, knowledge graph, Ask Devplan |
+| [Google Drive](/google-drive-integration) | Attached folders via a workspace service account (on demand) | Signals, knowledge graph, Ask Devplan |
+| [Confluence](/confluence-integration) | Attached spaces and pages (on demand; same Forge app as Jira) | Signals, knowledge graph, Ask Devplan |
+| [Upload files](/upload-files) | PDFs, docs, spreadsheets, images you upload directly | Knowledge graph, signals, insights |
+| [Granola](/granola-integration) | Call notes and meeting summaries (paid Granola accounts only) | Interview and stakeholder signals |
 
-See [Jira Integration](/jira-integration) and [Integrations](/integrations).
+Code repos drive catalog bootstrap — first analysis often takes **30+ minutes**. Other sources populate [Signals](/signals) and [Insights](/insights) over hours and days as background jobs run.
+
+Setup guides: [Integrations overview](/integrations-overview).
 
 ### CLI
 

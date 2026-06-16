@@ -66,7 +66,7 @@ codex mcp add devplan-remote --url https://app.devplan.com/api/v1/mcp
 
 - [CLI Cheat Sheet](/cli-cheat-sheet) — Install the `devplan` CLI and explore available commands
 - [Workspace Members](/workspace-members) — invite members and manage roles
-- [Core Workflow](/core-workflow) — How Devplan projects, PRDs, and user stories work
+- [Spec Driven Development](/spec-driven-development) — PRDs, user stories, and implementation workflow
 - [Jira Integration](/jira-integration) — Sync Devplan user stories to Jira
 
 ---
