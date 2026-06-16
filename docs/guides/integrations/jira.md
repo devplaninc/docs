@@ -24,7 +24,7 @@ Jira feeds product intelligence (signals, catalog, insights) and supports one-wa
 | **Allowed JIRA Projects** | Projects for catalog and export. None selected = Jira excluded from catalog. |
 | **Extra Fields** | Custom fields required during export (e.g. `customfield_10001`) |
 
-Jira connect also enables [Confluence](/confluence-integration) on the same site — attach Confluence content separately.
+To use [Confluence](/confluence-integration), install the same Forge app for Confluence on the same Atlassian site, then attach Confluence content separately.
 
 ---
 
