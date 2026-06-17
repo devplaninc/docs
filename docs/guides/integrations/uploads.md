@@ -6,7 +6,7 @@ sidebar_position: 10
 
 # Upload Files
 
-Upload documents when content does not live in a connected tool. Files join the knowledge graph and feed [Signals](/signals), [Insights](/insights), and [Ask Devplan](/ask-devplan).
+Upload documents when content does not live in a connected tool. Files join the knowledge graph and feed [Signals](/knowledge#signals), [Insights](/insights), and [Ask Devplan](/ask-devplan).
 
 ---
 
@@ -20,7 +20,7 @@ Upload documents when content does not live in a connected tool. Files join the 
 | Spreadsheets | CSV, XLSX |
 | Images | JPEG, PNG (AI-generated descriptions for text contexts) |
 
-All uploads go into a single library — no category picker. You can also attach docs during [onboarding](/getting-started) or on [Workspace](/workspace).
+All uploads go into a single library — no category picker. You can also attach docs during [onboarding](/getting-started) or on [Workspace](/knowledge#workspace).
 
 New uploads take time to ingest before appearing in signals.
 

@@ -27,7 +27,7 @@ Generic AI assistants make this worse — they answer from general knowledge, no
 
 ### A living model of your product
 
-Connect [integrations](/integrations-overview) once and Devplan builds a [feature catalog](/product) from your repos, enriches it with tickets and docs, and keeps it current as your product evolves. You get structured product knowledge without maintaining it by hand.
+Connect [integrations](/integrations-overview) once and Devplan builds a [feature catalog](/knowledge#product-catalog) from your repos, enriches it with tickets and docs, and keeps it current as your product evolves. You get structured product knowledge without maintaining it by hand.
 
 ### Daily clarity, not information overload
 
@@ -44,6 +44,18 @@ Connect [integrations](/integrations-overview) once and Devplan builds a [featur
 ### Evidence you can trust
 
 Across Today, Insights, and Ask Devplan, every claim links to its sources. Click through to the original artifact and verify for yourself.
+
+---
+
+## Powered by Weaver
+
+Underneath all of this is **Weaver** — the continuous knowledge graph that powers everything else. Weaver does three things, constantly:
+
+- **Ingest signals** from your code, conversations, tickets, and docs
+- **Maintain memory** of your product, decisions, and organizational context over time
+- **Route insight** to the right people and AI agents, in the interface, Slack, or MCP-enabled tools
+
+The result is a **shared brain** for your team: durable, traceable memory instead of context that lives in one person's head. It's also why Devplan's answers stay grounded in *your* organization rather than hallucinated — and why responses draw on pre-computed signal intelligence rather than re-reading everything from scratch each time.
 
 ---
 

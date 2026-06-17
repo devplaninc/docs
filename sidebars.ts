@@ -5,17 +5,17 @@ const sidebars: SidebarsConfig = {
     'overview',
     {
       type: 'category',
-      label: 'The Workflow',
+      label: 'Get Started',
       collapsed: false,
       items: [
         'quickstart',
-        { type: 'doc', id: 'core-workflow', label: 'Core Workflow' },
+        {type: 'doc', id: 'core-workflow', label: 'Core Workflow'},
         'architecture',
       ],
     },
     {
       type: 'category',
-      label: 'Platform',
+      label: 'Product',
       collapsed: false,
       items: [
         'platform/index',
@@ -24,77 +24,14 @@ const sidebars: SidebarsConfig = {
         'platform/projects',
         'platform/updates',
         'platform/insights',
-        {
-          type: 'category',
-          label: 'Knowledge',
-          collapsed: false,
-          items: [
-            'platform/workspace',
-            'platform/product',
-            'platform/signals',
-            'platform/integrations',
-          ],
-        },
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Preview',
-      collapsed: false,
-      items: ['platform/roadmap'],
-    },
-    {
-      type: 'category',
-      label: 'Settings',
-      collapsed: false,
-      items: [
-        'settings/index',
-        {
-          type: 'category',
-          label: 'Profile',
-          collapsed: false,
-          items: [
-            'settings/personal-info',
-            'settings/preferences',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Workspace',
-          collapsed: false,
-          items: [
-            'settings/workspace-general',
-            'settings/workspace-members',
-            'settings/workspace-daily-digest',
-            'settings/workspace-api-keys',
-          ],
-        },
-        {
-          type: 'category',
-          label: 'Organization',
-          collapsed: false,
-          items: [
-            'settings/organization-general',
-            'settings/organization-workspaces',
-            'settings/organization-billing',
-          ],
-        },
-      ],
-    },
-    {
-      type: 'category',
-      label: 'Developer Resources',
-      collapsed: false,
-      items: [
-        'dev/cli-cheat-sheet',
-        'dev/spec-driven-dev',
-        'cloud-run/index',
+        'platform/roadmap',
+        'platform/knowledge',
       ],
     },
     {
       type: 'category',
       label: 'Integrations',
-      collapsed: false,
+      collapsed: true,
       items: [
         'guides/integrations/index',
         'guides/integrations/github',
@@ -112,12 +49,25 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Guides',
-      collapsed: false,
+      label: 'Settings',
+      collapsed: true,
       items: [
-        'guides/billing/migrate-to-org-billing',
+        'settings/profile',
+        'settings/workspace',
+        'settings/organization',
       ],
-    }
+    },
+    {
+      type: 'category',
+      label: 'For Developers',
+      collapsed: true,
+      items: [
+        'dev/cli-cheat-sheet',
+        'dev/spec-driven-dev',
+        'dev/git-worktrees',
+        'cloud-run/index',
+      ],
+    },
   ],
 };
 

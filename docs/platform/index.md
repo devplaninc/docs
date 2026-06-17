@@ -1,13 +1,14 @@
 ---
-title: Platform Overview
+title: Product Overview
 slug: /platform-overview
 sidebar_label: Overview
 sidebar_position: 0
 ---
 
-# Platform Overview
+# Product Overview
 
-The sidebar groups pages into **daily work**, **knowledge**, and **preview** features.
+The **Product** section covers everything you do day to day in Devplan — your daily work
+surfaces, the [Knowledge](/knowledge) that powers them, and preview features.
 
 ---
 
@@ -20,31 +21,22 @@ The sidebar groups pages into **daily work**, **knowledge**, and **preview** fea
 | [Projects](/projects) | Active projects |
 | [Updates](/updates) | Recent product catalog changes |
 | [Insights](/insights) | Synthesized takeaways from signals |
+| [Roadmap](/roadmap) | Portfolio planning — Roadmap, Kanban, Timeline *(preview)* |
 
 ---
 
 ## Knowledge
 
-| Page | What it does |
+[Knowledge](/knowledge) is the context layer behind everything above.
+
+| Area | What it holds |
 |------|--------------|
-| [Workspace](/workspace) | Company context — goals, customers, competitors |
-| [Product](/product) | Auto-generated feature catalog |
-| [Signals](/signals) | Raw evidence from connected sources |
-| [Integrations](/integrations) | Connect and configure data sources |
+| [Workspace](/knowledge#workspace) | Company context — goals, customers, competitors |
+| [Product catalog](/knowledge#product-catalog) | Auto-generated feature catalog |
+| [Signals](/knowledge#signals) | Raw evidence from connected sources |
+| [Integrations](/knowledge#integrations) | Connect and configure data sources |
 
 **Flow:** Integrations → Signals → Insights → Today. Workspace and Product context shape relevance.
-
----
-
-## Preview
-
-| Page | What it does |
-|------|--------------|
-| [Roadmap](/roadmap) | Portfolio planning (Roadmap, Kanban, Timeline) |
-
-:::note
-**Roadmap** is in preview and is not enabled for all workspaces yet.
-:::
 
 ---
 

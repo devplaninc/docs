@@ -6,7 +6,7 @@ sidebar_position: 5
 
 # Linear
 
-Ingest ticket data for [Signals](/signals) and export Devplan projects to Linear.
+Ingest ticket data for [Signals](/knowledge#signals) and export Devplan projects to Linear.
 
 ---
 

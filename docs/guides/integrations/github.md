@@ -6,7 +6,7 @@ sidebar_position: 2
 
 # GitHub
 
-Analyze repositories and bootstrap your [feature catalog](/product).
+Analyze repositories and bootstrap your [feature catalog](/knowledge#product-catalog).
 
 ---
 
@@ -30,4 +30,4 @@ First analysis often takes **30+ minutes**.
 ## Related pages
 
 - [Bitbucket](/bitbucket-integration)
-- [Product](/product)
+- [Product](/knowledge#product-catalog)

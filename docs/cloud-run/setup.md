@@ -318,7 +318,7 @@ sdk install maven 3.9.6
 
 # Configure Maven settings for private repositories
 mkdir -p ~/.m2
-cat > ~/.m2/settings-overview.xml << EOF
+cat > ~/.m2/settings.xml << EOF
 <settings>
   <servers>
     <server>
@@ -327,7 +327,7 @@ cat > ~/.m2/settings-overview.xml << EOF
       <password>${MAVEN_PASSWORD}</password>
     </server>
   </servers>
-</settings-overview>
+</settings>
 EOF
 
 # Download dependencies

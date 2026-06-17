@@ -11,7 +11,7 @@ Sign up at [app.devplan.com](https://app.devplan.com) with Google SSO or a magic
 
 ## 1. Create your account and workspace
 
-After sign-in, set up your workspace. Refine context anytime under **Knowledge > Workspace** or [Workspace settings](/workspace-general).
+After sign-in, set up your workspace. Refine context anytime under **Knowledge > Workspace** or [Workspace settings](/settings/workspace#general).
 
 ---
 
@@ -39,26 +39,26 @@ Background jobs need time to ingest data.
 | Docs and tickets | Hours to days for signals and insights |
 | Slack | Grows as the bot reads new channel messages |
 
-[Signals](/signals), [Insights](/insights), and [Today](/today) start thin and get richer. Connect early and keep using the app while processing runs.
+[Signals](/knowledge#signals), [Insights](/insights), and [Today](/today) start thin and get richer. Connect early and keep using the app while processing runs.
 
 ---
 
 ## 3. Start using Devplan
 
-- **[Today](/today)** — daily digest; personalize from the page or [Preferences](/preferences)
+- **[Today](/today)** — daily digest; personalize from the page or [Preferences](/settings/profile#preferences)
 - **[Insights](/insights)** — synthesized takeaways
 - **[Ask Devplan](/ask-devplan)** — ask questions with workspace context
-- **[Product](/product)** — auto-generated feature catalog
+- **[Product](/knowledge#product-catalog)** — auto-generated feature catalog
 - **Projects** — plan features when ready
 
 ---
 
 ## For teams
 
-1. Invite teammates via [Workspace Members](/workspace-members)
+1. Invite teammates via [Workspace Members](/settings/workspace#members)
 2. Connect shared integrations (GitHub, Slack, Jira)
-3. Set [Daily Digest](/workspace-daily-digest) delivery and per-user email in [Preferences](/preferences)
-4. For multiple workspaces, use **Settings > Organization** and [Organization Billing](/organization-billing)
+3. Set [Daily Digest](/settings/workspace#daily-digest) delivery and per-user email in [Preferences](/settings/profile#preferences)
+4. For multiple workspaces, use **Settings > Organization** and [Organization Billing](/settings/organization#billing)
 
 ---
 

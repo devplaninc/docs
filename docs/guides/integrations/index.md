@@ -6,7 +6,7 @@ sidebar_position: 1
 
 # Integrations
 
-Connect tools under **Knowledge > Integrations** so Devplan can build your catalog, generate [Signals](/signals) and [Insights](/insights), and ground planning in real context.
+Connect tools under **Knowledge > Integrations** so Devplan can build your catalog, generate [Signals](/knowledge#signals) and [Insights](/insights), and ground planning in real context.
 
 | Integration | Guide |
 |-------------|-------|
@@ -27,6 +27,6 @@ Connect tools under **Knowledge > Integrations** so Devplan can build your catal
 
 ## Related pages
 
-- [Integrations (platform)](/integrations)
+- [Integrations (platform)](/knowledge#integrations)
 - [Core Workflow](/core-workflow)
 - [MCP Integration](/mcp-integration)
