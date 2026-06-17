@@ -34,7 +34,24 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
-  themes: ['@docusaurus/theme-mermaid'],
+  themes: [
+    '@docusaurus/theme-mermaid',
+    [
+      '@easyops-cn/docusaurus-search-local',
+      {
+        hashed: true,
+        language: ['en'],
+        indexDocs: true,
+        indexBlog: false,
+        indexPages: false,
+        docsRouteBasePath: '/',
+        highlightSearchTermsOnTargetPage: true,
+        explicitSearchResultPath: true,
+        searchResultLimits: 8,
+        searchResultContextMaxLength: 80,
+      },
+    ],
+  ],
   markdown: {
     mermaid: true,
   },
@@ -54,6 +71,10 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Documentation',
+        },
+        {
+          type: 'search',
+          position: 'right',
         },
         {
           href: 'https://devplan.com',
