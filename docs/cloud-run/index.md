@@ -95,5 +95,3 @@ Configure the trigger keyword in **Settings > Development > Pull Request Comment
 
 
 Questions: [info@devplan.com](mailto:info@devplan.com)
-
-Questions: [info@devplan.com](mailto:info@devplan.com)

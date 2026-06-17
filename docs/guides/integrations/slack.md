@@ -31,5 +31,5 @@ Remove the bot in Slack and **Refresh** to revoke access. Historical messages be
 
 ## Related pages
 
-- [Signals](/signals)
+- [Signals](/knowledge#signals)
 - [Today](/today)

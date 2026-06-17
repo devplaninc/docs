@@ -30,7 +30,7 @@ To use [Confluence](/confluence-integration), install the same Forge app for Con
 
 ## Ingestion
 
-Allowed projects feed signals processing and catalog bootstrap. Data surfaces over hours to days in [Signals](/signals) and [Insights](/insights).
+Allowed projects feed signals processing and catalog bootstrap. Data surfaces over hours to days in [Signals](/knowledge#signals) and [Insights](/insights).
 
 ---
 

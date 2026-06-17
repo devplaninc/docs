@@ -29,7 +29,7 @@ Shows **Connected** when at least one folder is configured.
 
 ## What it feeds
 
-Synced notes can appear in [Signals](/signals), [Insights](/insights), and [Today](/today).
+Synced notes can appear in [Signals](/knowledge#signals), [Insights](/insights), and [Today](/today).
 
 ---
 

@@ -30,7 +30,7 @@ Your OAuth step authorizes the picker; ongoing access uses the service account o
 
 ## What it feeds
 
-Google Docs, Sheets, Slides, and other files in attached folders can surface in [Signals](/signals), [Insights](/insights), and [Ask Devplan](/ask-devplan).
+Google Docs, Sheets, Slides, and other files in attached folders can surface in [Signals](/knowledge#signals), [Insights](/insights), and [Ask Devplan](/ask-devplan).
 
 ---
 

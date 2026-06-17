@@ -6,7 +6,7 @@ sidebar_position: 3
 
 # Bitbucket
 
-Connect Bitbucket to analyze repositories and bootstrap your [feature catalog](/product).
+Connect Bitbucket to analyze repositories and bootstrap your [feature catalog](/knowledge#product-catalog).
 
 ---
 
@@ -36,4 +36,4 @@ First analysis often takes **30+ minutes**.
 ## Related pages
 
 - [GitHub integration](/github-integration)
-- [Product](/product)
+- [Product](/knowledge#product-catalog)
