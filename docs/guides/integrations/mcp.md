@@ -58,7 +58,7 @@ codex mcp add devplan-remote --url https://app.devplan.com/api/v1/mcp
 
    Replace `dpsk-<your-api-key>` with the key you copied in step 3.
 
-5. **Verify the connection** — ask your AI assistant to call the `listWorkspaceUsers` tool. A successful response returns the list of members in your workspace.
+5. **Verify the connection** — ask your AI assistant to call the `listProductFeatureCatalog` tool. A successful response returns the product areas and features available in your workspace.
 
 ---
 
