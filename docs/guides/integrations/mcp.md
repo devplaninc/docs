@@ -30,7 +30,6 @@ claude mcp add --transport http devplan-remote https://app.devplan.com/api/v1/mc
 codex mcp add devplan-remote --url https://app.devplan.com/api/v1/mcp
 ```
 
-
 ### Manual Setup with an API Key (if OAuth is not possible in the environment)
 1. **Open the API Keys page** — navigate to **Settings → Workspace → API Keys** in the Devplan app.
 
@@ -59,6 +58,40 @@ codex mcp add devplan-remote --url https://app.devplan.com/api/v1/mcp
    Replace `dpsk-<your-api-key>` with the key you copied in step 3.
 
 5. **Verify the connection** — ask your AI assistant to call the `listProductFeatureCatalog` tool. A successful response returns the product areas and features available in your workspace.
+
+6. **Improve agent behavior** — after the connection verifies, paste this prompt into Claude Code or Codex from the root of the repository where you want to use Devplan. It updates your agent instructions so the assistant knows when to check Devplan instead of relying only on local code or general model knowledge.
+
+   ```text
+   Please update this repo's agent instructions so this coding agent knows when to use Devplan.
+
+   1. Look for existing instruction files: CLAUDE.md and AGENTS.md.
+   2. Preserve all existing content. Do not overwrite or remove existing instructions.
+   3. If CLAUDE.md exists, add or update the section below in CLAUDE.md.
+   4. If AGENTS.md exists, add or update the same section in AGENTS.md.
+   5. If neither file exists, create the instruction file for this client: CLAUDE.md for Claude Code, AGENTS.md for Codex. If you are unsure, create AGENTS.md.
+   6. If you can verify that Devplan tools are available in this agent session, mention that. If you cannot verify that, do not treat it as a blocker; still make the file update and say that Devplan availability should be confirmed separately.
+
+   Add this section:
+
+   ## Devplan Context
+
+   Use Devplan when the task depends on our product, customers, roadmap, sales or support feedback, user research, company terminology, internal decisions, or current project status.
+
+   Before answering those questions, check the available Devplan tools for relevant context and evidence. Do not rely only on the local repo or general model knowledge when the question is related to product, customers, roadmap, feedback, research, company terminology, internal decisions, or project status.
+
+   Use Devplan for questions like:
+   - What does an internal product term mean?
+   - Draft a customer email using what we know about this account.
+   - Summarize recent customer feedback about a feature.
+   - Explain the current status of a project, roadmap item, customer request, or product decision.
+   - Answer a product question where the answer may depend on Slack, meetings, tickets, docs, customer conversations, or recent team decisions.
+
+   Do not use Devplan for generic coding tasks where the local repository has enough context.
+
+   After making the update, summarize exactly which file(s) changed and show me the final Devplan Context section.
+   ```
+
+   This prompt does not install Devplan by itself. It teaches your coding agent when to use the Devplan tools you connected above.
 
 ---
 
