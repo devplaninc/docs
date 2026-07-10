@@ -48,6 +48,7 @@ Background jobs need time to ingest data.
 - **[Today](/today)** — daily digest; personalize from the page or [Preferences](/settings/profile#preferences)
 - **[Insights](/insights)** — synthesized takeaways
 - **[Ask Devplan](/ask-devplan)** — ask questions with workspace context
+- **[MCP Integration](/mcp-integration)** — use Devplan from Claude Code, Codex, Cursor, or another MCP-compatible AI client
 - **[Product](/knowledge#product-catalog)** — auto-generated feature catalog
 - **Projects** — plan features when ready
 

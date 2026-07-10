@@ -34,6 +34,7 @@ const sidebars: SidebarsConfig = {
       collapsed: true,
       items: [
         'guides/integrations/index',
+        'guides/integrations/mcp',
         'guides/integrations/github',
         'guides/integrations/bitbucket',
         'guides/integrations/jira',
@@ -44,7 +45,6 @@ const sidebars: SidebarsConfig = {
         'guides/integrations/confluence',
         'guides/integrations/uploads',
         'guides/integrations/granola',
-        'guides/integrations/mcp',
       ],
     },
     {
