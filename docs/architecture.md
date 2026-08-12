@@ -89,7 +89,7 @@ The CLI writes a context file for your AI IDE — project context, current task,
 | **Admin** | `OWNER` | Full access — members, settings, integrations |
 | **User** | `EDITOR` | Projects, documents, integrations — no member/settings management |
 
-See [Workspace Members](/settings/workspace#members).
+See [Workspace Members](/settings/workspace#members). Workspaces with advanced RBAC enabled can use the [full role and permission matrix](/advanced/access-control).
 
 ---
 

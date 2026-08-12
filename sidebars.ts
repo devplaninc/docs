@@ -68,6 +68,14 @@ const sidebars: SidebarsConfig = {
         'cloud-run/index',
       ],
     },
+    {
+      type: 'category',
+      label: 'Advanced',
+      collapsed: true,
+      items: [
+        'advanced/access-control',
+      ],
+    },
   ],
 };
 
