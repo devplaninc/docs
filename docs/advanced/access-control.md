@@ -13,9 +13,9 @@ Workspace roles define a member's permissions within a specific workspace. Membe
 
 | Role | Description | Key permissions | Typical use case |
 |------|-------------|-----------------|------------------|
-| **Owner** | Full administrative access | Manage all content and projects, manage users and roles, access all settings and billing | Workspace administrators, founders |
-| **User (Editor)** | Content management without user administration | Create and edit documents and projects, manage integrations, cannot manage users | Content creators, project managers |
-| **Projects Owner** | Project-focused management role | Full project and document management, manage integrations, cannot manage users | Dedicated project managers |
+| **Admin (Owner)** | Full administrative access | Manage all workspace content and projects, manage users and roles, access all workspace settings | Workspace administrators, founders |
+| **User (Editor)** | Content management without user administration | Create and edit documents and projects, manage most integrations, cannot manage users | Content creators, project managers |
+| **Projects owner** | Project-focused management role | Full project and document management, manage Linear and Jira sync, cannot manage users | Dedicated project managers |
 | **Engineering** | Technical team access | View all content, create comments, manage repositories and technical tools, regenerate tasks | Software developers, DevOps engineers |
 | **Product** | Product management focus | View all content, create comments, manage repositories and integrations, regenerate user stories | Product managers, product owners |
 | **Marketing** | Limited access for marketing teams | View all workspace content, create comments, read-only access to most features | Marketing team members |
@@ -23,7 +23,9 @@ Workspace roles define a member's permissions within a specific workspace. Membe
 
 ## Permission matrix
 
-| Permission | Owner | User (Editor) | Projects Owner | Engineering | Product | Marketing | Viewer |
+✅ means full access, ◐ means conditional access, and ❌ means no access.
+
+| Permission | Admin (Owner) | User (Editor) | Projects owner | Engineering | Product | Marketing | Viewer |
 |-----------|-------|--------|----------------|-------------|---------|-----------|--------|
 | **Content management** | | | | | | | |
 | Read access | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ | ✅ |
@@ -31,16 +33,16 @@ Workspace roles define a member's permissions within a specific workspace. Membe
 | Create/edit PRD | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ |
 | Create/edit tech brief | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
 | Create/edit GTM | ✅ | ✅ | ✅ | ❌ | ❌ | ✅ | ❌ |
-| Delete projects | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
+| Delete projects | ✅ | ✅ | ✅ | ◐ | ◐ | ◐ | ◐ |
 | Prioritize projects | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ | ❌ |
-| Repository rescan | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
-| Site rescan | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
+| Repository rescan | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ | ❌ |
+| Site rescan | ✅ | ✅ | ❌ | ✅ | ✅ | ❌ | ❌ |
 | **Integrations and sync** | | | | | | | |
 | Linear sync | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Jira sync | ✅ | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ |
 | Bitbucket connect | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
 | **Regeneration and AI features** | | | | | | | |
-| User story regeneration | ✅ | ✅ | ✅ | ❌ | ✅ | ❌ | ❌ |
+| User story regeneration | ✅ | ✅ | ✅ | ◐ | ✅ | ◐ | ❌ |
 | Task regeneration | ✅ | ✅ | ✅ | ✅ | ❌ | ❌ | ❌ |
 | **Workspace and user management** | | | | | | | |
 | Manage workspace settings | ✅ | ❌ | ❌ | ❌ | ❌ | ❌ | ❌ |
@@ -49,7 +51,9 @@ Workspace roles define a member's permissions within a specific workspace. Membe
 ## How roles combine
 
 - **Multiple roles:** A member can have several roles at the same time. Their permissions are combined.
-- **Role hierarchy:** Owner > User (Editor)/Projects Owner > Engineering/Product > Marketing > Viewer.
-- **Role assignment:** Only Owners can manage member roles.
+- **Document permissions:** The PRD, tech brief, and GTM rows reflect their standard Product, Engineering, and Marketing template categories. Custom document templates can allow different roles.
+- **Draft projects:** Conditional project deletion applies only to a member's own project while it remains a draft.
+- **Draft regeneration:** Conditional user story regeneration applies only to draft projects.
+- **Role assignment:** Only Admins can manage member roles.
 - **Workspace scope:** A role applies only within the workspace where it is assigned.
-- **Comments:** All roles except Viewer can manage their own comments.
+- **Comments:** Non-viewer roles can create comments. All members can manage their own comments.
