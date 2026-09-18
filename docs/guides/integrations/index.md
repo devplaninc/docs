@@ -20,6 +20,7 @@ Connect tools under **Knowledge > Integrations** so Devplan can build your catal
 | Confluence | [Setup](/confluence-integration) |
 | Upload files | [Uploads](/upload-files) |
 | Granola | [Setup](/granola-integration) |
+| Zoom | [Setup](/zoom-integration) |
 
 **After connecting:** complete **Configure**, **Attach**, or **Select folders** steps. Code repos often need **30+ minutes** for first bootstrap; other sources fill in over hours and days.
 

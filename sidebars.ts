@@ -45,6 +45,7 @@ const sidebars: SidebarsConfig = {
         'guides/integrations/confluence',
         'guides/integrations/uploads',
         'guides/integrations/granola',
+        'guides/integrations/zoom',
       ],
     },
     {
