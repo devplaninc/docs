@@ -69,3 +69,4 @@ Background jobs need time to ingest data.
 - [Platform Overview](/platform-overview)
 - [Core Workflow](/core-workflow)
 - [Integrations overview](/integrations-overview)
+- [Self-hosting overview](/self-hosting) — evaluate a deployment in your own environment with Devplan
