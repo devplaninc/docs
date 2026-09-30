@@ -32,7 +32,7 @@
   <rect x="1" y="1" width="998" height="663" rx="20" fill="url(#canvas)" stroke="#DCE5F4" stroke-width="2"/>
   <circle cx="920" cy="42" r="125" fill="#DDE7FF" opacity=".38"/>
 
-  <text x="32" y="40" class="eyebrow">REFERENCE ARCHITECTURE  /  02</text>
+  <text x="32" y="40" class="eyebrow">REFERENCE ARCHITECTURE</text>
   <text x="32" y="75" class="diagram-title">An AWS deployment example</text>
   <text x="32" y="99" class="subtitle">Provider-specific services implement the same workload and data boundaries.</text>
 
@@ -52,13 +52,11 @@
   <path d="M463 390 H430 V617 H440" class="flow-optional"/>
 
   <rect x="30" y="263" width="175" height="105" rx="15" fill="#FFFFFF" stroke="#DCE5F4" stroke-width="1.6" filter="url(#card-shadow)"/>
-  <rect x="48" y="281" width="4" height="28" rx="2" fill="#3159DF"/>
   <text x="62" y="292" class="card-label">ACCESS</text>
   <text x="48" y="328" class="card-title">Approved users</text>
   <text x="48" y="349" class="card-copy">Customer networks</text>
 
   <rect x="275" y="263" width="145" height="105" rx="15" fill="#EAF0FF" stroke="#B9CBFF" stroke-width="1.6"/>
-  <rect x="292" y="281" width="4" height="28" rx="2" fill="#3159DF"/>
   <text x="307" y="292" class="card-label">INGRESS</text>
   <text x="292" y="328" class="card-title">AWS ALB</text>
   <text x="292" y="349" class="card-copy">Private by default</text>
@@ -78,7 +76,6 @@
   <text x="482" y="484" class="chip-text">RDS PostgreSQL</text>
 
   <rect x="770" y="263" width="170" height="105" rx="15" fill="#E8F8F5" stroke="#B4E4DC" stroke-width="1.6"/>
-  <rect x="787" y="281" width="4" height="28" rx="2" fill="#087E78"/>
   <text x="802" y="292" class="card-label">OBJECT STORAGE</text>
   <text x="787" y="328" class="card-title">Amazon S3</text>
   <text x="787" y="349" class="card-copy">Objects + artifacts</text>
