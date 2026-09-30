@@ -67,10 +67,12 @@
   <text x="482" y="291" class="card-label">APPLICATION</text>
   <text x="482" y="322" class="card-title">Devplan workloads</text>
   <line x1="482" y1="335" x2="679" y2="335" stroke="#B9CBFF"/>
-  <circle cx="488" cy="358" r="4" fill="#3159DF"/>
-  <text x="501" y="363" class="chip-text">Webapp + Agents</text>
-  <circle cx="488" cy="388" r="4" fill="#3159DF"/>
-  <text x="501" y="393" class="chip-text">Codeup + FalkorDB</text>
+  <circle cx="488" cy="352" r="4" fill="#3159DF"/>
+  <text x="501" y="357" class="chip-text">Application + AI agents</text>
+  <circle cx="488" cy="376" r="4" fill="#3159DF"/>
+  <text x="501" y="381" class="chip-text">Workflow processing</text>
+  <circle cx="488" cy="400" r="4" fill="#3159DF"/>
+  <text x="501" y="405" class="chip-text">Graph database</text>
 
   <rect x="463" y="455" width="235" height="48" rx="12" fill="#E8F8F5" stroke="#B4E4DC" stroke-width="1.6"/>
   <text x="482" y="484" class="chip-text">RDS PostgreSQL</text>

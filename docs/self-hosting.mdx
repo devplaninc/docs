@@ -11,12 +11,12 @@ Devplan self-hosting is available for organizations that want Devplan applicatio
 
 ## The common deployment model
 
-The customer provides and controls the environment: a network boundary and ingress, a Kubernetes cluster, PostgreSQL, object storage, and the configuration and secrets used by workloads. Devplan supplies versioned application workloads that run in that cluster. The current package includes the Webapp and Agents services, Codeup orchestration and document processing, and an in-cluster FalkorDB graph store.
+The customer provides and controls the environment: a network boundary and ingress, a Kubernetes cluster, PostgreSQL, object storage, and the configuration and secrets used by workloads. Devplan supplies versioned application workloads that run in that cluster. The current package includes a user-facing application and API, AI agents, workflow orchestration and document processing, and an in-cluster graph database.
 
 <p className="selfHostingDiagramHint">Swipe horizontally to explore the diagram →</p>
 <div className="selfHostingDiagram">
   <ThemedImage
-    alt="Users and connected systems reach Devplan workloads through customer-managed ingress. Webapp, Agents, Codeup, and FalkorDB run in Kubernetes and use customer PostgreSQL and object storage. Configuration and secrets feed the workloads; external services are configuration-dependent."
+    alt="Users and connected systems reach Devplan workloads through customer-managed ingress. The application, AI agents, workflow processing, and graph database run in Kubernetes and use customer PostgreSQL and object storage. Configuration and secrets feed the workloads; external services are configuration-dependent."
     sources={{
       light: '/img/docs/self-hosting-model-light.svg',
       dark: '/img/docs/self-hosting-model-dark.svg',
@@ -24,12 +24,12 @@ The customer provides and controls the environment: a network boundary and ingre
   />
 </div>
 
-Users reach the Webapp through the customer's chosen network and ingress. The Webapp and background services work with Codeup; application data goes to PostgreSQL and objects or artifacts go to object storage. Codeup also uses the graph store inside Kubernetes. Configuration and secrets are supplied at the workload boundary. Integrations, model providers, and some supporting Devplan-operated services can remain external, depending on the deployment. Their access and data flows are reviewed with Devplan rather than assumed to be inside the customer environment.
+Users reach the application through the customer's chosen network and ingress. The application and AI agents coordinate with workflow and document processing services; application data goes to PostgreSQL and objects or artifacts go to object storage. Processing services also use the graph database inside Kubernetes. Configuration and secrets are supplied at the workload boundary. Integrations, model providers, and some supporting Devplan-operated services can remain external, depending on the deployment. Their access and data flows are reviewed with Devplan rather than assumed to be inside the customer environment.
 
 | Responsibility | General boundary |
 |---|---|
 | Customer-managed infrastructure | Cloud account or equivalent environment, networking, Kubernetes capacity, PostgreSQL, object storage, access controls, and secret management. |
-| Devplan application | Versioned Webapp, Agents, Codeup, and supporting in-cluster workloads, deployed into the customer environment in coordination with Devplan. |
+| Devplan application | Versioned workloads for the application and API, AI agents, workflow orchestration, document processing, and graph database, deployed into the customer environment in coordination with Devplan. |
 | Shared deployment decisions | Ingress exposure, identity, external services, operational ownership, and data handling are agreed for the specific environment. |
 
 ## AWS reference architecture

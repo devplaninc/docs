@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1000" height="610" viewBox="0 0 1000 610" role="img" aria-labelledby="title description">
   <title id="title">Provider-neutral Devplan self-hosting architecture</title>
-  <desc id="description">Users reach Devplan workloads through customer-managed ingress. Webapp, Agents, Codeup, and FalkorDB run in Kubernetes and use customer PostgreSQL and object storage. Configuration and secrets feed the workloads; configured external services sit outside the customer boundary.</desc>
+  <desc id="description">Users reach Devplan workloads through customer-managed ingress. The application, AI agents, workflow processing, and graph database run in Kubernetes and use customer PostgreSQL and object storage. Configuration and secrets feed the workloads; configured external services sit outside the customer boundary.</desc>
   <defs>
     <linearGradient id="canvas" x1="0" y1="0" x2="1" y2="1">
       <stop offset="0" stop-color="#101726"/>
@@ -64,10 +64,12 @@
   <text x="470" y="249" class="card-label">APPLICATION</text>
   <text x="470" y="279" class="card-title">Devplan workloads</text>
   <line x1="470" y1="292" x2="665" y2="292" stroke="#5B75B5"/>
-  <circle cx="476" cy="315" r="4" fill="#A5B7FF"/>
-  <text x="489" y="320" class="chip-text">Webapp + Agents</text>
-  <circle cx="476" cy="342" r="4" fill="#A5B7FF"/>
-  <text x="489" y="347" class="chip-text">Codeup + FalkorDB</text>
+  <circle cx="476" cy="307" r="4" fill="#A5B7FF"/>
+  <text x="489" y="312" class="chip-text">Application + AI agents</text>
+  <circle cx="476" cy="329" r="4" fill="#A5B7FF"/>
+  <text x="489" y="334" class="chip-text">Workflow processing</text>
+  <circle cx="476" cy="351" r="4" fill="#A5B7FF"/>
+  <text x="489" y="356" class="chip-text">Graph database</text>
 
   <rect x="740" y="215" width="185" height="90" rx="15" fill="#174442" stroke="#317E79" stroke-width="1.6"/>
   <rect x="757" y="233" width="4" height="26" rx="2" fill="#69DCCA"/>
