@@ -3,6 +3,8 @@ title: Self-Hosting
 slug: /self-hosting
 ---
 
+import ThemedImage from '@theme/ThemedImage';
+
 # Self-hosting Devplan
 
 Devplan self-hosting is available for organizations that want Devplan application workloads in a customer-managed environment. Deployments are planned and coordinated with Devplan so that the infrastructure, security, network access, and data flows fit the organization.
@@ -11,25 +13,16 @@ Devplan self-hosting is available for organizations that want Devplan applicatio
 
 The customer provides and controls the environment: a network boundary and ingress, a Kubernetes cluster, PostgreSQL, object storage, and the configuration and secrets used by workloads. Devplan supplies versioned application workloads that run in that cluster. The current package includes the Webapp and Agents services, Codeup orchestration and document processing, and an in-cluster FalkorDB graph store.
 
-```mermaid
-flowchart TB
-    people["Users and connected systems"]
-    external["Configured external services"]
-    subgraph customer["Customer-managed environment"]
-        ingress["Network and ingress"]
-        subgraph cluster["Kubernetes"]
-            workloads["Devplan workloads<br/>Webapp · Agents · Codeup · FalkorDB"]
-            config["Workload configuration and secrets"]
-        end
-        database["PostgreSQL"]
-        storage["Object storage"]
-    end
-    people --> ingress --> workloads
-    config -.-> workloads
-    workloads --> database
-    workloads --> storage
-    workloads -. "Where configured" .-> external
-```
+<p className="selfHostingDiagramHint">Swipe horizontally to explore the diagram →</p>
+<div className="selfHostingDiagram">
+  <ThemedImage
+    alt="Users and connected systems reach Devplan workloads through customer-managed ingress. Webapp, Agents, Codeup, and FalkorDB run in Kubernetes and use customer PostgreSQL and object storage. Configuration and secrets feed the workloads; external services are configuration-dependent."
+    sources={{
+      light: '/img/docs/self-hosting-model-light.svg',
+      dark: '/img/docs/self-hosting-model-dark.svg',
+    }}
+  />
+</div>
 
 Users reach the Webapp through the customer's chosen network and ingress. The Webapp and background services work with Codeup; application data goes to PostgreSQL and objects or artifacts go to object storage. Codeup also uses the graph store inside Kubernetes. Configuration and secrets are supplied at the workload boundary. Integrations, model providers, and some supporting Devplan-operated services can remain external, depending on the deployment. Their access and data flows are reviewed with Devplan rather than assumed to be inside the customer environment.
 
@@ -43,27 +36,16 @@ Users reach the Webapp through the customer's chosen network and ingress. The We
 
 AWS is one example of this model. The current self-hosting package includes AWS infrastructure provisioning; its application charts also accept GCP-specific configuration. The infrastructure and support scope for any deployment are coordinated with Devplan.
 
-```mermaid
-flowchart TB
-    users["Approved users and networks"]
-    external["Configured external services"]
-    subgraph account["Customer AWS account"]
-        subgraph vpc["Customer VPC"]
-            alb["Application Load Balancer<br/>(private by default)"]
-            subgraph eks["Amazon EKS"]
-                workloads["Devplan workloads<br/>Webapp · Agents · Codeup · FalkorDB"]
-                secrets["Kubernetes Secrets and configuration"]
-            end
-            rds["Amazon RDS for PostgreSQL"]
-        end
-        s3["Amazon S3<br/>objects and artifacts"]
-    end
-    users --> alb --> workloads
-    secrets -.-> workloads
-    workloads --> rds
-    workloads --> s3
-    workloads -. "Configured egress" .-> external
-```
+<p className="selfHostingDiagramHint">Swipe horizontally to explore the diagram →</p>
+<div className="selfHostingDiagram">
+  <ThemedImage
+    alt="AWS example: approved users reach a private-by-default Application Load Balancer in the customer VPC. Amazon EKS runs Devplan workloads, which connect to RDS PostgreSQL and S3. IAM Pod Identity, KMS, and Secrets Manager support the deployment; external services are configuration-dependent."
+    sources={{
+      light: '/img/docs/self-hosting-aws-light.svg',
+      dark: '/img/docs/self-hosting-aws-dark.svg',
+    }}
+  />
+</div>
 
 In this example, a customer-owned VPC contains EKS and a private RDS PostgreSQL database. EKS runs the Devplan workloads and the in-cluster graph store. Workloads use customer S3 buckets for objects and artifacts. The ingress is private by default; an internet-facing load balancer is an optional configuration. IAM Pod Identity grants the workloads access to AWS services, while Kubernetes Secrets carry application credentials. AWS KMS protects customer data resources, and Secrets Manager holds the RDS administrator secret. Network routing, certificate and DNS choices, and any external service access depend on the deployment.
 
