@@ -11,6 +11,7 @@ const sidebars: SidebarsConfig = {
         'quickstart',
         {type: 'doc', id: 'core-workflow', label: 'Core Workflow'},
         'architecture',
+        'self-hosting',
       ],
     },
     {

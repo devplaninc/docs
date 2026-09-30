@@ -233,3 +233,26 @@ h1, h2, h3,
   color: var(--ifm-color-primary);
   font-weight: 500;
 }
+
+/* Keep architecture labels readable on narrow screens. */
+.selfHostingDiagram {
+  margin: 1.5rem 0;
+  overflow-x: auto;
+}
+.selfHostingDiagram picture,
+.selfHostingDiagram img {
+  display: block;
+  width: 100%;
+  min-width: 720px;
+}
+.selfHostingDiagramHint {
+  display: none;
+}
+@media (max-width: 760px) {
+  .selfHostingDiagramHint {
+    display: block;
+    margin: 1rem 0 -0.75rem;
+    color: var(--ifm-color-content-secondary);
+    font-size: 0.875rem;
+  }
+}
