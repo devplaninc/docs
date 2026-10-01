@@ -19,7 +19,7 @@ Workspace roles define a member's permissions within a specific workspace. Membe
 | **Engineering** | Technical team access | View all content, create comments, manage repositories and technical tools, regenerate tasks | Software developers, DevOps engineers |
 | **Product** | Product management focus | View all content, create comments, manage repositories and integrations, regenerate user stories | Product managers, product owners |
 | **Marketing** | Limited access for marketing teams | View all workspace content, create comments, read-only access to most features | Marketing team members |
-| **Viewer** | Read-only access | View all workspace content; cannot create, edit, or delete anything | Stakeholders, clients, observers |
+| **Viewer** | Read-only by default | View all workspace content; retains edit and delete access to their own existing comments and draft projects | Stakeholders, clients, observers |
 
 ## Permission matrix
 
