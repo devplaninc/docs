@@ -29,7 +29,11 @@ const config: Config = {
         },
         blog: false,
         sitemap: {
-          ignorePatterns: ['**/archive/customer-success-story{,/}', '**/roadmap{,/}'],
+          ignorePatterns: [
+            '**/archive/customer-success-story{,/}',
+            '**/roadmap{,/}',
+            '**/{run-button,running-tasks,setup-scripts,secrets-management,addressing-pr-comments}{,/}',
+          ],
         },
         theme: {
           customCss: './src/css/custom.css',
@@ -52,7 +56,7 @@ const config: Config = {
         explicitSearchResultPath: true,
         searchResultLimits: 8,
         searchResultContextMaxLength: 80,
-        ignoreFiles: [/^archive\//, /^cloud-run\//],
+        ignoreFiles: [/^archive\//],
       },
     ],
   ],
