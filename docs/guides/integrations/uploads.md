@@ -1,33 +1,29 @@
 ---
 title: Upload Files
 slug: /upload-files
-sidebar_position: 10
+description: Bring files into workspace analysis or attach supporting material to a project.
 ---
 
 # Upload Files
 
-Upload documents when content does not live in a connected tool. Files join the knowledge graph and feed [Signals](/knowledge#signals), [Insights](/insights), and [Ask Devplan](/ask-devplan).
-
----
+Upload research, product briefs, and exported feedback so important context can inform Devplan even when it lives outside a connected service. A PDF brief or a spreadsheet of customer feedback can become part of the evidence Weaver uses in planning.
 
 ## Upload
 
-**Knowledge > Integrations** → **Upload files**
+Open **Integrations → Uploads** and use **Upload workspace context**. After uploading, check the **Uploaded files** list; it includes controls to open files or delete them when your permissions allow. You can also attach supporting material during onboarding, in workspace context, or to a project where those controls are available.
 
-| Type | Formats |
-|------|---------|
-| Documents | PDF, DOCX, Markdown |
-| Spreadsheets | CSV, XLSX |
-| Images | JPEG, PNG (AI-generated descriptions for text contexts) |
+Choose a supported file type shown by the uploader. Use readable source documents and identify why the material matters. Attach project-specific context to the relevant project rather than relying only on a general workspace upload.
 
-All uploads go into a single library — no category picker. You can also attach docs during [onboarding](/getting-started) or on [Workspace](/knowledge#workspace).
+## After uploading
 
-New uploads take time to ingest before appearing in signals.
+Workspace uploads are included in signal analysis, while project attachments provide context for that project. Processing may take time, and not every uploaded file produces a separate signal or insight.
 
----
+An upload is a copy of a document and does not stay in sync with the original. If the source changes, update the relevant context or use a supported connected-document integration.
+
+## Troubleshooting
+
+If a file cannot be processed, check the supported format, file contents, and any reported upload error. For a missing result, confirm the correct workspace or project and identify the uploaded document in your follow-up question.
 
 ## Related pages
 
-- [Notion](/notion-integration)
-- [Google Drive](/google-drive-integration)
-- [Core Workflow](/core-workflow)
+[Google Drive](/google-drive-integration) · [Knowledge](/knowledge) · [Projects](/projects)

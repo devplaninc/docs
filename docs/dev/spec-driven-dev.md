@@ -5,7 +5,20 @@ slug: /spec-driven-development
 
 # Spec Driven Development
 
-Devplan provides a scalable, easy-to-use workflow for spec-driven development. This document describes how it works.
+Use project context to guide implementation in an AI coding assistant. Start with [Devplan MCP](/mcp-integration) for access to workspace evidence and planning context. The CLI-based specification workflow below remains available for projects and workspaces configured to use it.
+
+## Start with Devplan MCP
+
+Connect [Devplan MCP](/mcp-integration) to your coding assistant and authorize the intended workspace. Then:
+
+1. Open a project in Devplan and select **Execution**.
+2. Find the user story you want to implement and select **Start**.
+3. Choose **Claude**, **Codex**, or **Cursor**, then select **Copy**.
+4. Open a terminal in the repository where you want to work and run the copied command.
+
+The assistant can retrieve additional project context through MCP. Review the scope and acceptance criteria with it before implementation.
+
+To download specifications and use the CLI workflow below, enable **CLI mode** in the same panel.
 
 ## Main Concepts
 
@@ -71,7 +84,7 @@ specs
 
 ## AI Coding Agent
 
-Devplan currently supports [Claude Code](https://www.claude.com/product/claude-code) as the AI coding agent for the SDD workflow.
+The MCP handoff supports compatible coding assistants such as Claude Code and Codex. The provisioned CLI workflow described here uses [Claude Code](https://www.claude.com/product/claude-code); use the options offered by your installed CLI for other supported clients.
 
 ---
 
@@ -82,7 +95,7 @@ The default SDD workflow consists of the following steps:
 1. **Research**: systematically investigates your codebase to understand implementation requirements
 2. **Planning**: creates a detailed implementation plan based on research findings
 3. **Coding**: implements the planned changes with progress tracking
-4. **Review**: performs comprehensive code quality analysis
+4. **Review**: reviews the code changes
 5. **Address Review**: systematically fixes identified issues
 6. **Full Workflow**: runs the entire SDD workflow from research to review autonomously
 
@@ -107,7 +120,7 @@ brew install devplaninc/devplan/devplan
 ### Start Implementation
 
 1. Open a project in Devplan.
-2. Navigate to the **Development** tab and click **Start** for the task you want to implement. The button copies a Devplan CLI command to your clipboard. Make sure Claude Code is selected as the IDE.
+2. Open the implementation controls for the work you want to implement and choose the CLI path. Select Claude Code for the workflow described here, then copy the generated command.
 
 
 3. Open a terminal and paste the command. It will look like:
@@ -116,9 +129,9 @@ brew install devplaninc/devplan/devplan
    devplan spec start -c <company id> -i claude --task <task id>
    ```
 
-4. The command will: clone the repository into `~/devplan/workspace/feature/<branch_name>/`, set up Claude Code commands for the SDD workflow, download input specs for the task into the `specs` directory, and start Claude Code in that folder.
+4. The command prepares a local workspace, downloads specifications, and launches Claude Code with the workflow's starting instruction. Use the workspace path printed by the CLI. The generated command may target a task or an entire user story.
 
-5. Run `/start` in Claude Code to begin implementation. The command starts working on the task autonomously, following the SDD workflow, and reports progress back to Devplan.
+5. Follow the assistant's progress and review its work. If your launch method only opens the assistant, use the start instruction provided for that workflow.
 
 
 ---
@@ -127,8 +140,8 @@ brew install devplaninc/devplan/devplan
 
 **Why are these specific commands provisioned?**
 
-Devplan's SDD workflow reflects software development best practices that have existed for decades. An engineer (human or AI) should understand the problem space first, then plan which areas of the codebase to update, then implement with proper test coverage, then review and address issues. That is exactly the flow Devplan provides. AI also allows capturing all important steps, findings, and decisions automatically and storing them alongside the codebase.
+The SDD workflow covers research, planning, implementation, testing, and review. It can save work logs and findings alongside the specifications; review them for missing or incorrect context.
 
 **Why should all output specs be committed?**
 
-While not strictly required, output specs provide invaluable context for future iterations. If specs for implementing V1 of a feature are committed, the AI agent knows exactly how V1 was approached, what the challenges were, and what decisions were made. This leads to higher-quality decisions when implementing V2.
+Committing output specs preserves the research, plan, and decisions behind a change. Future work can refer to those files to understand how the feature was implemented.

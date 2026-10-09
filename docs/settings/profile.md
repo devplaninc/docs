@@ -1,44 +1,26 @@
 ---
 title: Profile Settings
 slug: /settings/profile
-sidebar_label: Profile
-sidebar_position: 1
 ---
 
 # Profile Settings
 
-Your personal account details and preferences. Open **Settings** from your profile menu
-(bottom-left), then **Profile**. Use **Back to app** to return to your workspace.
-
----
+Open settings from your profile menu to manage your personal account and preferences. These settings apply to you; [workspace settings](/settings/workspace) manage shared configuration.
 
 ## Personal Info {#personal-info}
 
-**Settings > Profile > Personal Info** — account details and workspace memberships.
+Review your account details and workspace memberships. You can update your name, respond to pending invitations, and leave workspaces through the available account controls.
 
-- Edit your **Full name**
-- Accept or decline pending workspace invites
-- Leave a workspace from **Active workspaces**
-
-Invitations also appear in the invitation email; manage who can invite you under
-[Workspace Members](/settings/workspace#members).
-
----
+If an invitation is missing, confirm you signed in with the invited account. Ask the workspace administrator to check the invitation if needed.
 
 ## Preferences {#preferences}
 
-**Settings > Profile > Preferences** — personalize Devplan to how you work.
+Set your role preferences to help Devplan emphasize relevant insights, choose your preferred development tools where applicable, and adjust appearance settings.
 
-- **Roles** — personalize your [Insights](/insights); saves automatically
-- **Preferred IDE** — sets CLI flags when specs are enabled
-- **Daily Digest email** — toggle per workspace (the same setting as **Manage communication
-  settings** on [Today](/today))
-- **Color theme** — Light, Dark, or System
+Role preferences personalize content. Workspace membership roles, such as Admin or User, determine permissions and are managed by workspace administrators.
 
----
+Use communication preferences to manage report emails for each workspace. Personal delivery preferences are separate from the content of a report and from [individual dashboard schedules](/dashboards#schedule-updates).
 
 ## Related pages
 
-- [Today](/today)
-- [Workspace Settings](/settings/workspace)
-- [Insights](/insights)
+[Reports](/reports) · [Workspace settings](/settings/workspace) · [Insights](/insights)

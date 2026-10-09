@@ -1,23 +1,24 @@
 ---
-title: Run Button
+title: Cloud Task Execution
 slug: /run-button
+unlisted: true
 ---
 
-# Run Button
+# Cloud Task Execution
 
-:::note
-Run is currently in beta.
+:::note Cloud Run reference
+This guide is for existing Cloud Run users. [Contact Devplan](mailto:info@devplan.com) to confirm availability and setup for your workspace. For the current coding-assistant setup, start with [Devplan MCP](/mcp-integration).
 :::
 
-The Run Button executes your task implementations in the cloud using a Codex agent. Instead of running AI-assisted coding locally, click **Run** on any task and Devplan handles the entire process — from code generation to Pull Request creation.
+For configured workspaces, **Run** starts a hosted Codex agent to implement a task and open a pull request. Availability depends on workspace access and the task workflow.
 
 ---
 ## Quick Start
 
-1. Configure secrets in **Settings > Development** (if your repo needs credentials)
-2. Create `.devplan/run/setup.sh` and commit it to your repository
-3. Test via **Settings > Development > Test setup**
-4. Click **Run** on any task
+1. Confirm Cloud Run access and the development-settings entry point with Devplan.
+2. Ask a workspace Admin to configure any required [secrets](/secrets-management).
+3. If your repository needs extra setup, commit `.devplan/run/setup.sh` and test it using the available setup controls.
+4. Open an implementation task and select **Run** when the action is available.
 ---
 
 ## How It Works
@@ -25,8 +26,8 @@ The Run Button executes your task implementations in the cloud using a Codex age
 ```mermaid
 graph LR
     A[Click Run] --> B[Cloud Environment]
-    B --> C[Run setup.sh]
-    C --> D[Inject Secrets]
+    B --> C[Credentials Available]
+    C --> D[Run setup.sh]
     D --> E[Codex Agent]
     E --> F[Pull Request]
     F --> G[Devplan UI]
@@ -39,7 +40,7 @@ graph LR
     A[Plan] --> B[Code] --> C[Review] --> D[Address Review] --> E[Prepare Commit]
 ```
 
-Run times typically range from 20–60 minutes. Cloud Run automatically retries up to 3 times on agent inactivity or missing output files, resuming from the previous state each time.
+Duration depends on the task, repository setup, and available capacity.
 
 ---
 
@@ -53,22 +54,22 @@ set -e
 
 npm ci
 
-echo "DATABASE_URL=$DATABASE_TEST_URL" >> "$DEVPLAN_ENV"
+: "${DATABASE_URL:?Configure the DATABASE_URL workspace secret}"
 echo "NODE_ENV=test" >> "$DEVPLAN_ENV"
 ```
 
-Make the script executable with `chmod +x .devplan/run/setup.sh`. Test it before running real tasks via **Settings > Development > Test setup**.
+Test the script using the setup controls available for your configured workspace. See [Setup Scripts](/setup-scripts) for environment handling and troubleshooting.
 
 ---
 
 ## Secrets
 
-Store credentials in **Settings > Development > Secrets**. Secrets are encrypted at rest, never shown in the UI after creation, automatically redacted from logs, and injected as environment variables at run time.
+Workspace Admins manage credentials in the development settings provided for the workspace. Stored values are encrypted, hidden in the UI after creation, and supplied as environment variables. Devplan masks recognized values in logs, but transformed values may not be masked. Avoid printing credentials.
 
-Use uppercase names with underscores (`DATABASE_TEST_URL`, `GITHUB_TOKEN`, `AWS_ACCESS_KEY_ID`). Reference them in your setup script as standard environment variables.
+Use uppercase names with underscores (`DATABASE_URL`, `GITHUB_TOKEN`, `AWS_ACCESS_KEY_ID`). Reference them in your setup script as standard environment variables.
 
 :::warning
-Deleting a secret will cause any runs that depend on it to fail. Verify nothing active relies on it first.
+Check dependencies before deleting a secret. Future runs that need it may fail. Revoke or rotate credentials at their provider when needed.
 :::
 
 ---
@@ -77,7 +78,7 @@ Deleting a secret will cause any runs that depend on it to fail. Verify nothing 
 
 After clicking **Run**, the button becomes a live status indicator. Click it to open the **Runs page** showing run history with status, duration, and PR links. Click any run to view live logs broken down by phase.
 
-Cloud Run automatically retries up to 3 times on agent inactivity or missing output files, resuming from the previous state each time.
+Devplan retries recoverable failures when it can resume the session. Check the run logs for attempts and final status.
 
 ---
 
@@ -89,7 +90,7 @@ After the agent creates a PR, reviewers can leave comments as normal. To have th
 /devplan address comments
 ```
 
-Configure the trigger keyword in **Settings > Development > Pull Request Comment Trigger**. Leave all review comments before triggering — the agent reads everything unresolved and pushes fixes as a new commit.
+The trigger is configured in the workspace development settings. Any comment containing the configured keyword can trigger the agent; the words after it are optional. Finish your review before posting the trigger. See [Addressing PR Comments](/addressing-pr-comments).
 
 ---
 

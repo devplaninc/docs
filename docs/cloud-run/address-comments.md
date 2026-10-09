@@ -2,15 +2,16 @@
 title: "Addressing PR Comments"
 slug: /addressing-pr-comments
 sidebar_position: 5
+unlisted: true
 ---
 
 # Addressing PR Comments
 
-After a Cloud Run creates a Pull Request, reviewers can leave comments as usual. Instead of manually addressing each comment, you can trigger the Codex agent to address them automatically.
-
-:::note Beta Feature
-Cloud Run is currently in beta.
+:::note Cloud Run reference
+This guide is for existing Cloud Run users. [Contact Devplan](mailto:info@devplan.com) to confirm availability and setup for your workspace. For the current coding-assistant setup, start with [Devplan MCP](/mcp-integration).
 :::
+
+After a Cloud Run creates a Pull Request, reviewers can leave comments as usual. Instead of manually addressing each comment, you can trigger the Codex agent to address them automatically.
 
 ## How It Works
 
@@ -20,7 +21,7 @@ Cloud Run is currently in beta.
 
 ## Triggering the Address Flow
 
-Leave a comment on the PR with your configured trigger keyword followed by the address command. For example, if your trigger is `/devplan`:
+When your review is ready, post a comment containing the configured trigger keyword. Any comment containing that keyword can trigger the agent; additional text is optional. For example, if your trigger is `/devplan`:
 
 ```
 /devplan address comments
@@ -52,10 +53,7 @@ Reviewer: /devplan address comments
 
 The trigger keyword must be configured before using this feature:
 
-1. Go to **Settings** > **Development**
-2. Find **Pull Request Comment Trigger**
-3. Enter your preferred keyword (e.g., `/devplan`, `/address`, `/fix`)
-4. Click **Save**
+Ask your workspace Admin or [Devplan](mailto:info@devplan.com) for the development-settings entry point for your configured workspace. In **Pull Request Comment Trigger**, save a distinctive keyword such as `/devplan`. Avoid a word likely to appear in ordinary review discussion.
 
 Without a configured trigger, PR comments won't trigger the addressing flow. All team members in the workspace use the same trigger keyword.
 

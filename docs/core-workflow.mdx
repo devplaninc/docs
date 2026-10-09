@@ -1,73 +1,56 @@
 ---
 title: Core Workflow
 slug: /core-workflow
-description: How Devplan learns about your product from connected sources and delivers signals, insights, and daily digests.
-sidebar_label: Core Workflow
-sidebar_position: 2
+description: Connect sources, investigate a question, plan work, and review delivery in Devplan.
 ---
 
 # Core Workflow
 
-How Devplan **learns about your product** — integrations and uploads feed a feature catalog, signals, insights, and your daily digest. Better sources produce better [Today](/today), [Insights](/insights), and [Ask Devplan](/ask-devplan) output.
-
----
+Use Devplan to connect product understanding, planning, and delivery. Start with a useful question, inspect its evidence, and carry what you learn into the next decision.
 
 ## Pipeline
 
-| Layer | What it is | Where you see it |
-|-------|------------|------------------|
-| **Workspace context** | Goals, customers, competitors | [Workspace](/knowledge#workspace), [onboarding](/getting-started) |
-| **Integrations** | GitHub, Slack, Jira, docs, and more | [Integrations](/knowledge#integrations) |
-| **Uploads** | Files in the knowledge graph | **Knowledge > Integrations** uploads |
-| **Feature catalog** | Product features from code and docs | [Product](/knowledge#product-catalog) |
-| **Signals** | Raw evidence items | [Signals](/knowledge#signals) |
-| **Insights** | Synthesized takeaways | [Insights](/insights) |
-| **Daily Digest** | What changed, with evidence | [Today](/today) |
+| Layer | What it contributes |
+|---|---|
+| Workspace context | Your product, customers, priorities, and constraints |
+| Connected sources | Selected code, tickets, conversations, meeting notes, and documents |
+| Product knowledge | Live Docs, code-change summaries, signals, and decisions |
+| Analysis | Insights, answers, proposals, reports, and project assessments |
+| Your review | Corrections, decisions, and plans grounded in the available evidence |
 
 ### 1. Set workspace context
 
-Add company details, goals, customers, and competitors during [onboarding](/getting-started) or on [Workspace](/knowledge#workspace). Attach strategy docs to workspace sections when helpful.
+Describe your product, customers, and goals in [Workspace](/knowledge#workspace). Add relevant strategy or research documents and keep important assumptions current.
 
 ### 2. Connect integrations
 
-Open **Knowledge > Integrations** and connect your tools. **Connect alone is usually not enough** — also configure scope:
+For a new workspace, connect sources through [guided setup](/getting-started) and wait for the initial product map to be ready before entering the main app. After onboarding, use **Integrations** to add or manage sources.
 
-| Provider | Configure |
-|----------|-----------|
-| GitHub / Bitbucket | Enable **Analyze** on repos |
-| Slack | Invite the Devplan bot to channels **in Slack** |
-| Confluence / Notion / Google Drive | Attach spaces, pages, or folders |
-| Jira / Linear | Set allowed projects (Jira) or connect teams (Linear) |
-
-Setup guides: [Integrations overview](/integrations-overview).
-
-**Processing time:** code repos often need **30+ minutes** for first catalog bootstrap; other sources fill in over hours and days. [Signals](/knowledge#signals), [Insights](/insights), and [Today](/today) start thin and get richer.
+Choose sources that answer your team's questions. For example, code explains what was implemented, while feedback and discussions help explain why it matters. [Integration types](/integrations-overview) differ in whether they process selected material in the background or provide tools Weaver uses when needed.
 
 ### 3. Upload documents
 
-Upload PDFs, decks, spreadsheets, and images under **Knowledge > Integrations** uploads (single library, no category picker). Uploads join the knowledge graph and surface in signals, insights, Ask Devplan, and digests.
+Use [uploads](/upload-files) for research or context that is not available through a connected source. Attach project-specific material to the relevant project so its purpose is clear.
 
-### 4. Catalog, signals, insights, digest
+{/* Keep existing section links working after the content reorganization. */}
+<span id="4-catalog-signals-insights-digest" />
 
-- **Catalog bootstrap** runs after code repos are configured — maps features to code and connected tickets.
-- **Signals** are individual evidence items on [Signals](/knowledge#signals).
-- **Insights** synthesize signals into briefs on [Insights](/insights); roles in [Preferences](/settings/profile#preferences) personalize what you see.
-- **[Today](/today)** delivers workspace and personal digests with evidence pills. [Updates](/updates) shows catalog change history.
+### 4. Review product knowledge and insights
 
----
+Browse [Live Docs](/live-docs), [Changelog](/updates), [signals](/signals), and [decisions](/decisions). Use [Radar](/today) to catch up on the daily report and relevant work, then ask [Weaver](/ask-devplan) to investigate a specific question. For a recurring review, use the [weekly report](/reports) or a [dashboard](/dashboards) focused on your topic.
+
+### 5. Evaluate and plan work
+
+Review the [proposals](/proposals) Devplan creates from connected evidence, or start a [project](/projects) from a problem you already understand. Refine the desired outcome, scope, requirements, and supporting context before moving into implementation.
+
+### 6. Follow delivery
+
+Review project progress and risks against the underlying evidence. Bring project context to a coding assistant through [MCP](/mcp-integration) or the [developer workflow](/spec-driven-development). Keep code and issue trackers current so subsequent analysis reflects the work.
 
 ## Typical flow
 
-1. Complete [Getting Started](/getting-started) — context and integrations
-2. Wait for processing after new connections
-3. Review [Today](/today), [Insights](/insights), [Signals](/knowledge#signals)
-4. Use [Ask Devplan](/ask-devplan) for follow-up questions
-5. Keep adding sources and updating workspace context
-
----
+A customer raises a problem in a meeting. Devplan extracts a signal from the connected notes, relates it to product context, and may surface a feature request or proposal. You inspect the original feedback, refine a project, and follow evidence of its implementation as work progresses.
 
 ## Related pages
 
-- [Getting Started](/getting-started)
-- [Platform Overview](/platform-overview)
-- [How Devplan Works](/how-devplan-works)
+[Getting Started](/getting-started) · [Product guide](/platform-overview) · [Working with evidence](/evidence)

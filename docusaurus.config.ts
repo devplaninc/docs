@@ -4,7 +4,7 @@ import type * as Preset from '@docusaurus/preset-classic';
 
 const config: Config = {
   title: 'Devplan',
-  tagline: 'AI-Native Product Development for Modern Teams',
+  tagline: 'Product knowledge, planning, and delivery with connected evidence',
   favicon: 'img/favicon.ico',
   future: {
     v4: true,
@@ -13,8 +13,8 @@ const config: Config = {
   baseUrl: '/',
   organizationName: 'devplaninc',
   projectName: 'docs',
-  onBrokenLinks: 'warn',
-  onBrokenMarkdownLinks: 'warn',
+  onBrokenLinks: 'throw',
+  onBrokenAnchors: 'throw',
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -28,6 +28,9 @@ const config: Config = {
           routeBasePath: '/',
         },
         blog: false,
+        sitemap: {
+          ignorePatterns: ['**/archive/customer-success-story{,/}', '**/roadmap{,/}'],
+        },
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -49,11 +52,15 @@ const config: Config = {
         explicitSearchResultPath: true,
         searchResultLimits: 8,
         searchResultContextMaxLength: 80,
+        ignoreFiles: [/^archive\//, /^cloud-run\//],
       },
     ],
   ],
   markdown: {
     mermaid: true,
+    hooks: {
+      onBrokenMarkdownLinks: 'throw',
+    },
   },
   themeConfig: {
     image: 'img/weaver-icon.png',
@@ -112,7 +119,7 @@ const config: Config = {
           items: [
             {
               label: 'Devplan App',
-              href: 'https://devplan.com',
+              href: 'https://app.devplan.com',
             },
             {
               label: 'YouTube Channel',

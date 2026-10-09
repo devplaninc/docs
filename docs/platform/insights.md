@@ -1,39 +1,32 @@
 ---
 title: Insights
 slug: /insights
-sidebar_label: Insights
-sidebar_position: 5
+description: Review risks and feature requests, inspect their evidence, and decide what needs follow-up.
 ---
 
 # Insights
 
-**Insights** turns raw [Signals](/knowledge#signals) into synthesized takeaways — the risks,
-opportunities, and feedback themes worth your attention — filtered to the roles you set in
-[Preferences](/settings/profile#preferences).
+Insights connect related evidence into findings worth investigating. Devplan uses customer and workspace context to surface delivery risks, product risks, and feature requests. This helps you spot recurring needs or emerging problems that may be hard to see in individual tickets or conversations.
 
-## Why it matters
+{/* Keep existing section links working after the content reorganization. */}
+<span id="why-it-matters" />
 
-A stream of PRs, tickets, and messages is data, not understanding. Insights does the synthesis:
-it connects related signals across your tools and surfaces patterns you'd otherwise have to find
-by hand — an emerging customer-feedback theme, a risk building across several PRs, an opportunity
-hiding in usage. Because Insights are personalized by role, you see what's relevant to your work
-rather than everything at once.
+## Where to find insights
 
-Every insight is backed by evidence, so you can move from a takeaway to the exact PRs, tickets,
-and threads behind it.
+Open **Insights** from the main navigation to browse risks and feature requests. You can also find insights on [Radar](/today), or investigate related findings through [Ask Weaver](/ask-devplan) and project evidence.
 
 ## What you can do
 
-- Filter by kind and search across insights
-- Click **evidence pills** to inspect the source references behind an insight
-- **Read brief** for the full narrative and reasoning
+Open an insight to understand its reasoning and supporting sources. For a risk, check the potential consequence and whether the evidence is still current. For a feature request, examine the underlying need, affected customers, and relevant product capabilities before deciding what to build.
 
-:::note
-Insights may not appear in all workspaces.
-:::
+Use the available feedback and follow-up actions to review a finding or carry it into planning. A feature request is evidence of demand to evaluate; it is not automatically a delivery commitment.
+
+## Signals and insights
+
+A [signal](/signals) captures a focused observation from source material. An insight interprets related signals and changes in the context of the product. Several references may originate from the same underlying event, so source counts alone are not a measure of independent support.
+
+Role preferences help shape relevance. They do not replace checking whether a finding applies to your current work.
 
 ## Related pages
 
-- [Signals](/knowledge#signals) — the raw evidence Insights are built from
-- [Knowledge → Workspace](/knowledge#workspace) — the company context that shapes relevance
-- [Today](/today) — where the most important insights surface each day
+[Radar](/today) · [Signals](/signals) · [Proposals](/proposals) · [Working with evidence](/evidence)

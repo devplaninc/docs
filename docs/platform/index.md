@@ -1,53 +1,36 @@
 ---
-title: Product Overview
+title: Product Guide
 slug: /platform-overview
+description: Find the Devplan pages for daily reviews, project planning, product knowledge, and reporting.
 sidebar_label: Overview
-sidebar_position: 0
 ---
 
-# Product Overview
+# Product Guide
 
-The **Product** section covers everything you do day to day in Devplan — your daily work
-surfaces, the [Knowledge](/knowledge) that powers them, and preview features.
-
----
+Devplan helps you turn scattered product information into answers, priorities, and plans. Use this guide to choose where to start: catch up on changes, investigate a customer need, or move an idea toward implementation.
 
 ## Daily work
 
-| Page | What it does |
-|------|--------------|
-| [Today](/today) | AI daily digest |
-| [Ask Devplan](/ask-devplan) | Workspace-scoped AI assistant |
-| [Projects](/projects) | Active projects |
-| [Updates](/updates) | Recent product catalog changes |
-| [Insights](/insights) | Synthesized takeaways from signals |
-| [Roadmap](/roadmap) | Portfolio planning — Roadmap, Kanban, Timeline *(preview)* |
-
----
+| Area | Use it to |
+|---|---|
+| [Radar](/today) | Catch up on activity and insights that need attention |
+| [Insights](/insights) | Review risks and feature requests with their supporting evidence |
+| [Ask Weaver](/ask-devplan) | Investigate questions and turn findings into plans, draft work, and updates |
+| [Proposals](/proposals) | Review opportunities Devplan identifies from connected evidence |
+| [Projects](/projects) | Connect customer demand to scope, requirements, and delivery evidence |
+| [Dashboards](/dashboards) | Create focused, reusable views of workspace information |
+| [Daily and Weekly Reports](/reports) | Configure the daily report in Radar and the weekly report linked from Dashboards |
 
 ## Knowledge
 
-[Knowledge](/knowledge) is the context layer behind everything above.
+**Knowledge** contains [Integrations](/integrations-overview), [Workspace](/knowledge#workspace), [Decisions](/decisions), and [Signals](/signals).
 
-| Area | What it holds |
-|------|--------------|
-| [Workspace](/knowledge#workspace) | Company context — goals, customers, competitors |
-| [Product catalog](/knowledge#product-catalog) | Auto-generated feature catalog |
-| [Signals](/knowledge#signals) | Raw evidence from connected sources |
-| [Integrations](/knowledge#integrations) | Connect and configure data sources |
+**Product** contains [Live Docs](/live-docs), the evolving description of your product, and [Changelog](/updates), its code-change history. Live Docs describes your workspace's product; this public documentation explains how to use Devplan itself.
 
-**Flow:** Integrations → Signals → Insights → Today. Workspace and Product context shape relevance.
+## Source references {#evidence-pills}
 
----
-
-## Evidence pills
-
-On [Today](/today), [Insights](/insights), and [Ask Devplan](/ask-devplan), **evidence pills** show source icons and a count (e.g. `3 sources`). Click to see linked PRs, tickets, Slack threads, and documents.
-
----
+Source references appear alongside many findings and answers. Open them to inspect the supporting material, check its date, and understand how a conclusion was reached. See [Working with evidence](/evidence).
 
 ## Next steps
 
-- [Overview](/overview)
-- [Getting Started](/getting-started)
-- [How Devplan Works](/how-devplan-works)
+[Getting Started](/getting-started) · [Core Workflow](/core-workflow) · [Settings](/settings/workspace)

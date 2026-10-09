@@ -1,40 +1,35 @@
 ---
 title: Google Drive Integration
 slug: /google-drive-integration
-sidebar_position: 8
+description: Attach Google Drive files and folders so written context informs product decisions.
 ---
 
 # Google Drive
 
-Attach Google Drive folders for on-demand reads during signal processing.
-
----
+Attach Google Drive files or folders so product documents, research, and customer notes can inform Weaver’s answers and analysis. This brings the team’s written context into planning alongside code and delivery evidence.
 
 ## Setup
 
-1. Open **Knowledge > Integrations** → **Google Drive** → **Select folders**.
-2. Click **Attach folders** and sign in with Google if prompted.
-3. Pick folders in the picker and confirm.
+As a workspace Admin, open **Integrations → Google Drive** and select **Attach items**. If prompted, connect or reconnect Google Drive using an account that can access and share the intended content. Browse the folders, select files or folders, then choose **Add Selected**. Check the result for any items that could not be attached.
 
-Attached folders appear in the manage table. Remove any you no longer want Devplan to read.
-
----
+Review the attached items in the management page. Remove items to detach them from the workspace's configured context.
 
 ## Service account access
 
-When you attach a folder, Devplan grants **reader access to a workspace-specific Google service account** on that folder. That lets Devplan read folder contents during background processing without requiring your personal OAuth session to stay active.
+The built-in Drive connection uses a workspace-specific Google service account to read attached content. The setup flow grants reader access to that account on selected items, so ongoing access does not depend only on your personal sign-in session.
 
-Your OAuth step authorizes the picker; ongoing access uses the service account on each attached folder.
+Your Google organization may restrict sharing with service accounts. If setup fails, check the item's sharing permissions and organization policy rather than repeatedly selecting it.
 
----
+Removing an attachment in Devplan does not revoke the service account's sharing permissions in Google Drive. To revoke access, review and change sharing in Drive as well, including access inherited from a parent folder. Check whether that access is still needed for other attached content before removing it.
 
 ## What it feeds
 
-Google Docs, Sheets, Slides, and other files in attached folders can surface in [Signals](/knowledge#signals), [Insights](/insights), and [Ask Devplan](/ask-devplan).
+Attached content is available to document and signal-processing workflows. For example, ask Weaver to compare requirements in an attached brief with a project’s current scope. Processing takes time, and not every attachment produces a separate signal.
 
----
+## Troubleshooting
+
+For inaccessible content, confirm that the correct item was attached and that reader access remains available. For missing information in an answer, identify the document and check whether the relevant workflow can retrieve or has processed it.
 
 ## Related pages
 
-- [Upload files](/upload-files) — upload directly without Drive
-- [Integrations overview](/integrations-overview)
+[Uploads](/upload-files) · [Notion](/notion-integration) · [Integration types](/integrations-overview)

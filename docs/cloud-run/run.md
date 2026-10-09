@@ -2,21 +2,22 @@
 title: "Running Tasks"
 slug: /running-tasks
 sidebar_position: 3
+unlisted: true
 ---
 
 # Running Tasks
 
-Execute tasks in the cloud and monitor their progress through the Devplan UI.
-
-:::note Beta Feature
-Cloud Run is currently in beta. Run times typically range from 20-60 minutes.
+:::note Cloud Run reference
+This guide is for existing Cloud Run users. [Contact Devplan](mailto:info@devplan.com) to confirm availability and setup for your workspace. For the current coding-assistant setup, start with [Devplan MCP](/mcp-integration).
 :::
+
+Execute tasks in the cloud and monitor their progress through the Devplan UI.
 
 ## Starting a Run
 
-1. Navigate to your project's **Development** tab
+1. Open the implementation tasks for your project
 2. Find the task you want to implement
-3. Click the **Run** button
+3. Select **Run** if it is available for your workspace and task
 
 A dialog opens confirming the cloud execution. Click **RUN** to start.
 
@@ -64,11 +65,7 @@ Phases in logs: `setup`, `plan`, `code`, `review`, `address-review`, `prepare-co
 
 ## Automatic Retries
 
-Cloud Run automatically retries on:
-- Agent inactivity (becomes unresponsive)
-- Missing expected output files
-
-Maximum 3 retries per job, each resuming from previous state.
+Devplan retries recoverable failures, such as agent inactivity or missing expected output, when it can resume the session. Check the run logs for attempts and final status. Duration depends on the task, repository setup, and available capacity.
 
 ## Pull Request Output
 

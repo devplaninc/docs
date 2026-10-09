@@ -1,98 +1,62 @@
 ---
 title: How Devplan Works
 slug: /how-devplan-works
+description: Learn how Devplan processes connected sources and uses them to answer questions and support planning.
 ---
 
 # How Devplan Works
 
-Devplan learns about your product from the tools and documents you already use, then surfaces what matters through daily digests, insights, and Ask Devplan. It also supports structured feature planning — PRDs, user stories, technical designs, and export to PM tools.
-
-Two layers:
-
-1. **Product intelligence** — ingest context and integrations, build the **Weaver** knowledge graph and feature catalog, extract signals, synthesize insights, deliver [Today](/today).
-2. **Feature planning** — turn ideas into implementation-ready specs and coding prompts grounded in that context.
-
-See [Overview](/overview), [Getting Started](/getting-started), [Core Workflow](/core-workflow), and [Platform Overview](/platform-overview).
-
----
+Devplan connects source material and product knowledge so Weaver can help your team understand the product, evaluate work, and follow delivery.
 
 ## Product intelligence pipeline
 
-| Layer | What it is | Where you see it |
-|-------|------------|------------------|
-| **Workspace context** | Goals, customers, competitors — what you tell Devplan | [Workspace](/knowledge#workspace), [onboarding](/getting-started) |
-| **Integrations** | Live data from GitHub, Slack, Jira, and other tools | [Integrations](/knowledge#integrations) |
-| **Document uploads** | Files in the workspace knowledge graph | **Knowledge > Integrations** uploads |
-| **Weaver (knowledge graph)** | Connected model of people, features, and research | Powers Ask Devplan and cross-source reasoning |
-| **Feature catalog** | Structured map of product features | [Product](/knowledge#product-catalog) |
-| **Signals** | Individual evidence items | [Signals](/knowledge#signals) |
-| **Insights** | Synthesized, role-aware takeaways | [Insights](/insights) |
-| **Daily Digest** | Summary of what changed, with evidence | [Today](/today) |
+Built-in integrations process selected repositories, tickets, conversations, meeting notes, and documents. Repository analysis reads source code to understand product behavior. Processing runs over time, so a new connection or recent source change may not be reflected immediately.
 
-**Workspace context** frames how Devplan interprets signals. **Integrations** feed the pipeline on a schedule — repo bootstrap often takes 30+ minutes; signals and insights grow over hours and days. **Uploads** are parsed into the knowledge graph alongside integration data.
+[Additional connections](/additional-connections) give Weaver tools to access other services. Their data is not necessarily imported into the same background pipeline.
 
----
+## Weaver and your knowledge graph
 
-## Weaver: the knowledge graph
+Weaver is Devplan's AI system. The workspace knowledge graph connects source evidence with the product knowledge derived from it.
 
-**Weaver** is the continuous knowledge graph that powers everything else. It does three things on an ongoing basis:
+| Kind of context | Meaning |
+|---|---|
+| Source material | Original messages, documents, meeting notes, tickets, pull requests, and commits |
+| Live Docs | Code-backed descriptions of product capabilities and user flows |
+| Changes | Summaries of code changes and their product effects |
+| Signals | Focused observations synthesized from source material |
+| Insights | Risks or feature requests derived from related evidence |
+| Decisions | Recorded decisions and their context, including proposals for review |
+| Projects | Planned or inferred initiatives with scope, requirements, and delivery evidence |
 
-- **Ingest signals** from code, conversations, tickets, and docs
-- **Maintain memory** of product context, decisions, and history over time
-- **Route insight** to people and AI agents — in the interface, Slack, or MCP-enabled tools
-
-By linking workspace context, uploads, catalog features, tickets, and code into one persistent graph, Weaver enables cross-source answers in [Ask Devplan](/ask-devplan) and the evidence citations on Today and Insights. This shared, durable memory is what keeps responses grounded in your organization rather than hallucinated.
-
-The **feature catalog** maps features to code and docs. **Catalog bootstrap** runs after code repos are connected; **catalog update** jobs keep [Product](/knowledge#product-catalog) and [Updates](/updates) current. Jira context from allowed projects enriches bootstrap.
-
----
+These are different views of connected information. A signal summarizes evidence; it is not itself the original message. A project's planning status is not proof that its implementation is deployed.
 
 ## Signals, insights, and planning
 
-**Signals** are raw evidence — PRs, Slack threads, tickets, uploads. **Insights** synthesize related signals into risks, opportunities, and themes, personalized by [Preferences](/settings/profile#preferences) roles. Both feed [Today](/today).
+Weaver uses source material and product context to identify observations and relationships, answer questions, and support project planning. Generated conclusions depend on the coverage and freshness of the available evidence.
 
-For feature planning, Devplan maps requirements to components and APIs for impact analysis, story sequencing, and context-rich coding prompts. Planning agents run discovery, PRD review, and attachment processing. See [Spec Driven Development](/spec-driven-development) for the planning workflow.
-
----
+Review [source references](/evidence), distinguish observed facts from inferences, and correct inaccurate context. If something is missing, check which sources Devplan searched and whether they've been processed.
 
 ## Integrations
 
-Connect sources under **Knowledge > Integrations**. For most providers, **Connect** is only the first step — you also enable repos, attach pages or folders, invite the Slack bot, or select Jira projects before data flows in.
+Authorize an integration and configure its scope before expecting useful results. Selecting a repository, channel, or document is different from completing its analysis. Provider-specific guides explain prerequisites and common access problems.
 
-| Integration | What Devplan reads | What it powers |
-|-------------|-------------------|----------------|
-| [GitHub](/github-integration) | Repos, PRs, commits, code structure | Catalog bootstrap, code-change signals, planning context |
-| [Bitbucket](/bitbucket-integration) | Same as GitHub (requires Forge app) | Catalog bootstrap, code-change signals |
-| [Jira](/jira-integration) | Issues and project activity from **Allowed JIRA Projects** (requires Forge app) | Catalog enrichment, [Signals](/knowledge#signals), [Insights](/insights) |
-| [Linear](/linear-integration) | Issues and team activity from connected teams | [Signals](/knowledge#signals), [Insights](/insights) |
-| [Slack](/slack-integration) | Messages in channels where the Devplan bot is a member | Discussion signals, alignment gaps |
-| [Notion](/notion-integration) | Attached pages and databases (on demand) | Signals, knowledge graph, Ask Devplan |
-| [Google Drive](/google-drive-integration) | Attached folders via a workspace service account (on demand) | Signals, knowledge graph, Ask Devplan |
-| [Confluence](/confluence-integration) | Attached spaces and pages (on demand; same Forge app as Jira) | Signals, knowledge graph, Ask Devplan |
-| [Upload files](/upload-files) | PDFs, docs, spreadsheets, images you upload directly | Knowledge graph, signals, insights |
-| [Granola](/granola-integration) | Call notes and meeting summaries (paid Granola accounts only) | Interview and stakeholder signals |
-
-Code repos drive catalog bootstrap — first analysis often takes **30+ minutes**. Other sources populate [Signals](/knowledge#signals) and [Insights](/insights) over hours and days as background jobs run.
-
-Setup guides: [Integrations overview](/integrations-overview).
+[Integration types and setup guides](/integrations-overview).
 
 ### CLI
 
-The CLI writes a context file for your AI IDE — project context, current task, code patterns, file references, and repo guidance. See [CLI Cheat Sheet](/cli-cheat-sheet).
-
----
+Use [MCP](/mcp-integration) to make workspace context available to an AI client. The [Devplan CLI](/cli-cheat-sheet) also supports specification-based development workflows. The two serve different setup and implementation needs.
 
 ## Access control
 
-| Role | Internal name | Permissions |
-|------|---------------|-------------|
-| **Admin** | `OWNER` | Full access — members, settings, integrations |
-| **User** | `EDITOR` | Projects, documents, integrations — no member/settings management |
+Workspace membership and roles govern actions within Devplan. Integration authorization and source selection determine what a connection can access. Do not assume that individual source-system permissions are reproduced identically across all imported or generated workspace content.
 
-See [Workspace Members](/settings/workspace#members). Workspaces with advanced RBAC enabled can use the [full role and permission matrix](/advanced/access-control).
-
----
+Before connecting sensitive material, confirm that its scope is appropriate for the workspace and ask Devplan about any required access guarantees. See [Access control](/advanced/access-control).
 
 ## Data privacy
 
-Devplan analyzes code structure and metadata — not source code, business logic, credentials, or customer data. Hybrid deployment is available for on-premises codebase analysis.
+Devplan may process source code and the content of selected connected sources to generate product knowledge. Choose sources according to your organization's data policies. Previously processed content may remain after you disconnect a source. Contact Devplan about deletion requirements.
+
+For deployment and data-handling requirements, see [Self-hosting](/self-hosting), the [privacy policy](https://www.devplan.com/privacy), or contact [Devplan](mailto:info@devplan.com).
+
+{/* Preserve links to sections consolidated in this guide. */}
+<span id="weaver-the-knowledge-graph" />

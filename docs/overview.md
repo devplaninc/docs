@@ -1,100 +1,74 @@
 ---
 title: Overview
 slug: /overview
-sidebar_label: Overview
-sidebar_position: 0
+description: Understand Devplan, Weaver, and the workflows that connect product knowledge to planning and delivery.
 ---
 
 # Devplan
 
-**Product intelligence for software teams.** Devplan connects the tools you already use — code, tickets, docs, and Slack — and turns scattered activity into a clear picture of what is changing in your product and why it matters.
+Devplan connects product knowledge across your code, tickets, conversations, and documents. It helps your team understand what customers need, what your product does, and how planned work relates to delivery.
 
-Stop digging through GitHub, Jira, and Slack to piece together context. Devplan does that work for you.
+**Weaver** is the AI system within Devplan. It uses connected workspace context to answer questions, surface insights, and help you develop plans with supporting evidence.
 
-[Get started →](/getting-started)
+[Get started](/getting-started) or explore the [product guide](/platform-overview).
 
----
-
-## The problem
-
-Product knowledge lives everywhere. PRs in GitHub, decisions in Slack, specs in Notion, delivery history in Jira. No single person sees the full picture, and staying current means hours of manual synthesis every week.
-
-Generic AI assistants make this worse — they answer from general knowledge, not *your* product, *your* codebase, or *your* team's recent decisions.
-
----
+{/* Keep existing section links working after the content reorganization. */}
+<span id="the-problem" />
 
 ## What Devplan gives you
 
 ### A living model of your product
 
-Connect [integrations](/integrations-overview) once and Devplan builds a [feature catalog](/knowledge#product-catalog) from your repos, enriches it with tickets and docs, and keeps it current as your product evolves. You get structured product knowledge without maintaining it by hand.
+[Live Docs](/live-docs) describes your product's capabilities and user flows using repository analysis and connected context. [Changelog](/updates) helps you understand how that product is changing.
 
-### Daily clarity, not information overload
+<span id="daily-clarity-not-information-overload" />
 
-[**Today**](/today) delivers an AI-generated digest of what changed across your workspace — with **evidence pills** linking back to the PRs, tickets, Slack threads, and documents behind every claim. Start your day informed in minutes, not hours.
+### Catch up on recent activity
+
+Start in [Radar](/today) for your daily report, relevant risks, assigned projects, and recent dashboard updates. Open the weekly report from [Dashboards](/dashboards), where you can also create focused views of a question, project, or area of the business. See [Daily and Weekly Reports](/reports) to configure report content and delivery.
 
 ### Takeaways you can act on
 
-[**Insights**](/insights) synthesize raw signals into prioritized briefs — risks, opportunities, and feedback themes — filtered to the roles you care about. See what matters without reading every update yourself.
+[Insights](/insights) connect evidence into risks and feature requests. Devplan creates [proposals](/proposals) from customer and product context so you can evaluate opportunities before committing to them. [Projects](/projects) bring demand, agreed scope, requirements, and delivery evidence together.
 
 ### Answers grounded in your workspace
 
-[**Ask Devplan**](/ask-devplan) is a conversational assistant scoped to your product. Ask what shipped, what is blocked, or what customers are saying — and get answers backed by connected sources, not guesses.
+Ask [Weaver](/ask-devplan) about customer feedback, product behavior, decisions, or project status. Follow up to turn the findings into a plan, draft tickets, or a customer update. You can also make Devplan context available to your own AI assistant through [MCP](/mcp-integration).
 
-### Evidence you can trust
+{/* Keep existing section links working after the content reorganization. */}
+<span id="evidence-you-can-trust" />
 
-Across Today, Insights, and Ask Devplan, every claim links to its sources. Click through to the original artifact and verify for yourself.
+### Evidence you can inspect
 
----
+Open source references to understand the basis for a conclusion. AI-generated findings can be incomplete or mistaken: check the relevant evidence, its date, and any assumptions before using a finding to make a decision. See [Working with evidence](/evidence).
 
 ## Powered by Weaver
 
-Underneath all of this is **Weaver** — the continuous knowledge graph that powers everything else. Weaver does three things, constantly:
-
-- **Ingest signals** from your code, conversations, tickets, and docs
-- **Maintain memory** of your product, decisions, and organizational context over time
-- **Route insight** to the right people and AI agents, in the interface, Slack, or MCP-enabled tools
-
-The result is a **shared brain** for your team: durable, traceable memory instead of context that lives in one person's head. It's also why Devplan's answers stay grounded in *your* organization rather than hallucinated — and why responses draw on pre-computed signal intelligence rather than re-reading everything from scratch each time.
-
----
+Weaver's answers depend on the sources you connect, their configured scope, processing progress, and the corrections you make. See [How Devplan Works](/how-devplan-works).
 
 ## Built for how your team works
 
-| If you are a… | Devplan helps you… |
-|---------------|-------------------|
-| **Product manager** | Stay on top of product changes, spot risks early, and ask cross-source questions without chasing updates in five tools |
-| **Engineer** | Understand what changed in the codebase and why, with a catalog grounded in your actual repos |
-| **Engineering leader** | Get a workspace-wide view of activity and alignment gaps without manual standup prep |
-| **Founder or operator** | Run lean — product intelligence that scales without a dedicated PM to synthesize everything |
-
----
+| Your goal | Start here |
+|---|---|
+| Catch up on important developments | [Radar](/today) and [reports](/reports) |
+| Understand a capability or recent change | [Live Docs](/live-docs) and [Changelog](/updates) |
+| Investigate customer needs or delivery risks | [Ask Weaver](/ask-devplan) and [insights](/insights) |
+| Evaluate and plan work | [Proposals](/proposals) and [projects](/projects) |
+| Bring product context into implementation | [Devplan MCP](/mcp-integration) and [developer workflow](/spec-driven-development) |
 
 ## Connects to your stack
 
-Devplan reads from the tools your team already uses:
+Built-in integrations bring selected source material into Devplan's product intelligence workflows. Additional connections give Weaver tools to retrieve information or perform supported actions in other services. These roles can overlap; authorizing a connection does not mean all its content is continuously imported.
 
-**GitHub** · **Bitbucket** · **Jira** · **Linear** · **Slack** · **Notion** · **Google Drive** · **Confluence** · **Granola** · direct **file uploads**
-
-No rip-and-replace. Connect, configure scope, and let background jobs build your picture over time. Code repos typically need **30+ minutes** for first analysis; signals and insights grow richer over the following days.
-
-[See all integrations →](/integrations-overview)
-
----
+[Compare integration types and find setup guides](/integrations-overview).
 
 ## How it works
 
-1. **Set workspace context** — goals, customers, competitors
-2. **Connect integrations** — code, tickets, docs, Slack
-3. **Devplan ingests and synthesizes** — catalog, signals, insights, daily digest
-4. **You stay informed and ask questions** — Today, Insights, Ask Devplan
-
-For the technical pipeline, see [How Devplan Works](/how-devplan-works). For setup steps, see [Getting Started](/getting-started).
-
----
+1. Describe your workspace and connect relevant sources.
+2. Review the product knowledge and first insights Devplan generates.
+3. Investigate questions and evaluate potential work with Weaver.
+4. Develop projects and review progress against connected evidence.
 
 ## Get started
 
-Sign up at [app.devplan.com](https://app.devplan.com) and connect your first integrations. The more context you add early, the better your first digests and insights become.
-
-[Getting Started →](/getting-started) · [Platform tour →](/platform-overview) · [Core Workflow →](/core-workflow)
+Open [app.devplan.com](https://app.devplan.com) and follow [Getting Started](/getting-started). For a repeatable way to use Devplan with your team, see the [Core Workflow](/core-workflow).
