@@ -1,41 +1,32 @@
-# Website
+# Devplan documentation
 
-This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+Public product documentation built with Docusaurus. Content lives in `docs/`; `sidebars.ts` defines navigation. The production site is https://docs.devplan.com.
 
-## Installation
+## Local development
 
-```bash
-yarn
-```
-
-## Local Development
+Use Node.js 22, matching the deployment workflow, and npm:
 
 ```bash
-yarn start
+npm ci
+npm start
 ```
 
-This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
-
-## Build
+## Validate and preview
 
 ```bash
-yarn build
+npm run typecheck
+npm run build
+npm run serve
 ```
 
-This command generates static content into the `build` directory and can be served using any static contents hosting service.
+The build checks internal links and anchors. Review the rendered pages and search results before publication, including existing URLs affected by a rename.
 
-## Deployment
+## Writing and maintenance
 
-Using SSH:
+Explain user goals and stable workflows. Include precise setup details where required for success, but avoid inventories of changing menu options. Keep source-processing behavior, tool access, and delivery claims accurate.
 
-```bash
-USE_SSH=true yarn deploy
-```
+Preserve a page's public slug when changing its title. Retain old section anchors when reorganizing content. Archived material remains accessible by direct link but is excluded from local search.
 
-Not using SSH:
+## Publication
 
-```bash
-GIT_USER=<Your GitHub username> yarn deploy
-```
-
-If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+The GitHub Actions workflow deploys the site when changes reach `main`. Local builds and previews do not publish it. Review and approve changes before merging to `main` or starting a manual deployment.

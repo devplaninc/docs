@@ -1,67 +1,40 @@
 ---
 title: Workspace Settings
 slug: /settings/workspace
-sidebar_label: Workspace
-sidebar_position: 2
 ---
 
 # Workspace Settings
 
-Administer the current workspace — its identity, members, digest, and API access.
-**Settings > Workspace**.
-
----
+Use workspace settings to manage shared identity, membership, reporting, and API access. Administrative actions require the appropriate workspace permissions.
 
 ## General {#general}
 
-**Settings > Workspace > General**
+Keep the workspace name, website, and other identifying information accurate. The website and product description also inform [workspace context](/knowledge#workspace).
 
-- **Workspace name**, **logo**, and **website**
-- **Danger Zone** — permanent workspace deletion (irreversible)
-
-The website is also editable under [Knowledge > Workspace](/knowledge#workspace) in the app.
-
----
+Review destructive actions carefully. Workspace deletion is different from leaving a workspace or disconnecting one source.
 
 ## Members {#members}
 
-**Settings > Workspace > Members**
+Invite colleagues using the intended email address and role. Administrators can update roles, remove members, and revoke pending invitations.
 
-- **Invite** by email with an **Admin** or **User** role
-- Change roles or remove members
-- Revoke pending invites
+Most workspaces use **Admin** and **User** roles. Admins manage membership and shared settings; Users work with workspace content within their assigned permissions. Some workspaces retain [additional roles](/advanced/access-control).
 
-Invitees accept from [Personal Info](/settings/profile#personal-info) or the invitation email.
+Invitees can respond through their invitation or [account settings](/settings/profile#personal-info).
 
----
+## Reporting {#daily-digest}
 
-## Daily Digest {#daily-digest}
+Configure shared daily and weekly reporting, including enabled schedules, delivery timezone, and recipients. The daily report uses Devplan's standard structure; administrators can add instructions for the weekly report. Connected Slack or Microsoft Teams channels can be used for supported delivery.
 
-**Settings > Workspace > Daily Digest** — workspace-wide digest settings for [Today](/today).
+A generated report may still be waiting for delivery. Check the delivery settings separately. Members control their own email preferences through [profile settings](/settings/profile#preferences).
 
-- **Default instructions** — how the workspace digest is generated
-- **Generate** — a manual 24-hour report (in-app only, not emailed)
-- **Delivery time** — email schedule (local timezone)
-- **Email recipients** — all members or role defaults
-- **Slack channel** — requires Slack connected under [Integrations](/knowledge#integrations)
-
-Individual members can opt out of the digest email under
-[Preferences](/settings/profile#preferences).
-
----
+See [Reports](/reports) for the difference between content, generation, and delivery, and [Dashboards](/dashboards) for per-dashboard schedules.
 
 ## API Keys {#api-keys}
 
-**Settings > Workspace > API Keys**
+Create workspace-scoped keys for clients that use [Devplan MCP](/mcp-integration) with API-key authentication. Copy a key when it is created; its value cannot be retrieved later.
 
-Create workspace-scoped keys for [MCP Integration](/mcp-integration). Copy the key at
-creation — it cannot be retrieved later. Delete and recreate if you lose it.
-
----
+Keep keys in the client's credential storage, not in repository files or chats. Delete a key when it should no longer provide access, and update any client that relied on it.
 
 ## Related pages
 
-- [Today](/today)
-- [Profile Settings](/settings/profile)
-- [Organization Settings](/settings/organization)
-- [MCP Integration](/mcp-integration)
+[Profile settings](/settings/profile) · [Organization settings](/settings/organization) · [Access control](/advanced/access-control)

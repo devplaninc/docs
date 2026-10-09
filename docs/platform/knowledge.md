@@ -1,104 +1,55 @@
 ---
 title: Knowledge
 slug: /knowledge
-sidebar_label: Knowledge
-sidebar_position: 7
+description: Manage the workspace context, sources, signals, and decisions behind Weaver's answers.
 ---
 
 # Knowledge
 
-Knowledge is the context layer behind everything Devplan generates. It holds what your
-company is, what you've built, and the raw evidence flowing in from your connected tools.
-Keep it current and your [Insights](/insights), project plans, and [Ask Devplan](/ask-devplan)
-answers stay relevant.
+Knowledge is where you give Devplan the context that makes its work relevant to your business: who you serve, what you are trying to achieve, and which decisions should guide the work. A strategy brief or customer description saved here becomes shared workspace context that Weaver can use across conversations and projects.
 
-Behind the scenes, this context feeds **Weaver** — the continuous knowledge graph that
-connects your signals, context, and history into durable team memory. The areas below are
-where you view and curate what Weaver learns from. See
-[How Devplan Works](/how-devplan-works#weaver-the-knowledge-graph) for the full picture.
-
-Find it under **Knowledge** in the left nav, with four areas:
-
-| Area | What it holds |
-|------|---------------|
-| [Workspace](#workspace) | Company context — customers, goals, competitors |
-| [Product catalog](#product-catalog) | Auto-generated feature catalog from your code |
-| [Signals](#signals) | Raw evidence from connected sources |
-| [Integrations](#integrations) | The data sources that feed everything above |
-
----
+Use **Knowledge** to maintain that background, connect source material, inspect signals, and record decisions. Together, these help Weaver connect an individual request or update to the bigger picture.
 
 ## Workspace {#workspace}
 
-Core context that shapes AI output — customers, goals, competitors, and background.
+Open **Knowledge → Workspace** to review and edit your company context. Start with the descriptions created during onboarding, correct anything misleading, and add the priorities or constraints that public information cannot tell Devplan. Select **Save changes** after editing the text.
 
-- **Website & overview** — Devplan drafts an initial overview from your site; edit it and
-  **Rescan** after major changes
-- **Target customers** — who you serve
-- **Competitors** — your competitive landscape
-- **Company goals** — what your team is building toward
-- **Additional context** — free-form background
+Be specific about what matters. For example, “Help small operations teams complete onboarding without an implementation consultant” gives Weaver more useful direction than “Improve onboarding.” Describe the customer and desired outcome, and add relevant background about your market or product.
 
-This is the highest-leverage context to keep accurate — it informs every downstream surface.
-You can also edit your website under [Workspace settings](/settings/workspace#general).
+Update this context when your goals, target customers, or product direction change. For a lasting correction to these descriptions, update the fields here and save them so future work has a shared starting point.
 
----
+### Add supporting documents
 
-## Product catalog {#product-catalog}
+Under **Additional context**, select **Add context** to upload files or attach content from Google Drive, Notion, or Confluence. You can connect a supported provider from this menu if it is not already connected. Provider connections and attachment actions depend on your workspace permissions.
 
-An auto-generated catalog of your product — user flows, technical design, and implementation
-status by product area.
+Add material that applies across your work, such as strategy briefs, customer research, or product positioning. You can also attach documents directly to **Company goals**. Keep documents that belong to a single initiative with that [project](/projects).
 
-- Browse by product area or search features
-- Read the **User Flow** and **Tech Design** tabs for each feature
-- Use **Refine section** to submit corrections
+The attachment list lets you open source documents or uploaded files, check processing status, and remove attachments that no longer belong in the workspace. Uploads are copies; connected documents depend on continued access to their source. See [Uploads](/upload-files) and the relevant [integration guide](/integrations-overview) for details.
 
-The catalog populates after your code repositories are connected and the bootstrap completes
-(often **30+ minutes**). Recent changes surface in [Updates](/updates).
+### Review website and company research
 
----
+Expand **Website overview** to read Devplan's analysis of your company website. Use **Rescan** after updating the website or when you want a fresh analysis; the page shows scan status and errors.
+
+When available, **Company research** includes a company profile and competitive analysis with links to public sources. These reports are read-only. Use their sources to assess the findings, then correct or supplement the editable workspace context with what your team knows.
+
+## Live Docs {#product-catalog}
+
+[Live Docs](/live-docs), under **Product**, describes your product's capabilities and user flows based on repository analysis and connected context. Use Workspace to explain the business and its direction, and Live Docs to explore how the product works.
 
 ## Signals {#signals}
 
-Raw evidence from connected sources — PRs, tickets, Slack messages, docs, and uploads —
-before it's synthesized into [Insights](/insights).
+Signals are synthesized observations from discussions, meeting notes, tickets, and documents. They help you find customer needs, problems, and other relevant developments across source material. Open a signal to inspect its supporting evidence before using it to inform a decision. Read the [Signals guide](/signals) for how to use them.
 
-- Filter by source type (GitHub, Slack, Jira, etc.)
-- Search and sort the feed
-- Open evidence flyouts and jump to related [Insights](/insights)
+## Decisions
 
-:::note
-Signals may not appear in all workspaces.
-:::
+[Decisions](/decisions) keeps the choices your team has made available beyond the original conversation. Search the register to understand earlier choices. Workspace admins can add a decision with its reasoning, review and approve decisions Devplan extracted from connected material, edit the wording, and archive or restore decisions as direction changes.
 
----
+Use workspace context for ongoing background and goals, and Decisions for explicit choices—for example, which customer segment a release will serve and why. This gives Weaver a clearer basis for explaining prior choices and helping with new work.
 
 ## Integrations {#integrations}
 
-Connect code repos, docs, tickets, and communication tools that feed Knowledge. Manage them
-under **Knowledge > Integrations**.
-
-| Integration | Guide |
-|-------------|-------|
-| GitHub | [Setup](/github-integration) |
-| Bitbucket | [Setup](/bitbucket-integration) |
-| Jira | [Setup](/jira-integration) |
-| Linear | [Setup](/linear-integration) |
-| Slack | [Setup](/slack-integration) |
-| Notion | [Setup](/notion-integration) |
-| Google Drive | [Setup](/google-drive-integration) |
-| Confluence | [Setup](/confluence-integration) |
-| Upload files | [Uploads](/upload-files) |
-| Granola | [Setup](/granola-integration) |
-
-Most providers need **Connect** plus **Configure**, **Attach**, or **Select folders**.
-See the [Integrations overview](/integrations-overview) for the full list and setup details,
-or [MCP Integration](/mcp-integration) to connect Devplan to your own tools.
-
----
+Use **Integrations** to connect sources, choose scope, and resolve access problems. Built-in integrations and additional connections serve different purposes; see [Integration types](/integrations-overview).
 
 ## Related pages
 
-- [Insights](/insights) — synthesized takeaways from your Signals
-- [Core Workflow](/core-workflow) — how Knowledge fits the end-to-end flow
-- [Integrations overview](/integrations-overview) — per-tool setup guides
+[How Devplan Works](/how-devplan-works) · [Working with evidence](/evidence) · [Workspace settings](/settings/workspace)

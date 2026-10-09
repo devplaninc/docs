@@ -6,215 +6,105 @@ sidebar_position: 1
 
 # CLI Cheat Sheet
 
-Quick reference for the most commonly used Devplan CLI commands.
+The Devplan CLI downloads specifications and starts a local coding workflow. [Devplan MCP](/mcp-integration) is the primary way to give your coding assistant workspace context; the CLI is also available from your project's implementation controls.
+
+## Start with the generated command
+
+Open the implementation controls for the work you want to implement, choose the CLI option, and copy the command. It contains the workspace and work identifiers for that task or user story.
+
+These examples show the command structure. Replace the example identifiers with the ones Devplan provides. Run `devplan --help` or a subcommand's `--help` to check your installed version.
 
 ## Authentication
 
 ### `devplan auth`
-Authenticate with the Devplan service.
+
+Authenticate in the browser:
 
 ```bash
-# Initial authentication (opens browser for login)
 devplan auth
-
-# Force re-authentication even if token exists
-devplan auth --force
 ```
 
-| Flag | Short | Description |
-|------|-------|-------------|
-| `--force` | `-f` | Force reauthentication even if token exists |
+Use `devplan auth --force` to sign in again.
 
 ## Starting Implementation
 
 ### `devplan specs start`
-Start implementation of a task in an AI IDE. This is the primary command for beginning work on a Devplan task.
 
 ```bash
 # Start a task with Claude Code
 devplan specs start -c 123 -t task_abc123 -i claude
 
-# Start with Cursor CLI
-devplan specs start -c 123 -t task_abc123 -i cursor-cli
+# Start a user story (the CLI calls this a feature)
+devplan specs start -c 123 -f feature_abc123 -i claude
 
-# Use existing repository path (skip cloning)
-devplan specs start -c 123 -t task_abc123 -i claude -p /path/to/repo
-
-# Specify branch to checkout
-devplan specs start -c 123 -t task_abc123 -i claude -b feature/my-branch
+# Use an existing checkout
+devplan specs start -c 123 -t task_abc123 -i claude --path /path/to/repo
 ```
 
-| Flag | Short | Required | Description |
-|------|-------|----------|-------------|
-| `--company` | `-c` | Yes | Company ID |
-| `--task` | `-t` | Yes | Task ID to implement |
-| `--ide` | `-i` | Yes | IDE to use (`claude`, `cursor-cli`) |
-| `--path` | `-p` | No | Path to existing repository (skips cloning) |
-| `--branch` | `-b` | No | Branch to checkout after workspace setup |
+Provide either `--task` (`-t`) or `--feature` (`-f`). Task mode prepares a repository worktree; feature mode can prepare the repositories referenced by the user story. The CLI downloads the specifications and launches the selected assistant with the workflow's starting instruction.
 
-**What it does:**
-1. Clones the repository into a workspace folder (or uses provided path)
-2. Sets up IDE-specific commands for the SDD workflow
-3. Downloads input specs for the task into the `specs` directory
-4. Launches the specified IDE
+Use the assistant option offered by the generated command. For example, `claude` selects Claude Code and `cursor-cli` selects Cursor CLI.
 
 ### `devplan specs pull`
-Download spec/context files for a task without cloning or launching IDE.
+
+Download specifications into the current folder without cloning a repository or opening an assistant:
 
 ```bash
-# Pull specs to current directory
 devplan specs pull -c 123 -t task_abc123 -i claude
-
-# Pull specs to specific directory
-devplan specs pull -c 123 -t task_abc123 -i claude -p /path/to/output
 ```
 
-| Flag | Short | Required | Description |
-|------|-------|----------|-------------|
-| `--company` | `-c` | Yes | Company ID |
-| `--task` | `-t` | Yes | Task ID to pull specs for |
-| `--ide` | `-i` | Yes | IDE type (`claude`, `cursor-cli`) |
-| `--path` | `-p` | No | Output directory (defaults to current directory) |
-
-**Use case:** When you already have the repository cloned and just want to refresh or download the latest specs.
+This also accepts `--feature` instead of `--task`, and `--path` to choose an existing output folder. Save any local edits to generated specification files before pulling again; matching generated files can be overwritten.
 
 ## Workspace Management
 
 ### `devplan switch`
-List and switch between cloned features by opening them in your preferred IDE.
 
-```bash
-# Interactive feature selection (detects installed IDEs)
-devplan switch
-
-# Shorthand alias
-devplan sw
-
-# Specify IDE directly
-devplan switch -i cursor
-```
-
-| Flag | Short | Description |
-|------|-------|-------------|
-| `--ide` | `-i` | IDE to use (e.g., `vscode`, `intellij`, `cursor`, `claude`) |
-
-**Features:**
-- Shows all cloned features in your workspace
-- Indicates features with uncommitted changes
-- Remembers your last used IDE
+Use `devplan switch` to select a local workspace and open it in an editor. `devplan sw` is an alias.
 
 ### `devplan list`
-List all cloned features and copy the selected path to clipboard.
 
-```bash
-# List all features
-devplan list
+Use `devplan list` to list local workspaces and copy a selected path. `devplan ls` is an alias.
 
-# Shorthand alias
-devplan ls
-```
-
-**Features:**
-- Displays all cloned features with their paths
-- Shows uncommitted changes indicator
-- Copies selected feature path to clipboard
+The change indicators in these commands exclude untracked files. Use `git status --short` inside a checkout to inspect those too.
 
 ### `devplan clean`
-Clean up individual repositories from your workspace.
+
+Run `git status --short` in the folder you plan to remove and save any work you need, including untracked files. Then run:
 
 ```bash
 devplan clean
 ```
 
-**Features:**
-- Lists all cloned repositories in the workspace
-- Shows warning for features with uncommitted changes
-- Properly handles git worktree removal
-- Confirms before deletion
+Select the folder carefully. Cleanup deletes it after confirmation. The CLI's extra warning about local changes excludes untracked files, so the absence of a warning does not mean the folder contains nothing worth keeping.
 
 ## Other Useful Commands
 
 ### `devplan version`
-Display the current CLI version.
 
-```bash
-devplan version
-```
+Run `devplan version` to see your installed version.
 
 ### `devplan update`
-Update the CLI to the latest version.
+
+For a Homebrew installation, update through Homebrew:
 
 ```bash
-# Update to latest production version
-devplan update
-
-# Update to specific version
-devplan update --to=1.2.3
-
-# List available versions
-devplan update --list
+brew upgrade devplaninc/devplan/devplan
 ```
 
-### `devplan prefs reset`
-Reset all saved preferences (company, project, git protocol).
-
-```bash
-devplan prefs reset
-```
-
-## Typical Workflow
-
-1. **Authenticate** (first time only):
-   ```bash
-   devplan auth
-   ```
-
-2. **Start a task** from Devplan UI:
-   - Go to Development tab in Devplan
-   - Click "Start" on a task (copies command to clipboard)
-   - Paste and run in terminal:
-   ```bash
-   devplan specs start -c 123 -t task_abc123 -i claude
-   ```
-
-3. **Switch between features**:
-   ```bash
-   devplan switch
-   ```
-
-4. **Update specs** for current task:
-   ```bash
-   devplan specs pull -c 123 -t task_abc123 -i claude
-   ```
-
-5. **Clean up** when done:
-   ```bash
-   devplan clean
-   ```
+For a standalone build that supports self-update, run `devplan update`. See [CLI releases](https://github.com/devplaninc/devplan-cli/releases) for available versions.
 
 ## Workspace Structure
 
-When you run `specs start`, repositories are cloned to:
-```
-~/devplan/workspace/feature/<branch_name>/
-```
+Use the workspace path printed by the CLI. Default task worktrees live under `~/devplan/workspace/features/<project>/<task>/`; user-story workspaces can contain multiple repositories. A custom workspace or `--path` changes the location.
 
-Specs are downloaded to a `specs` directory within the repository:
-```
-specs/
-├── [Project]/
-│   ├── prd.md
-│   ├── tech_brief.md
-│   └── [User Story]/
-│       ├── requirements.md
-│       └── [Task]/
-│           ├── requirements.md
-│           └── instructions.md
-└── focus.md
-```
+Generated specifications live under `specs` in the prepared workspace. See [Spec Driven Development](/spec-driven-development) for the input and output files.
 
 ## Learn More
 
-- **[Spec Driven Development](/spec-driven-development)** - Full SDD workflow documentation
-- **[Git Worktrees](/dev/git-worktrees)** - How Devplan uses git worktrees
-- **[Getting Started](/getting-started)** - Initial setup guide
+- [Spec Driven Development](/spec-driven-development)
+- [Working with Git Worktrees](/dev/git-worktrees)
+- [Devplan MCP](/mcp-integration)
+
+{/* Preserve links to sections consolidated in this guide. */}
+<span id="devplan-prefs-reset" />
+<span id="typical-workflow" />
