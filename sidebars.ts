@@ -20,17 +20,10 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         {type: 'doc', id: 'guides/integrations/mcp', label: 'Overview'},
-        {
-          type: 'category',
-          label: 'MCP connections',
-          collapsed: false,
-          items: [
-            'guides/integrations/mcp/claude',
-            'guides/integrations/mcp/chatgpt',
-            'guides/integrations/mcp/claude-code',
-            'guides/integrations/mcp/codex',
-          ],
-        },
+        'guides/integrations/mcp/claude',
+        'guides/integrations/mcp/chatgpt',
+        'guides/integrations/mcp/claude-code',
+        'guides/integrations/mcp/codex',
       ],
     },
     {
