@@ -1,160 +1,86 @@
 ---
-title: Devplan plugin and MCP
+title: Devplan Plug-in
 slug: /mcp-integration
-description: Use Devplan in Claude, ChatGPT, Claude Code, and Codex through the Devplan plugin or a direct MCP connection.
+description: Add Devplan context, dashboards, and product workflows to Claude, ChatGPT, Claude Code, or Codex.
 ---
 
-# Use Devplan with your AI assistant
+# Devplan Plug-in
 
-Bring Devplan's Connected Product Intelligence into Claude, ChatGPT, Claude Code, or Codex. Your assistant can use the context Devplan has already connected across code, documentation, conversations, meeting notes, and project systems to surface risks, status updates, project insights, and evidence-backed answers.
+The Devplan Plug-in brings Connected Product Intelligence into your AI assistant. It connects the assistant to your Devplan workspace through MCP and adds skills for product context, planning, customer demand, delivery monitoring, specifications, and engineering analytics.
 
-The **Devplan plugin is the recommended setup**. It includes the Devplan MCP connection plus guided workflows for setup, dashboards, planning, specifications, customer demand, and engineering analytics. If your client or plan cannot install plugins, connect the Devplan MCP server directly as a secondary option.
+The plug-in is the recommended setup because it provides both the Devplan connection and the workflows that put that context to work. A direct MCP connection is available on every supported platform when you only need Devplan tools or cannot install plug-ins.
 
-| Setup | What you get | Choose it when |
-|---|---|---|
-| Devplan plugin | Devplan workspace tools, guided setup, product-context skills, dashboards, planning, and specification workflows | Your client supports plugins |
-| Direct MCP connection | Devplan workspace tools and context | Plugins are unavailable or you want only the connection |
+## Quick start
 
-These options let **your AI assistant use Devplan**. [Additional connections inside Devplan](/additional-connections) let **Weaver use other services**. They are separate setup paths.
+1. Choose your platform under [Connections](#connections).
+2. Install the Devplan Plug-in and sign in to the intended Devplan workspace.
+3. Start a new chat or terminal session and say **“Set up Devplan.”**
 
-## Before you start
+You need a Devplan account with a code repository connected. If you do not have an account yet, the setup workflow helps you create one.
 
-For the plugin, you need a Devplan account with a code repository connected. If you do not have an account yet, the setup workflow helps you create one. For a direct MCP connection, you need a Devplan account with access to the workspace you want to use.
+## Dashboards
 
-Use these values throughout this guide:
+The plug-in can build four dashboards from the work and evidence connected to your Devplan workspace:
 
-- Plugin marketplace: `https://github.com/devplaninc/devplan-plugins`
-- MCP server: `https://app.devplan.com/api/v1/mcp`
+| Dashboard | What it helps you see |
+|---|---|
+| Daily Radar | What shipped, what is moving, what is stuck, and what needs your attention |
+| Execution Monitoring | Active projects, delivery risks, slipped or blocked work, inferred work, and a searchable changelog |
+| Demand Report | Customer demand themes, isolated requests, adoption blockers, customer commitments, and recent market moves |
+| Engineering Analytics | Pull request throughput, cycle time, review load, and work in progress by person and repository |
 
-## Install the Devplan plugin
+In Claude and ChatGPT, setup can create shareable dashboards and schedule supported weekday refreshes. In Claude Code and Codex, dashboards are generated on request as local HTML files and are not scheduled.
 
-After installation, start a new chat or terminal session and say:
+## Skills
 
-> Set up Devplan
+You do not need to name a skill. Ask for the outcome you want, and the plug-in can load the relevant workflow.
 
-The setup workflow connects your account, checks your workspace, confirms company context, and introduces the available workflows. In Claude and ChatGPT, it can also build Devplan dashboards and schedule supported refreshes. Terminal setup stays focused on the repository and code in front of you.
+| Skill | What it does |
+|---|---|
+| Product context | Grounds product and engineering work in current Devplan evidence, decisions, delivery state, and product intent |
+| Daily Radar | Builds a personal view of what shipped, what is moving, what is stuck, and what needs attention |
+| Execution Monitoring | Reviews active projects, delivery risks, inferred work, and recent changes |
+| Demand Report | Synthesizes customer demand, adoption blockers, commitments, and market movement |
+| Engineering Analytics | Reports throughput, cycle time, review load, and work in progress |
+| Cycle Planning | Sizes a cycle from the team's real pace and separates committed, stretch, and deferred work |
+| Spec | Turns an idea into a specification, technical plan, and estimate tracked in Devplan |
+| Setup | Connects Devplan, confirms company context, and prepares the supported dashboards and workflows |
 
-### Claude desktop and web
+Try requests such as:
 
-1. Open **Customize → Plugins**.
-2. Select **Add → Add marketplace → Add from a repository**.
-3. Enter `https://github.com/devplaninc/devplan-plugins` and select **Sync**.
-4. Open **Devplan** in the marketplace and select **Add**.
-5. Start a new chat and say **“Set up Devplan.”**
-6. When prompted to connect, open **Plugins → Devplan → Connect**, keep the detected connector settings, and sign in to Devplan.
+- “What should I know before changing billing?”
+- “Run my Daily Radar.”
+- “How are our projects going?”
+- “What are customers asking for?”
+- “Plan the next six weeks.”
+- “Write a spec for SSO.”
 
-The plugin is saved to your Claude account and is also available in Cowork and Claude Code when you use the same account.
+## Connections
 
-### ChatGPT desktop and web
+Choose the client where you want to use Devplan. Each guide starts with the recommended plug-in installation and includes direct MCP setup as a secondary option.
 
-1. Open **Plugins** and choose to add a marketplace.
-2. Enter `https://github.com/devplaninc/devplan-plugins`.
-3. Open the **Devplan** marketplace, open **Devplan**, and select **+** to install it.
-4. Start a new chat, say **“Set up Devplan,”** and sign in when prompted.
+- [Claude desktop and web](/mcp-integration/claude)
+- [ChatGPT desktop and web](/mcp-integration/chatgpt)
+- [Claude Code](/mcp-integration/claude-code)
+- [Codex](/mcp-integration/codex)
 
-After installation, ask for the outcome directly or type `@` and choose **Devplan**. If your account does not offer marketplace installation, ask a workspace admin to import the marketplace or use a [direct MCP connection](#connect-devplan-mcp-directly).
-
-#### ChatGPT workspace admins
-
-Business, Enterprise, and Edu workspace admins can import the marketplace for their organization:
-
-1. Open **Admin → Plugins** and select **Add → Import marketplace**.
-2. Enter `https://github.com/devplaninc/devplan-plugins` as the source. Leave the path empty and use the repository's default branch.
-3. Import the marketplace, review the result, and set Devplan's installation policy to **Available** or **Installed** for the appropriate roles.
-
-ChatGPT syncs imported GitHub marketplaces daily. Use **Sync now** from the marketplace settings when you need an update immediately.
-
-### Claude Code
-
-Install from your shell:
-
-```bash
-claude plugin install devplan --marketplace https://github.com/devplaninc/devplan-plugins
-```
-
-Or run this inside a Claude Code session:
+All platforms use the same Devplan MCP server:
 
 ```text
-/plugin install devplan --marketplace https://github.com/devplaninc/devplan-plugins
+https://app.devplan.com/api/v1/mcp
 ```
 
-Then start a new session and say **“Set up Devplan.”** Open the sign-in link Claude Code displays. If no sign-in link appears, run `/mcp`, select `plugin:devplan:devplan`, and authenticate.
+If you install the plug-in after creating a direct connection, remove the separate MCP server so your client does not show two Devplan connections.
 
-To update or remove the plugin:
+## Access and permissions
 
-```bash
-claude plugin update devplan@devplan
-claude plugin uninstall devplan@devplan
-```
+The plug-in reads the projects, product knowledge, changes, discussions, calls, support summaries, and documents available through your Devplan workspace. Devplan's permissions and connected-source access determine what it can retrieve.
 
-### Codex terminal
+Setup can save company context and dashboard settings in Devplan. The Spec skill can create or update Devplan projects. Nothing is posted, sent, or changed in your other connected tools by these workflows.
 
-Add the marketplace and install the plugin:
+Some Devplan MCP tools can update Devplan content, depending on workspace configuration. Review the requested action before approving a change.
 
-```bash
-codex plugin marketplace add https://github.com/devplaninc/devplan-plugins
-codex plugin add devplan@devplan
-```
-
-Until Devplan is available in OpenAI's public plugin directory, also register its MCP server and complete the one-time sign-in:
-
-```bash
-codex mcp add devplan --url https://app.devplan.com/api/v1/mcp
-codex mcp login devplan
-```
-
-Start a new Codex session and say **“Set up Devplan.”** You can also enter `/plugins` to inspect installed plugins and `/mcp` to inspect the connection.
-
-To update or remove the plugin:
-
-```bash
-codex plugin marketplace upgrade devplan
-codex plugin remove devplan@devplan
-codex mcp remove devplan
-```
-
-## Connect Devplan MCP directly
-
-Use a direct connection when plugins are unavailable or you only need Devplan's MCP tools. This gives the assistant access to your Devplan workspace, but it does not install Devplan's guided setup, dashboards, planning, specification, or reporting skills.
-
-If you later install the plugin, remove the separate connection so your client does not show two Devplan servers.
-
-### Claude desktop and web
-
-1. Open **Customize → Connectors**.
-2. Select **Add → Custom → Web**.
-3. Name the connector `Devplan` and enter `https://app.devplan.com/api/v1/mcp`.
-4. Keep the detected OAuth settings and choose **Sign in now**.
-5. Add the connector, select the intended Devplan workspace, and authorize access.
-
-The remote connector is saved to your Claude account and can be available across Claude surfaces that use the same account.
-
-### ChatGPT desktop and web
-
-1. Open **Plugins**, select **+**, then choose **Add custom MCP server**.
-2. Name the connection `Devplan` and enter `https://app.devplan.com/api/v1/mcp` as the server URL.
-3. Choose OAuth authentication, review the connection warning, and continue.
-4. Select **Create as a plugin**, install the resulting personal plugin, and sign in to Devplan.
-5. Start a new chat and type `@` to select the Devplan connection when you want to invoke it explicitly.
-
-### Claude Code
-
-```bash
-claude mcp add --transport http devplan https://app.devplan.com/api/v1/mcp
-```
-
-Start Claude Code, run `/mcp`, select `devplan`, and complete the Devplan sign-in. Use `claude mcp list` to verify the saved connection.
-
-### Codex terminal
-
-```bash
-codex mcp add devplan --url https://app.devplan.com/api/v1/mcp
-codex mcp login devplan
-```
-
-Use `codex mcp list` or `/mcp` in a Codex session to verify the connection.
-
-## Verify the connection
+## Verify your connection
 
 Ask your assistant:
 
@@ -162,91 +88,6 @@ Ask your assistant:
 
 Confirm that the assistant used Devplan tools and returned information from the intended workspace. A successful sign-in, visible tool list, and useful answer are separate checks.
 
-## Start using Devplan
-
-Try requests that identify both the topic and the outcome you need:
-
-- “What should I know before changing billing?”
-- “Summarize recent customer feedback about onboarding and cite the evidence.”
-- “Find projects related to exports and explain what remains unfinished.”
-- “Before editing this feature, check for relevant product decisions and customer requests.”
-- “Explain what this capability does, then compare it with the local implementation.”
-
-With the plugin installed, you can also ask:
-
-- “Run my Daily Radar.”
-- “How are our projects going?”
-- “What are customers asking for?”
-- “Plan the next six weeks.”
-- “Write a spec for SSO.”
-
-## Improve agent behavior
-
-The plugin already includes product-context guidance. For a direct MCP connection, add concise instructions to your existing `AGENTS.md` or `CLAUDE.md` while preserving the repository's other rules:
-
-```text
-Use Devplan when a task depends on product context, customer feedback,
-project status, internal decisions, or evidence across connected sources.
-Check the tools available in this session and retrieve relevant evidence.
-Use local code to verify implementation details. Distinguish planned,
-implemented, deployed, and enabled behavior. Cite supporting sources
-and state material uncertainty. For questions about how Devplan itself
-works, consult https://docs.devplan.com/overview and the relevant guide.
-```
-
-These instructions do not install or authorize a connection. Verify the setup separately.
-
-## Common Devplan tools
-
-Your client's live tool descriptions are the authoritative reference for names, inputs, and availability. Common capabilities include:
-
-| Capability | Example tools |
-|---|---|
-| Find relevant workspace context | `search_entities` |
-| Follow stored relationships and activity | `query_workspace_graph` |
-| Read selected records and supporting sources | `fetch_internal_entities_by_ids`, `fetch_external_entities` |
-| Browse projects and product knowledge | `list_workspace_projects`, `list_product_feature_catalog` |
-| Read connected documents | `fetch_external_documents` |
-
-Search finds relevant content; graph queries follow recorded relationships. Fetch tools retrieve the details needed to inspect a result. A missing result is not proof that evidence does not exist.
-
-Some tools can start planning or update Devplan content, depending on workspace configuration. Additional connected services may expose other tools. Check the tool and requested action before approving a change.
-
-## Use an API key when OAuth is unavailable
-
-If your client cannot use OAuth, create a workspace API key under **Settings → Workspace → API Keys** with the appropriate permissions. Copy it when created; the value cannot be retrieved later.
-
-Configure the remote HTTP server with an authorization header. For a client that supports this JSON format:
-
-```json
-{
-  "mcpServers": {
-    "devplan": {
-      "type": "http",
-      "url": "https://app.devplan.com/api/v1/mcp",
-      "headers": {
-        "Authorization": "Bearer <your-api-key>"
-      }
-    }
-  }
-}
-```
-
-Use your client's secret storage or environment-variable support where available. Do not commit the key to a repository or paste it into a conversation. Delete a lost or exposed key and create a replacement.
-
-## Troubleshooting
-
-| Problem | What to check |
-|---|---|
-| Plugin is installed but its skills are missing | Start a new chat or terminal session; confirm the plugin is enabled and up to date |
-| No Devplan tools appear | Confirm the plugin's connection or direct MCP server is enabled, then refresh or restart the client |
-| Authentication fails | Reconnect and complete authorization, or check the API key and workspace access |
-| Two Devplan servers appear | Remove the separate direct MCP connection after installing the plugin |
-| Results refer to the wrong workspace | Reauthorize and select the intended workspace, or use its workspace-scoped key |
-| Results are thin | Check relevant source access, selection, processing status, and the scope of the question |
-| The assistant answers without using Devplan | Select Devplan explicitly and confirm a tool call succeeded |
-| A capability is missing | Check live tool descriptions and workspace configuration rather than relying on an old tool list |
-
 ## Related documentation
 
-[Devplan plugin source](https://github.com/devplaninc/devplan-plugins) · [Ask Weaver](/ask-devplan) · [Developer workflow](/spec-driven-development) · [CLI Cheat Sheet](/cli-cheat-sheet) · [Workspace Members](/settings/workspace#members)
+[Devplan Plug-in source](https://github.com/devplaninc/devplan-plugins) · [Ask Weaver](/ask-devplan) · [Dashboards](/dashboards) · [Workspace members](/settings/workspace#members)

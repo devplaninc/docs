@@ -45,6 +45,8 @@ The time needed depends on your sources and the work already queued. If setup re
 
 Once you enter the main app, you can open **Integrations** to add or manage sources and **Knowledge → Workspace** to refine your company context. See [Integration types](/integrations-overview) for the difference between built-in integrations and additional connections.
 
+The recommended next step is to install the [Devplan Plug-in](/mcp-integration), which brings your workspace context, dashboards, and guided product workflows into your AI assistant. Choose the connection guide for [Claude](/mcp-integration/claude), [ChatGPT](/mcp-integration/chatgpt), [Claude Code](/mcp-integration/claude-code), or [Codex](/mcp-integration/codex).
+
 Then try a concrete task:
 
 - Review [Radar](/today) for important developments.
@@ -58,7 +60,7 @@ If the answer is thin, check whether the relevant source has been selected and p
 
 Invite colleagues through [Workspace Members](/settings/workspace#members), keep shared [workspace context](/knowledge#workspace) accurate, and choose useful [report delivery](/reports#delivery) settings.
 
-Install the [Devplan plugin or connect Devplan MCP directly](/mcp-integration) to use the same workspace context in Claude, ChatGPT, Claude Code, or Codex. The plugin is recommended because it also includes guided product and engineering workflows.
+If your team cannot install the plug-in, each [connection guide](/mcp-integration#connections) also explains how to connect Devplan MCP directly.
 
 ## Troubleshooting
 
