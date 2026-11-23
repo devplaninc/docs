@@ -1,10 +1,10 @@
 ---
-title: Claude Code
+title: Claude Code via terminal
 slug: /mcp-integration/claude-code
 description: Install the Devplan Plug-in or connect Devplan MCP directly in Claude Code.
 ---
 
-# Connect Devplan to Claude Code
+# Connect Devplan to Claude Code via terminal
 
 Install the Devplan Plug-in to give Claude Code the product decisions, customer demand, project context, and recent changes behind the code you are editing. Terminal setup focuses on the current repository. Dashboards are generated on request as local HTML files and are not scheduled.
 
@@ -63,4 +63,4 @@ Run `/mcp` to confirm that Devplan is connected, then ask:
 
 ## Related documentation
 
-[Devplan Plug-in overview](/mcp-integration) · [Claude](/mcp-integration/claude) · [ChatGPT](/mcp-integration/chatgpt) · [Codex](/mcp-integration/codex)
+[Devplan Plug-in overview](/mcp-integration) · [Claude](/mcp-integration/claude) · [ChatGPT](/mcp-integration/chatgpt) · [Codex via terminal](/mcp-integration/codex)

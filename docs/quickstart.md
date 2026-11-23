@@ -45,7 +45,7 @@ The time needed depends on your sources and the work already queued. If setup re
 
 Once you enter the main app, you can open **Integrations** to add or manage sources and **Knowledge → Workspace** to refine your company context. See [Integration types](/integrations-overview) for the difference between built-in integrations and additional connections.
 
-The recommended next step is to install the [Devplan Plug-in](/mcp-integration), which brings your workspace context, dashboards, and guided product workflows into your AI assistant. Choose the connection guide for [Claude](/mcp-integration/claude), [ChatGPT](/mcp-integration/chatgpt), [Claude Code](/mcp-integration/claude-code), or [Codex](/mcp-integration/codex).
+The recommended next step is to install the [Devplan Plug-in](/mcp-integration), which brings your workspace context, dashboards, and guided product workflows into your AI assistant. Choose the connection guide for [Claude](/mcp-integration/claude), [ChatGPT](/mcp-integration/chatgpt), [Claude Code via terminal](/mcp-integration/claude-code), or [Codex via terminal](/mcp-integration/codex).
 
 Then try a concrete plug-in task:
 

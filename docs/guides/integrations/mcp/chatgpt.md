@@ -47,4 +47,4 @@ If ChatGPT does not use Devplan, type `@`, select Devplan explicitly, and confir
 
 ## Related documentation
 
-[Devplan Plug-in overview](/mcp-integration) · [Claude](/mcp-integration/claude) · [Claude Code](/mcp-integration/claude-code) · [Codex](/mcp-integration/codex)
+[Devplan Plug-in overview](/mcp-integration) · [Claude](/mcp-integration/claude) · [Claude Code via terminal](/mcp-integration/claude-code) · [Codex via terminal](/mcp-integration/codex)

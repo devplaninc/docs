@@ -43,4 +43,4 @@ If Claude does not use Devplan, select the Devplan plug-in or connector explicit
 
 ## Related documentation
 
-[Devplan Plug-in overview](/mcp-integration) · [ChatGPT](/mcp-integration/chatgpt) · [Claude Code](/mcp-integration/claude-code) · [Codex](/mcp-integration/codex)
+[Devplan Plug-in overview](/mcp-integration) · [ChatGPT](/mcp-integration/chatgpt) · [Claude Code via terminal](/mcp-integration/claude-code) · [Codex via terminal](/mcp-integration/codex)

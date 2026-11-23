@@ -61,8 +61,8 @@ Choose the client where you want to use Devplan. Each guide starts with the reco
 
 - [Claude desktop and web](/mcp-integration/claude)
 - [ChatGPT desktop and web](/mcp-integration/chatgpt)
-- [Claude Code](/mcp-integration/claude-code)
-- [Codex](/mcp-integration/codex)
+- [Claude Code via terminal](/mcp-integration/claude-code)
+- [Codex via terminal](/mcp-integration/codex)
 
 All platforms use the same Devplan MCP server:
 
