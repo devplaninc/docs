@@ -46,7 +46,7 @@ See [Additional connections](/additional-connections) for setup, permissions, an
 
 ### Devplan in your own AI assistant
 
-[Devplan MCP](/mcp-integration) works in the other direction: it lets an external AI assistant use Devplan workspace context. You do not need to add a custom connection inside Devplan to connect Claude Code or Codex to Devplan MCP.
+The [Devplan plugin and MCP](/mcp-integration) work in the other direction: they let Claude, ChatGPT, Claude Code, or Codex use Devplan workspace context. Install the plugin for guided workflows, or connect the MCP server directly when plugins are unavailable. You do not add this connection inside Devplan.
 
 ## Check connection readiness
 

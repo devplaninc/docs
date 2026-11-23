@@ -58,7 +58,7 @@ If the answer is thin, check whether the relevant source has been selected and p
 
 Invite colleagues through [Workspace Members](/settings/workspace#members), keep shared [workspace context](/knowledge#workspace) accurate, and choose useful [report delivery](/reports#delivery) settings.
 
-Developers can connect [Devplan MCP](/mcp-integration) to their AI assistant to use the same workspace context during research and implementation.
+Install the [Devplan plugin or connect Devplan MCP directly](/mcp-integration) to use the same workspace context in Claude, ChatGPT, Claude Code, or Codex. The plugin is recommended because it also includes guided product and engineering workflows.
 
 ## Troubleshooting
 
