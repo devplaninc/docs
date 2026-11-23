@@ -13,7 +13,7 @@ The plug-in is the recommended setup because it provides both the Devplan connec
 ## Quick start
 
 1. Choose your platform under [Connections](#connections).
-2. Install the Devplan Plug-in and sign in to the intended Devplan workspace.
+2. Install the Devplan Plug-in from `https://github.com/devplaninc/devplan-plugins` and sign in to the intended Devplan workspace.
 3. Start a new chat or terminal session and say **“Set up Devplan.”**
 
 You need a Devplan account with a code repository connected. If you do not have an account yet, the setup workflow helps you create one.
