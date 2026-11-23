@@ -13,7 +13,7 @@ The plug-in is the recommended setup because it provides both the Devplan connec
 ## Quick start
 
 1. Choose your platform under [Connections](#connections).
-2. Install the Devplan Plug-in from `https://github.com/devplaninc/devplan-plugins` and sign in to the intended Devplan workspace.
+2. Install the Devplan Plug-in from [https://github.com/devplaninc/devplan-plugins](https://github.com/devplaninc/devplan-plugins) and sign in to the intended Devplan workspace.
 3. Start a new chat or terminal session and say **“Set up Devplan.”**
 
 You need a Devplan account with a code repository connected. If you do not have an account yet, the setup workflow helps you create one.
@@ -29,7 +29,7 @@ The plug-in can build four dashboards from the work and evidence connected to yo
 | Demand Report | Customer demand themes, isolated requests, adoption blockers, customer commitments, and recent market moves |
 | Engineering Analytics | Pull request throughput, cycle time, review load, and work in progress by person and repository |
 
-In Claude and ChatGPT, setup can create shareable dashboards and schedule supported weekday refreshes. In Claude Code and Codex, dashboards are generated on request as local HTML files and are not scheduled.
+In Claude and ChatGPT, setup creates the four dashboards in one shareable Devplan Site and refreshes them twice every weekday. In Claude Code and Codex, dashboards are generated on request as local HTML files in a `devplan/` folder and are not scheduled. Add `devplan/` to `.gitignore` if you do not want to commit generated files.
 
 ## Skills
 

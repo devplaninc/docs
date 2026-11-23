@@ -6,7 +6,7 @@ description: Install the Devplan Plug-in or connect Devplan MCP directly in Code
 
 # Connect Devplan to Codex via terminal
 
-Install the Devplan Plug-in to give Codex the product decisions, customer demand, project context, and recent changes behind the code you are editing. Terminal setup focuses on the current repository. Dashboards are generated on request as local HTML files and are not scheduled.
+Install the Devplan Plug-in to give Codex the product decisions, customer demand, project context, and recent changes behind the code you are editing. Terminal setup focuses on the current repository. Dashboards are generated on request as local HTML files in a `devplan/` folder and are not scheduled. Add `devplan/` to `.gitignore` if you do not want to commit generated files.
 
 ## Install the Devplan Plug-in
 
