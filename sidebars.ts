@@ -16,7 +16,15 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'Using Devplan',
+      label: 'Using Devplan Plug-in',
+      collapsed: false,
+      items: [
+        'guides/integrations/mcp',
+      ],
+    },
+    {
+      type: 'category',
+      label: 'Using Devplan SAAS',
       collapsed: false,
       items: [
         'platform/index',
@@ -37,6 +45,16 @@ const sidebars: SidebarsConfig = {
             'platform/insights',
             'platform/decisions',
             'platform/evidence',
+          ],
+        },
+        {
+          type: 'category',
+          label: 'Specification-based development',
+          collapsed: true,
+          items: [
+            'dev/spec-driven-dev',
+            'dev/cli-cheat-sheet',
+            'dev/git-worktrees',
           ],
         },
       ],
@@ -71,24 +89,6 @@ const sidebars: SidebarsConfig = {
         'settings/profile',
         'settings/workspace',
         'settings/organization',
-      ],
-    },
-    {
-      type: 'category',
-      label: 'For Developers',
-      collapsed: true,
-      items: [
-        'guides/integrations/mcp',
-        {
-          type: 'category',
-          label: 'Specification-based development',
-          collapsed: true,
-          items: [
-            'dev/spec-driven-dev',
-            'dev/cli-cheat-sheet',
-            'dev/git-worktrees',
-          ],
-        },
       ],
     },
     {
