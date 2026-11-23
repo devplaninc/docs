@@ -45,12 +45,18 @@ The time needed depends on your sources and the work already queued. If setup re
 
 Once you enter the main app, you can open **Integrations** to add or manage sources and **Knowledge → Workspace** to refine your company context. See [Integration types](/integrations-overview) for the difference between built-in integrations and additional connections.
 
-Then try a concrete task:
+The recommended next step is to install the [Devplan Plug-in](/mcp-integration), which brings your workspace context, dashboards, and guided product workflows into your AI assistant. Choose the connection guide for [Claude](/mcp-integration/claude), [ChatGPT](/mcp-integration/chatgpt), [Claude Code via terminal](/mcp-integration/claude-code), or [Codex via terminal](/mcp-integration/codex).
 
-- Review [Radar](/today) for important developments.
-- Open [Live Docs](/live-docs) and find a capability you know well.
-- Ask [Weaver](/ask-devplan) what changed in that capability and request the supporting evidence.
-- Inspect a [project](/projects) to compare its scope with the available delivery evidence.
+Then try a concrete plug-in task:
+
+- **Setup:** “Set up Devplan.”
+- **Product context:** “What should I know before changing billing?”
+- **Daily Radar:** “Run my Daily Radar.”
+- **Demand Report:** “What are customers asking for?”
+- **Cycle Planning:** “Plan the next six weeks for a team of four.”
+- **Spec:** “Write a spec for SSO.”
+
+See the [dashboard](/mcp-integration#dashboards) and [skill](/mcp-integration#skills) overview for the complete set of guided workflows.
 
 If the answer is thin, check whether the relevant source has been selected and processed. Adding more unrelated sources will not necessarily answer the question.
 
@@ -58,7 +64,7 @@ If the answer is thin, check whether the relevant source has been selected and p
 
 Invite colleagues through [Workspace Members](/settings/workspace#members), keep shared [workspace context](/knowledge#workspace) accurate, and choose useful [report delivery](/reports#delivery) settings.
 
-Developers can connect [Devplan MCP](/mcp-integration) to their AI assistant to use the same workspace context during research and implementation.
+If your team cannot install the plug-in, each [connection guide](/mcp-integration#connections) also explains how to connect Devplan MCP directly.
 
 ## Troubleshooting
 

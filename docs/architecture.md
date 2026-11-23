@@ -42,9 +42,9 @@ Authorize an integration and configure its scope before expecting useful results
 
 [Integration types and setup guides](/integrations-overview).
 
-### CLI
+### Devplan Plug-in
 
-Use [MCP](/mcp-integration) to make workspace context available to an AI client. The [Devplan CLI](/cli-cheat-sheet) also supports specification-based development workflows. The two serve different setup and implementation needs.
+Use the [Devplan Plug-in](/mcp-integration) to access Devplan headlessly from Claude, ChatGPT, Claude Code, or Codex. It brings workspace context, dashboards, and guided product workflows into the AI client where you already work, without requiring the Devplan app to be open.
 
 ## Access control
 
